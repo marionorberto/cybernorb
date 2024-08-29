@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("../node_modules/bootstrap-icons/font/bootstrap-icons.min.css");
+
+@font-face {
+  font-family: "Monserat";
+  src: url("./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Monserat Italic";
+  src: url("./assets/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Monserat";
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.report-nav-item {
+  transition: width 0.3s;
+}
+
+.display-card-new-message {
+  display: flex;
+}
