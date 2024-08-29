@@ -11,6 +11,13 @@
   <body class="relative">
     <app-root></app-root>
 
-    <script></script>
+    <script>
+      const btnCardProfile = document.querySelector(".btnCardProfile");
+      const cardProfile = document.querySelector(".cardProfile");
+
+      btnCardProfile.addEventListener("click", (event) => {
+        cardProfile.classList.toggle("showCardProfile");
+      });
+    </script>
   </body>
 </html>

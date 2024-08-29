@@ -1,31 +1,43 @@
 <nav
   class="relative p-2 py-3 flex justify-around items-center border-b-[1px] border-zinc-300"
 >
-  <a href="" class="font-bold">
-    <!-- <img
-      src="../../../assets/images/cybernorb.png"
-      alt=""
-      width="40"
-      height="10"
-    /> -->
-    cybernorb
-  </a>
+  <a routerLink="/" class="font-bold"> cybernorb </a>
   <ul class="flex justify-center items-center gap-1">
     <li>
-      <a href="" class="text-slate-500 hover:bg-slate-200 p-1 px-3">Home</a>
+      <a
+        routerLink="/"
+        routerLinkActive="nav-active"
+        class="text-slate-500 hover:bg-slate-200 p-1 px-3"
+        >Home</a
+      >
     </li>
     <li>
-      <a href="" class="text-slate-500 hover:bg-slate-200 p-1 px-3">perfil</a>
+      <a
+        routerLink="/perfil"
+        routerLinkActive="nav-active"
+        class="text-slate-500 hover:bg-slate-200 p-1 px-3"
+        >perfil</a
+      >
     </li>
     <li>
-      <a href="" class="text-slate-500 hover:bg-slate-200 p-1 px-3">contact</a>
+      <a
+        routerLink="/contacts"
+        routerLinkActive="nav-active"
+        class="text-slate-500 hover:bg-slate-200 p-1 px-3"
+        >contacts</a
+      >
     </li>
     <li>
-      <a href="" class="text-slate-500 hover:bg-slate-200 p-1 px-3">about</a>
+      <a
+        routerLink="/about"
+        routerLinkActive="nav-active"
+        class="text-slate-500 hover:bg-slate-200 p-1 px-3"
+        >about</a
+      >
     </li>
   </ul>
   <section class="absolute right-9 flex justify-center gap-2 items-center">
-    <div class="relative">
+    <div class="relative hover:shadow-md h-8 w-8 rounded-full cursor-pointer">
       <i
         class="bi bi-bell-fill text-slate-950 text-lg border-[1px] border-zinc-100 h-8 w-8 p-1 rounded-full flex justify-center items-center"
       ></i>
@@ -34,14 +46,24 @@
         >10</span
       >
     </div>
-    <i
-      class="bi bi-exclamation-circle-fill text-slate-950 text-lg border-[1px] border-zinc-100 h-8 w-8 p-1 rounded-full flex justify-center items-center"
-    ></i>
-    <i
-      class="bi bi-people-fill text-slate-950 text-lg border-[1px] border-zinc-100 h-8 w-8 p-1 rounded-full flex justify-center items-center"
-    ></i>
+    <a
+      routerLink="/"
+      class="cursor-pointer hover:shadow-md h-8 w-8 rounded-full"
+    >
+      <i
+        class="bi bi-exclamation-circle-fill text-slate-950 text-lg border-[1px] border-zinc-100 h-8 w-8 p-1 rounded-full flex justify-center items-center"
+      ></i>
+    </a>
+    <a
+      routerLink="/"
+      class="cursor-pointer hover:shadow-md h-8 w-8 rounded-full"
+    >
+      <i
+        class="bi bi-people-fill text-slate-950 text-lg border-[1px] border-zinc-100 h-8 w-8 p-1 rounded-full flex justify-center items-center"
+      ></i>
+    </a>
     <div
-      class="flex justify-center items-center gap-2 border-[1px] cursor-pointer rounded-full px-[3px]"
+      class="btnCardProfile flex justify-center items-center gap-2 border-[1px] cursor-pointer rounded-full px-[3px] hover:shadow-md"
     >
       <img
         src="../../../assets/images/me.jpg"
@@ -49,6 +71,102 @@
         class="w-7 h-7 rounded-full"
       />
       <i class="bi bi-upc text-2xl"></i>
+    </div>
+    <div
+      class="cardProfile hidden p-4 overflow-y-scroll flex-col justify-stretch items-start z-10 absolute top-10 right-0 overflow-y bg-slate-800 rounded-s-md rounded-b-md shadow-md h-96 w-56 text-zinc-300 shadow-md"
+    >
+      <div class="flex gap-1 justify-center items-center pt-1">
+        <img
+          src="../../../assets/images/me.jpg"
+          alt=""
+          class="w-7 h-7 rounded-full"
+        />
+        <div class="flex flex-col gap-0">
+          <h4 class="text-white text-[12px] font-bold">Mário Norberto</h4>
+          <h6 class="text-sm text-[10px] overflow-hidden font-lighter">
+            marionorberto2018&#64;gmail.com
+          </h6>
+        </div>
+      </div>
+      <div
+        class="flex w-full flex-col justify-center items-start gap-2 border-t-[1px] mt-4 border-slate-700 pt-2"
+      >
+        <a
+          routerLink="/profile"
+          class="flex justify-center items-center gap-2 text-[14px] hover:text-zinc-500 text-zinc-400"
+          ><i class="bi bi-person-fill text-lg"></i> Profile</a
+        >
+        <a
+          routerLink="/post-saved"
+          class="flex justify-center items-center gap-2 text-[14px] hover:text-zinc-500 text-zinc-400"
+          ><i class="bi bi-save-fill text-lg"></i> Saved</a
+        >
+        <a
+          routerLink="/profile-setting"
+          class="flex justify-center items-center gap-2 text-[14px] text-zinc-400 hover:text-zinc-500"
+          ><i class="bi bi-gear-fill text-lg"></i> Settings</a
+        >
+      </div>
+      <div
+        class="flex w-full flex-col justify-center items-start gap-2 border-t-[1px] mt-4 border-slate-700 pt-2"
+      >
+        <a
+          routerLink="/new-post"
+          class="flex justify-center items-center gap-2 text-[14px] hover:text-zinc-500 text-zinc-400"
+          ><i class="bi bi-plus text-lg"></i> Compose new Post</a
+        >
+        <a
+          routerLink="/arquived-post"
+          class="flex justify-center items-center gap-2 text-[14px] hover:text-zinc-500 text-zinc-400"
+          ><i class="bi bi-download text-lg"></i> Check Arquived Post</a
+        >
+        <a
+          routerLink="/notifications"
+          class="flex justify-center items-center gap-2 text-[14px] hover:text-zinc-500 text-zinc-400"
+          ><i class="bi bi-bell-fill text-lg"></i> Check Notifications</a
+        >
+      </div>
+      <div
+        class="border-t-[1px] mb-4 border-slate-700 flex justify-start items-center gap-3 pt-3 w-full mt-2"
+      >
+        <button
+          class="relative bg-white rounded-md h-14 w-20 p-1 hover:shadow-zinc-600 hover:shadow-md"
+        >
+          <i
+            class="absolute left-7 top-4 bi bi-check text-white bg-slate-700 text-lg h-5 w-5 rounded-full flex justify-center items-center"
+          ></i>
+          <div class="bg-zinc-200 w-full rounded-sm h-4"></div>
+          <div class="flex gap-1 justify-between items-center py-1">
+            <div class="bg-zinc-200 w-5 rounded-sm h-7"></div>
+            <div class="bg-zinc-200 w-5 rounded-sm h-7"></div>
+            <div class="bg-zinc-200 w-5 rounded-sm h-7"></div>
+          </div>
+          <h4 class="hover:text-zinc-500 text-zinc-400 text-start py-1 text-sm">
+            Light
+          </h4>
+        </button>
+        <button
+          class="relative bg-black rounded-md h-14 w-20 p-1 hover:shadow-zinc-600 hover:shadow-md"
+        >
+          <i
+            class="absolute left-7 top-4 bi bi-check text-white bg-slate-700 text-lg h-5 w-5 rounded-full flex justify-center items-center"
+          ></i>
+          <div class="bg-neutral-800 w-full rounded-sm h-4"></div>
+          <div class="flex gap-1 justify-between items-center py-1">
+            <div class="bg-neutral-800 w-5 rounded-sm h-7"></div>
+            <div class="bg-neutral-800 w-5 rounded-sm h-7"></div>
+            <div class="bg-neutral-800 w-5 rounded-sm h-7"></div>
+          </div>
+          <h4 class="hover:text-zinc-500 text-zinc-400 text-start py-1 text-sm">
+            Dark
+          </h4>
+        </button>
+      </div>
+      <div
+        class="py-3 w-full border-t-[1px] mt-4 border-slate-700 hover:text-zinc-500 text-zinc-400 font-semibold flex justify-start items-center gap-2 cursor-pointer"
+      >
+        <i class="bi bi-box-arrow-left font-bold text-2xl"></i> logout
+      </div>
     </div>
   </section>
 </nav>

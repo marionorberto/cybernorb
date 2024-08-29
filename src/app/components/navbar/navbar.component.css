@@ -1,0 +1,6 @@
+.nav-active {
+  background: #334155;
+  border-top-width: 3px;
+  --tw-border-opacity: 1;
+  border-color: rgb(161 161 170 / var(--tw-border-opacity));
+}

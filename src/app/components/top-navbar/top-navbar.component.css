@@ -2,3 +2,11 @@
   width: 80px;
   height: 70px;
 }
+
+.nav-active {
+  background: #e2e8f0;
+}
+
+.showCardProfile {
+  display: flex;
+}
