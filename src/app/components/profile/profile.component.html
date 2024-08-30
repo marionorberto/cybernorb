@@ -1,0 +1,263 @@
+<app-top-navbar></app-top-navbar>
+<section
+  class="flex flex-col gap-0 w-full mb-6 bg-white border-[1px] border-zinc-100"
+>
+  <section class="relative">
+    <img
+      src="../../../../assets/images/mountain.jpg"
+      class="w-full h-[300px]"
+      alt=""
+    />
+
+    <label
+      id="coverProfilePhotoLabel"
+      for="coverProfilePhoto"
+      class="absolute text-[12px] bg-zinc-50 hover:bg-zinc-100 p-4 right-4 top-4 rounded-md cursor-pointer"
+    >
+      Upload cover photo <i class="bi bi-camera"></i>
+      <input
+        type="file"
+        accept=".png, .jpg, .jpeg"
+        name="coverProfilePhoto"
+        id="coverProfilePhoto"
+        class="hidden"
+      />
+    </label>
+    <div class="absolute bottom-[-40px] left-[45%]">
+      <div class="relative">
+        <img
+          src="../../../../assets/images/me.jpg"
+          class="w-32 h-32 rounded-full border-[1px] border-white"
+          alt=""
+        />
+        <label for="profilePhoto" id="profilePhotoLabel">
+          <i
+            class="absolute bi bi-pencil-fill left-[85%] top-20 h-8 w-8 text-sm flex justify-center items-center bg-zinc-200 text-black hover:bg-zinc-300 p-1 cursor-pointer rounded-full"
+          ></i>
+          <input
+            id="profilePhoto"
+            name="profilePhoto"
+            type="file"
+            accept=".png, .jpeg, .jpg"
+            class="hidden"
+          />
+        </label>
+      </div>
+    </div>
+  </section>
+  <section
+    class="p-6 pb-10 flex flex-col shadow-md justify-center items-center gap-3"
+  >
+    <h1 class="font-semibold text-2xl mt-8 mb-3 text-center">Mário Norberto</h1>
+
+    <div class="flex gap-3 justify-around text-[12px]">
+      <span class="text-zinc-700"
+        ><i class="bi bi-laptop"></i> Fullstack Developer
+      </span>
+      <span class="text-zinc-700"
+        ><i class="bi bi-geo-alt"></i> Luanda, Angola
+      </span>
+      <span class="text-zinc-700"
+        >Joined July 29 <i class="bi bi-calendar-date"></i
+      ></span>
+    </div>
+
+    <div class="flex flex-col justify-center items-center">
+      <span class="font-semibold text-lg mt-2">profile complete</span>
+      <div class="flex gap-1 items-center justify-center">
+        <div class="bg-zinc-300 w-48 h-1 rounded-md">
+          <div class="bg-green-600 w-20 h-1 rounded-md"></div>
+        </div>
+        <span class="text-[9px]">60%</span>
+      </div>
+    </div>
+  </section>
+</section>
+
+<section
+  class="flex flex-col justify-between items-stretch gap-2 mb-6 mt-8 mx-auto w-[70%] bg-white rounded-lg p-6 shadow-sm"
+>
+  <h3 class="text-black font-semibold">Edit your profile information</h3>
+  <div class="flex gap-1 w-full">
+    <div class="w-1/2">
+      <input
+        type="text"
+        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        name="firstname"
+        placeholder="Firstname"
+      />
+    </div>
+    <div class="w-1/2">
+      <input
+        type="text"
+        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        name="lastname"
+        placeholder="Lastname"
+      />
+    </div>
+  </div>
+  <div class="flex gap-1 w-full">
+    <div class="w-1/2">
+      <input
+        type="text"
+        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        name="job"
+        placeholder="Job Title"
+      />
+    </div>
+    <div class="w-1/2">
+      <input
+        type="text"
+        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        name="company"
+        placeholder="Company Name"
+      />
+    </div>
+  </div>
+  <div class="flex gap-1 w-full">
+    <div class="w-1/2">
+      <input
+        type="text"
+        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        name="phone"
+        placeholder="Phone Number"
+      />
+    </div>
+    <div class="w-1/2">
+      <input
+        type="text"
+        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        name="email"
+        placeholder="Email Address"
+      />
+    </div>
+  </div>
+  <textarea
+    type="text"
+    name="bio"
+    class="border-zinc-200 border-[1px] rounded-md h-40 w-full justify-items-start p-2 text-black flex justify-start items-stretch"
+    placeholder="write your bio information here!"
+  ></textarea>
+  <div class="flex gap-2">
+    <button
+      class="transition-all text-[14px] transition-[all 0.4s ease-in-out] font-medium hover:text-white hover:bg-neutral-800 border-[1px] border-black text-white bg-black hover:shadow-md px-6 py-2 rounded-md shadow-sm"
+    >
+      Save
+    </button>
+    <button
+      class="transition-all text-[14px] transition-[all 0.4s ease-in-out] font-medium hover:text-white hover:bg-neutral-800 border-[1px] border-black text-black bg-white px-6 py-2 rounded-md hover:shadow-md"
+    >
+      Cancel
+    </button>
+  </div>
+</section>
+
+<section
+  class="flex flex-col justify-between items-stretch gap-2 mb-6 mt-8 mx-auto w-[70%] bg-white rounded-lg p-6 shadow-sm"
+>
+  <h3 class="text-black font-semibold">Profissional information</h3>
+  <div class="flex gap-1 w-full">
+    <div class="w-1/2">
+      <input
+        type="text"
+        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        name="mainJob"
+        placeholder="Main job"
+      />
+    </div>
+    <div class="w-1/2">
+      <input
+        type="text"
+        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        name="firstJob"
+        placeholder="Is your Firs Job?"
+      />
+    </div>
+  </div>
+  <div class="flex gap-1 w-full">
+    <div class="w-1/2">
+      <input
+        type="text"
+        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        name="remoteJob"
+        placeholder="Is you work remote?"
+      />
+    </div>
+    <div class="w-1/2">
+      <input
+        type="text"
+        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        name="jobPlace"
+        placeholder="Where is your job placed?"
+      />
+    </div>
+  </div>
+  <div class="flex gap-1 w-full">
+    <div class="w-1/2">
+      <input
+        type="text"
+        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        name="phone"
+        placeholder="Phone Number"
+      />
+    </div>
+    <div class="w-1/2">
+      <input
+        type="text"
+        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        name="email"
+        placeholder="Email Address"
+      />
+    </div>
+  </div>
+  <div class="flex gap-2">
+    <button
+      class="transition-all text-[14px] transition-[all 0.4s ease-in-out] font-medium hover:text-white hover:bg-neutral-800 border-[1px] border-black text-white bg-black hover:shadow-md px-6 py-2 rounded-md shadow-sm"
+    >
+      Save
+    </button>
+    <button
+      class="transition-all text-[14px] transition-[all 0.4s ease-in-out] font-medium hover:text-white hover:bg-neutral-800 border-[1px] border-black text-black bg-white px-6 py-2 rounded-md hover:shadow-md"
+    >
+      Cancel
+    </button>
+  </div>
+</section>
+
+<section
+  class="flex flex-col justify-between items-stretch gap-2 mb-6 mt-8 mx-auto w-[70%] bg-white rounded-lg p-6 shadow-sm"
+>
+  <h3 class="text-black font-semibold">Connected Account</h3>
+  <div class="flex gap-1 w-[50%]">
+    <div class="flex gap-1 w-full">
+      <div class="w-1/2 flex justify-start gap-2 items-center">
+        <div class="flex gap-2 items-center justify-start">
+          <i class="bi bi-google text-black"></i>
+          <h3 class="text-sm">Google</h3>
+        </div>
+        <button
+          class="bg-red-100 text-sm cursor-pointer p-1 rounded-md text-red-500"
+        >
+          Disconnect
+        </button>
+      </div>
+      <div class="w-1/2 flex justify-start gap-2 items-center">
+        <div class="flex gap-2 items-center justify-start">
+          <i class="bi bi-linkedin text-blue-500"></i>
+          <h3 class="text-[15px]">Linkedin</h3>
+        </div>
+        <button
+          class="bg-blue-100 text-sm cursor-pointer p-1 rounded-md text-blue-500"
+        >
+          connect
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section
+  class="flex justify-between items-stretch mb-6 mt-8 w-full bg-white rounded-lg p-6"
+>
+  ada
+</section> -->
