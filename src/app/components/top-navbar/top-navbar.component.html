@@ -37,7 +37,10 @@
     </li>
   </ul>
   <section class="absolute right-9 flex justify-center gap-2 items-center">
-    <div class="relative hover:shadow-md h-8 w-8 rounded-full cursor-pointer">
+    <a
+      routerLink="/notifications"
+      class="relative hover:shadow-md h-8 w-8 rounded-full cursor-pointer"
+    >
       <i
         class="bi bi-bell-fill text-slate-950 text-lg border-[1px] border-zinc-100 h-8 w-8 p-1 rounded-full flex justify-center items-center"
       ></i>
@@ -45,9 +48,9 @@
         class="absolute top-0 right-[-2px] bg-red-500 text-[9px] rounded-full flex justify-center items-center w-4 text-white"
         >10</span
       >
-    </div>
+    </a>
     <a
-      routerLink="/"
+      routerLink="/usage"
       class="cursor-pointer hover:shadow-md h-8 w-8 rounded-full"
     >
       <i
@@ -55,7 +58,7 @@
       ></i>
     </a>
     <a
-      routerLink="/"
+      routerLink="/community"
       class="cursor-pointer hover:shadow-md h-8 w-8 rounded-full"
     >
       <i
@@ -73,7 +76,7 @@
       <i class="bi bi-upc text-2xl"></i>
     </div>
     <div
-      class="cardProfile hidden p-4 overflow-y-scroll flex-col justify-stretch items-start z-10 absolute top-10 right-0 overflow-y bg-slate-800 rounded-s-md rounded-b-md shadow-md h-96 w-56 text-zinc-300 shadow-md"
+      class="cardProfile hidden p-4 overflow-x-hidden overflow-y-scroll flex-col justify-stretch items-start z-10 absolute top-10 right-0 overflow-y bg-slate-800 rounded-s-md rounded-b-md shadow-md h-96 w-56 text-zinc-300 shadow-md"
     >
       <div class="flex gap-1 justify-center items-center pt-1">
         <img
@@ -83,7 +86,7 @@
         />
         <div class="flex flex-col gap-0">
           <h4 class="text-white text-[12px] font-bold">Mário Norberto</h4>
-          <h6 class="text-sm text-[8px] overflow-hidden font-lighter">
+          <h6 class="text-[8px] overflow-hidden font-lighter">
             marionorberto2018&#64;gmail.com
           </h6>
         </div>
@@ -93,17 +96,17 @@
       >
         <a
           routerLink="/profile"
-          class="flex justify-center items-center gap-2 text-[14px] hover:text-zinc-500 text-zinc-400"
+          class="flex justify-center items-center gap-2 text-[14px] hover:text-zinc-400 text-zinc-300"
           ><i class="bi bi-person-fill text-lg"></i> Profile</a
         >
         <a
-          routerLink="/post-saved"
-          class="flex justify-center items-center gap-2 text-[14px] hover:text-zinc-500 text-zinc-400"
+          routerLink="/posts?arquived=true"
+          class="flex justify-center items-center gap-2 text-[14px] hover:text-zinc-400 text-zinc-300"
           ><i class="bi bi-save-fill text-lg"></i> Saved</a
         >
         <a
           routerLink="/profile-setting"
-          class="flex justify-center items-center gap-2 text-[14px] text-zinc-400 hover:text-zinc-500"
+          class="flex justify-center items-center gap-2 text-[14px] text-zinc-300 hover:text-zinc-400"
           ><i class="bi bi-gear-fill text-lg"></i> Settings</a
         >
       </div>
@@ -112,17 +115,17 @@
       >
         <a
           routerLink="/new-post"
-          class="flex justify-center items-center gap-2 text-[14px] hover:text-zinc-500 text-zinc-400"
+          class="flex justify-center items-center gap-2 text-[14px] hover:text-zinc-400 text-zinc-300"
           ><i class="bi bi-plus text-lg"></i> Compose new Post</a
         >
         <a
           routerLink="/arquived-post"
-          class="flex justify-center items-center gap-2 text-[14px] hover:text-zinc-500 text-zinc-400"
+          class="flex justify-center items-center gap-2 text-[14px] hover:text-zinc-400 text-zinc-300"
           ><i class="bi bi-download text-lg"></i> Check Arquived Post</a
         >
         <a
           routerLink="/notifications"
-          class="flex justify-center items-center gap-2 text-[14px] hover:text-zinc-500 text-zinc-400"
+          class="flex justify-center items-center gap-2 text-[14px] hover:text-zinc-400 text-zinc-300"
           ><i class="bi bi-bell-fill text-lg"></i> Check Notifications</a
         >
       </div>
@@ -162,11 +165,12 @@
           </h4>
         </button>
       </div>
-      <div
-        class="py-3 w-full border-t-[1px] mt-4 border-slate-700 hover:text-zinc-500 text-zinc-400 font-semibold flex justify-start items-center gap-2 cursor-pointer"
+      <a
+        routerLink="/login"
+        class="py-3 w-full border-t-[1px] mt-4 border-slate-700 hover:text-zinc-400 text-zinc-300 font-semibold flex justify-start items-center gap-2 cursor-pointer"
       >
         <i class="bi bi-box-arrow-left font-bold text-2xl"></i> logout
-      </div>
+      </a>
     </div>
   </section>
 </nav>

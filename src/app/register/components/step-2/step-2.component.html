@@ -1,0 +1,86 @@
+<section
+  class="flex flex-col justify-between items-stretch gap-2 mb-6 mt-8 mx-auto w-[96%] bg-white rounded-lg p-6 shadow-sm"
+>
+  <h3 class="text-slate-800 font-semibold text-xl mb-1">
+    Set your personal information:
+  </h3>
+  <div class="flex gap-1 w-full">
+    <div class="w-1/2">
+      <input
+        type="text"
+        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        name="firstname"
+        placeholder="Firstname*"
+      />
+    </div>
+    <div class="w-1/2">
+      <input
+        type="text"
+        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        name="lastname"
+        placeholder="Lastname*"
+      />
+    </div>
+  </div>
+
+  <div class="flex gap-1 w-full">
+    <div class="w-1/2">
+      <input
+        type="text"
+        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        name="phone"
+        placeholder="Phone Number"
+      />
+    </div>
+    <div class="w-1/2">
+      <input
+        type="text"
+        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        name="email"
+        placeholder="Email Address"
+      />
+    </div>
+  </div>
+  <div class="flex gap-1 w-full">
+    <div class="w-1/2">
+      <select
+        name="country"
+        id="country"
+        class="rounded-md text-[15px] bg-white border-[1px] border-zinc-200 text-zinc-400 w-full p-2"
+      >
+        <option value="">choose country</option>
+        <option value="ao">Angola</option>
+        <option value="pt">Portugal</option>
+        <option value="br">Brasil</option>
+        <option value="us">USA</option>
+      </select>
+    </div>
+    <div class="w-1/2">
+      <input
+        type="date"
+        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-zinc-400 w-full p-2"
+        name="birthday"
+        placeholder="birthday"
+      />
+    </div>
+  </div>
+  <textarea
+    type="text"
+    name="bio"
+    class="border-zinc-200 border-[1px] rounded-md h-40 w-full justify-items-start p-2 text-black flex justify-start items-stretch"
+    placeholder="write your bio information here!"
+  ></textarea>
+
+  <div class="flex gap-2">
+    <button
+      class="transition-all text-[14px] transition-[all 0.4s ease-in-out] font-medium hover:text-white hover:bg-slate-800 border-[1px] text-white bg-slate-900 hover:shadow-md px-6 py-2 rounded-md shadow-sm"
+    >
+      Save
+    </button>
+    <button
+      class="transition-all text-[14px] transition-[all 0.4s ease-in-out] font-medium hover:text-white hover:bg-slate-800 border-[1px] border-slate-500 text-slate-900 bg-white px-6 py-2 rounded-md hover:shadow-md"
+    >
+      Cancel
+    </button>
+  </div>
+</section>

@@ -1,6 +1,7 @@
 <section
-  class="login-img-bg h-screen w-screen flex justify-center items-center"
+  class="login-img-bg h-screen w-screen flex flex-col justify-center items-center"
 >
+  <h1 class="text-3xl font-bold text-white mb-3">Sign In</h1>
   <form
     action="/login"
     method="post"
@@ -30,10 +31,16 @@
 
     <button
       type="submit"
-      class="w-full p-3 bg-black hover:bg-neutral-900 rounded-sm text-white"
+      class="w-full p-3 bg-slate-900 hover:bg-slate-800 rounded-sm text-white hover:shadow-sm"
     >
       submit <i class="bi bi-send"></i>
     </button>
+    <div class="flex justify-end items-center gap-3 my-[-15px]">
+      <span class="text-[12px] text-zinc-400">i have no account</span>
+      <a routerLink="/register" class="underline text-[12px] text-blue-600"
+        >sign up</a
+      >
+    </div>
     <div class="flex justify-center items-center gap-2">
       <hr class="w-full" />
       <span class="text-zinc-300">or</span>
@@ -41,13 +48,13 @@
     </div>
     <div class="w-full flex flex-col justify-center items-center gap-2">
       <button
-        class="w-full text-black font-semibold flex justify-center items-center rounded-full border-[1px] border-zinc-300 p-3"
+        class="w-full text-black font-semibold flex justify-center items-center rounded-full border-[1px] hover:shadow-sm border-zinc-300 p-3 hover:border-zinc-400"
       >
         <img src="../../../assets/images/google.png" class="w-8" alt="" />
         <span>Google</span>
       </button>
       <button
-        class="text-black w-full font-semibold flex gap-2 justify-center items-center rounded-full border-[1px] border-zinc-300 p-3"
+        class="text-black w-full font-semibold flex gap-2 justify-center items-center rounded-full border-[1px] border-zinc-300 p-3 hover:shadow-sm hover:border-zinc-400"
       >
         <img src="../../../assets/images/github.png" class="w-4 h-4" alt="" />
         <span>Github</span>

@@ -1,0 +1,97 @@
+<section
+  class="flex flex-col justify-between items-stretch gap-2 mb-6 mt-8 mx-auto w-[%] bg-white rounded-lg p-6 shadow-sm"
+>
+  <h3 class="text-xl font-semibold text-slate-800 mb-1">
+    Set your Profissional information:
+  </h3>
+  <div class="flex gap-1 w-full">
+    <div class="w-1/2">
+      <select
+        name="job"
+        id="job"
+        class="rounded-md text-[15px] bg-white border-[1px] border-zinc-200 text-zinc-400 w-full p-2"
+      >
+        <option value="">Job*</option>
+        <option value="none">no working</option>
+        <option value="student">student</option>
+        <option value="frontend">frontend dev</option>
+        <option value="backend">backend dev</option>
+        <option value="enthusiat-hacker">enthusiat hacker</option>
+        <option value="enthusiat-programmer">enthusiast programmer</option>
+        <option value="cyber-engineer">cyber-sec... engineer</option>
+        <option value="web-pen">web pent</option>
+        <option value="us">other</option>
+      </select>
+    </div>
+    <div class="w-1/2 relative">
+      <input
+        type="text"
+        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        placeholder="Is your First Job?"
+      />
+      <input
+        type="checkbox"
+        checked
+        class="absolute right-3 top-3"
+        name="firstJob"
+        id="firstJob"
+      />
+    </div>
+  </div>
+  <div class="flex gap-1 w-full">
+    <div class="w-1/2 relative">
+      <input
+        type="text"
+        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        placeholder="Is your work remote?"
+      />
+      <input
+        type="checkbox"
+        checked
+        class="absolute right-3 top-3"
+        name="remoteJob"
+        id="remoteJob"
+      />
+    </div>
+    <div class="w-1/2">
+      <input
+        type="number"
+        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-zinc-500 w-full p-2"
+        name="work-year"
+        placeholder="years works"
+        min="0"
+        value="1"
+      />
+    </div>
+  </div>
+  <div class="flex gap-1 w-full">
+    <div class="w-1/2">
+      <input
+        type="text"
+        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        name="phone"
+        placeholder="Phone Number"
+      />
+    </div>
+    <div class="w-1/2">
+      <input
+        type="text"
+        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        name="email"
+        placeholder="Email Address"
+      />
+    </div>
+  </div>
+  <div class="flex gap-2">
+    <button
+      class="transition-all text-[14px] transition-[all 0.4s ease-in-out] font-medium hover:text-white hover:bg-neutral-800 border-[1px] border-black text-white bg-black hover:shadow-md px-6 py-2 rounded-md shadow-sm"
+    >
+      Save
+    </button>
+    <button
+      class="transition-all text-[14px] transition-[all 0.4s ease-in-out] font-medium hover:text-white hover:bg-neutral-800 border-[1px] border-black text-black bg-white px-6 py-2 rounded-md hover:shadow-md"
+    >
+      Cancel
+    </button>
+  </div>
+</section>

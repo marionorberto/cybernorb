@@ -1,16 +1,17 @@
 <section
-  class="flex flex-col justify-center items-start gap-3 ps-2 w-[18rem] bg-white"
+  class="flex flex-col justify-center items-start gap-3 ps-2 w-[17rem] bg-white"
 >
   <section class="w-full">
-    <h2
-      class="font-bold text-sm text-black flex justify-start items-center gap-1 mb-4"
+    <a
+      routerLink="/most-read"
+      class="cursor-pointer hover:underline font-bold text-sm text-black flex justify-start items-center gap-1 mb-4"
     >
       Most Read
       <i
         class="bi bi-chevron-right text-[12px] h-4 w-4 border-[1px] border-zinc-200 rounded-full p1 text-black font-bold flex justify-center items-center"
       ></i>
-    </h2>
-    <div class="border-s-[1px] border-zinc-100 ps-2">
+    </a>
+    <div class="border-s-[1px] border-zinc-50 ps-2">
       <app-card-most-read></app-card-most-read>
       <app-card-most-read></app-card-most-read>
       <app-card-most-read></app-card-most-read>
@@ -18,6 +19,14 @@
       <app-card-most-read></app-card-most-read>
     </div>
   </section>
-  <section class="bg-slate-100 w-full h-72"></section>
-  <section class="bg-slate-100 w-full h-72"></section>
+  <section
+    class="bg-slate-50 w-full h-72 flex flex-col justify-center items-center"
+  >
+    Ad
+  </section>
+  <section
+    class="bg-slate-50 w-full h-72 flex flex-col justify-center items-center"
+  >
+    Ad
+  </section>
 </section>
