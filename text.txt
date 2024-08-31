@@ -5,6 +5,15 @@ missing:
 * concrete images
 * concrete post personal user(image/ name /the  user that posted);
 
+
+
+* navbar rool chevron button
+
+
+
+*footer infinite filter post rool
+
+
 pages:
 *register
 *notification

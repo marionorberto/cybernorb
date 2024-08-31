@@ -1,41 +1,69 @@
-<section
-  class="flex flex-col justify-between items-stretch gap-2 mb-6 mt-8 mx-auto w-[96%] bg-white rounded-lg p-6 shadow-sm"
+<form
+  method="post"
+  action="/"
+  class="flex flex-col justify-between items-stretch gap-2 mb-6 mx-auto w-[96%] bg-transparent rounded-lg p-6 shadow-sm me-36 mt-12"
 >
-  <h3 class="text-slate-800 font-semibold text-xl mb-1">
-    Set your personal information:
+  <h3
+    class="font-bold text-5xl text-zinc-400 flex justify-start items-center gap-2"
+  >
+    step
+    <div
+      class="bg-amber-600 h-6 w-6 font-bold text-white rounded-full flex justify-center items-center text-sm"
+    >
+      2
+    </div>
+  </h3>
+
+  <h3 class="font-semibold text-lg text-white mb-2">
+    Set your personal information
   </h3>
   <div class="flex gap-1 w-full">
     <div class="w-1/2">
       <input
         type="text"
-        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        class="rounded-md bg-transparent text-[15px] border-[1px] border-zinc-200 text-white placeholder:text-white w-full p-2"
         name="firstname"
+        required
         placeholder="Firstname*"
       />
     </div>
     <div class="w-1/2">
       <input
         type="text"
-        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        required
+        class="rounded-md bg-transparent text-[15px] border-[1px] border-zinc-200 text-white placeholder:text-white w-full p-2"
         name="lastname"
         placeholder="Lastname*"
       />
     </div>
   </div>
 
-  <div class="flex gap-1 w-full">
+  <div class="relative flex gap-1 w-full">
     <div class="w-1/2">
       <input
-        type="text"
-        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        type="tel"
+        required
+        class="ps-14 rounded-md bg-transparent text-[15px] border-[1px] border-zinc-200 text-white w-full p-2 placeholder:text-white"
         name="phone"
         placeholder="Phone Number"
       />
+      <select
+        name=""
+        id=""
+        class="absolute top-3 left-0 w-14 bg-transparent text-white text-[11px]"
+      >
+        <option value="">+244</option>
+        <option value="">+55</option>
+        <option value="">+11</option>
+        <option value="">+244</option>
+        <option value="">+244</option>
+      </select>
     </div>
     <div class="w-1/2">
       <input
-        type="text"
-        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        type="email"
+        required
+        class="rounded-md bg-transparent text-[15px] border-[1px] border-zinc-200 text-white w-full p-2 placeholder:text-white"
         name="email"
         placeholder="Email Address"
       />
@@ -46,19 +74,19 @@
       <select
         name="country"
         id="country"
-        class="rounded-md text-[15px] bg-white border-[1px] border-zinc-200 text-zinc-400 w-full p-2"
+        class="rounded-md bg-transparent text-[15px] border-[1px] border-zinc-200 text-white w-full p-2 placeholder:text-white"
       >
         <option value="">choose country</option>
-        <option value="ao">Angola</option>
-        <option value="pt">Portugal</option>
-        <option value="br">Brasil</option>
-        <option value="us">USA</option>
+        <option value="ao">🇦🇴 Angola</option>
+        <option value="pt">🇵🇹 Portugal</option>
+        <option value="br">🇧🇷 Brasil</option>
+        <option value="us">🇺🇸 USA</option>
       </select>
     </div>
     <div class="w-1/2">
       <input
         type="date"
-        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-zinc-400 w-full p-2"
+        class="rounded-md bg-transparent text-[15px] border-[1px] border-zinc-200 text-white w-full p-2 placeholder:text-white"
         name="birthday"
         placeholder="birthday"
       />
@@ -67,20 +95,24 @@
   <textarea
     type="text"
     name="bio"
-    class="border-zinc-200 border-[1px] rounded-md h-40 w-full justify-items-start p-2 text-black flex justify-start items-stretch"
+    class="border-zinc-200 border-[1px] rounded-md bg-transparent h-40 w-full justify-items-start p-2 text-white flex justify-start items-stretch placeholder:text-white"
     placeholder="write your bio information here!"
   ></textarea>
 
   <div class="flex gap-2">
     <button
-      class="transition-all text-[14px] transition-[all 0.4s ease-in-out] font-medium hover:text-white hover:bg-slate-800 border-[1px] text-white bg-slate-900 hover:shadow-md px-6 py-2 rounded-md shadow-sm"
+      type="submit"
+      class="transition-all text-[14px] transition-[all 0.4s ease-in-out] font-medium hover:text-white hover:bg-slate-800 text-white bg-slate-900 hover:shadow-md px-6 py-2 rounded-md shadow-sm"
     >
-      Save
+      Submit
     </button>
     <button
-      class="transition-all text-[14px] transition-[all 0.4s ease-in-out] font-medium hover:text-white hover:bg-slate-800 border-[1px] border-slate-500 text-slate-900 bg-white px-6 py-2 rounded-md hover:shadow-md"
+      class="transition-all text-[14px] transition-[all 0.4s ease-in-out] font-medium hover:text-white hover:bg-slate-900 border-[1px] border-zinc-400 text-zinc-400 px-6 py-2 rounded-md hover:shadow-md bg-transparent"
     >
       Cancel
     </button>
   </div>
-</section>
+  <a href="" class="text-slate-400 text-base mt-2 hover:text-slate-500"
+    ><i class="bi bi-arrow-left"></i> Back</a
+  >
+</form>

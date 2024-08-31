@@ -1,0 +1,55 @@
+<form
+  method="post"
+  action="/"
+  class="flex flex-col justify-between items-stretch gap-2 mb-6 mx-auto w-[96%] bg-transparent rounded-lg p-6 shadow-sm me-48 mt-12"
+>
+  <h3
+    class="font-bold text-5xl text-zinc-400 flex justify-start items-center gap-2"
+  >
+    step
+    <div
+      class="bg-amber-600 h-6 w-6 font-bold text-white rounded-full flex justify-center items-center text-sm"
+    >
+      4
+    </div>
+  </h3>
+
+  <h3 class="font-semibold text-lg text-white mb-2">you're almost there</h3>
+
+  <div class="w-[80%]">
+    <input
+      type="text"
+      required
+      id="password"
+      name="password"
+      class="rounded-md text-[15px] border-[1px] border-white text-white w-full p-2 bg-transparent placeholder:text-white"
+      placeholder="your password"
+    />
+  </div>
+
+  <div class="relative w-[80%]">
+    <input
+      type="text"
+      required
+      id="repeatPassword"
+      name="repeatPassword"
+      class="rounded-md text-[15px] border-[1px] border-white text-white w-full p-2 bg-transparent placeholder:text-white"
+      placeholder="repeat password"
+    />
+
+    <i class="absolute top-2 right-3 bi bi-eye text-zinc-300"></i>
+  </div>
+
+  <div class="flex gap-2 w-[80%]">
+    <button
+      type="text"
+      onclick="activeConfettiEffect()"
+      class="w-full transition-all text-[14px] transition-[all 0.4s ease-in-out] font-medium hover:text-white hover:bg-slate-800 text-white bg-slate-900 hover:shadow-md px-6 py-2 rounded-md shadow-sm"
+    >
+      Submit
+    </button>
+  </div>
+  <a href="" class="text-slate-400 text-base mt-2 hover:text-slate-500"
+    ><i class="bi bi-arrow-left"></i> Back</a
+  >
+</form>

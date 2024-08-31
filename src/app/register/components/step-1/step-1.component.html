@@ -1,8 +1,20 @@
-<section class="mt-9 border-[1px] border-zinc-50 rounded-sm p-4">
-  <h3 class="font-bold text-3xl text-zinc-500">step 1</h3>
-  <h5 class="font-semibold text-sm text-zinc-200">choose your sign up way:</h5>
-  <section class="mt-4 flex justify-center items-center gap-8">
+<section class="mt-0 rounded-sm p-4">
+  <h3
+    class="font-bold text-5xl text-zinc-400 flex justify-start items-center gap-2"
+  >
+    step
+    <div
+      class="bg-amber-600 h-6 w-6 font-bold text-white rounded-full flex justify-center items-center text-sm"
+    >
+      1
+    </div>
+  </h3>
+  <h5 class="font-semibold text-lg text-zinc-300">choose your sign up way</h5>
+  <section class="mt-9 flex justify-center items-center gap-8">
     <div>
+      <h3 class="mb-4 text-white text-sm font-bold">
+        Click to create your account
+      </h3>
       <button
         class="bg-slate-900 hover:bg-slate-800 font-bold hover:shadow-md text-nowrap text-white p-4 rounded-md"
       >
@@ -14,23 +26,34 @@
       >
     </div>
     <div
-      class="w-full flex flex-col justify-center items-center gap-2 ps-8 border-s-[1px] border-zinc-200"
+      class="w-full flex flex-col justify-center items-start gap-2 ps-12 ms-8 border-s-[1px] border-zinc-200"
     >
+      <h3 class="mb-4 text-white text-sm font-bold mt-9">
+        Sign up with a provider
+      </h3>
       <button
-        class="w-60 text-black font-semibold flex justify-center items-center rounded-full border-[1px] hover:shadow-sm border-zinc-300 p-3 hover:border-zinc-400"
+        class="w-60 text-black font-semibold flex justify-center items-center rounded-full border-[1px] hover:shadow-sm border-zinc-400 p-3 hover:border-zinc-500"
       >
         <img src="../../../assets/images/google.png" class="w-8" alt="" />
-        <span>Google</span>
+        <span class="text-zinc-300">Google</span>
       </button>
       <button
-        class="text-black w-60 font-semibold flex gap-2 justify-center items-center rounded-full border-[1px] border-zinc-300 p-3 hover:shadow-sm hover:border-zinc-400"
+        class="text-black w-60 font-semibold flex gap-2 justify-center items-center rounded-full border-[1px] border-zinc-400 p-3 hover:shadow-sm hover:border-zinc-600"
       >
         <img src="../../../assets/images/github.png" class="w-4 h-4" alt="" />
-        <span>Github</span>
+        <span class="text-zinc-300">Github</span>
       </button>
-      <span class="text-[10px] text-zinc-400"
-        >*create a account by a chose provider (preferencial)</span
+      <span class="text-[10px] text-zinc-400 ps-5"
+        >*create a account by a chosen provider (preferencial)</span
       >
     </div>
   </section>
+  <p class="text-white text-sm mt-16">
+    I already have account
+    <a
+      routerLink="/login"
+      class="text-slate-400 text-base mt-2 hover:text-slate-500 hover:underline"
+      >Sign In</a
+    >
+  </p>
 </section>

@@ -1,5 +1,31 @@
 <main>
   <app-navbar></app-navbar>
+  <section
+    class="relative rounded-xl shadow-sm w-96 bg-transparent h-12 flex justify-start items-center border-[1px] border-zinc-100"
+  >
+    <i class="absolute left-2 top-2 text-xl text-zinc-400 bi bi-search"></i>
+    <div
+      class="w-[75%] rounded-s-xl border-e-[2px] border-zinc-200 h-full bg-white"
+    >
+      <input
+        type="text"
+        placeholder="search by post..."
+        class="text-sm search-posts w-full bg-transparent ps-14 text-zinc-600 h-full"
+      />
+    </div>
+    <div
+      class="w-[25%] rounded-e-xl h-full bg-white flex justify-center items-center"
+    >
+      <select
+        name="filter-post"
+        id="filter-post"
+        class="text-zinc-500 bg-transparent text-[12px]"
+      >
+        <option value="">backend</option>
+        <option value="">frontend</option>
+      </select>
+    </div>
+  </section>
   <section class="flex justify-between items-stretch gap-1 bg-white mt-5">
     <app-left-sidebar></app-left-sidebar>
     <app-middle-sidebar></app-middle-sidebar>

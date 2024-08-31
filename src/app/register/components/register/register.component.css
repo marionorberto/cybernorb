@@ -1,0 +1,7 @@
+.register-img-bg {
+  background: url("../../../../assets/images/register3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
