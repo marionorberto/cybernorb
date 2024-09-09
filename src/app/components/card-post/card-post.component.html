@@ -1,6 +1,22 @@
-<section>
+<section class="px-5">
+  <div class="flex justify-start items-center gap-2 mb-3">
+    <img
+      src="../../../assets/images/me.jpg"
+      alt=""
+      class="w-6 h-6 rounded-full"
+    />
+    <div class="flex flex-col items-start justify-center">
+      <h3 class="text-zinc-800 text-sm font-bold">Mário Norberto</h3>
+      <div class="text-sm flex gap-1 justify-start items-center">
+        <span href="" class="text-[11px] text-green-700 font-semibold"
+          ><i class="bi bi-dot"></i>Follow</span
+        >
+        <span class="text-[11px] text-zinc-500">March 1, 2024</span>
+      </div>
+    </div>
+  </div>
   <h1 class="text-zinc-900 text-3xl pb-5">
-    How to install extensios on vs code?
+    How to install extensions on vs code?
   </h1>
   <img
     src="../../../assets/images/how-to-install-images-on-vscode.png"
@@ -16,7 +32,6 @@
       class="flex justify-center items-center text-sm h-8 bg-white border-[1px] border-zinc-200 text-black font-bold shadow-sm rounded-[3px] p-1 text-center"
       >code editor</span
     >
-    <span class="ms-auto text-sm text-zinc-200">July 18, 2024 </span>
   </div>
   <section class="mt-4 text-justify text-sm text-neutral-700">
     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed excepturi
@@ -35,7 +50,7 @@
   </section>
   <div class="flex justify-start items-center gap-3 mt-4">
     <button
-      class="hover:shadow-md flex justify-center items-center gap-3 text-sm rounded-3xl border-[1px] border-zinc-300 p-1 cursor-pointer"
+      class="hover:shadow-md flex justify-center items-center gap-3 text-sm rounded-3xl border-[1px] border-zinc-400 p-1 cursor-pointer"
     >
       <i
         class="flex justify-center items-center gap-1 bi bi-heart-fill font-bold text-slate-700 font-mono"
@@ -53,9 +68,16 @@
         class="rounded-s-3xl border-e-[none] ps-2 border-[1px] text-sm border-zinc-400 p-1"
         placeholder="leave your comment here"
       />
-      <div class="rounded-e-3xl p-1 border-[1px] text-[12px] border-zinc-400">
+      <div
+        class="relative rounded-e-3xl p-1 border-[1px] text-[12px] border-zinc-400"
+      >
         <i class="bi bi-chat-fill text-slate-700"></i> 43
       </div>
     </span>
+    <button
+      class="hover:shadow-md flex justify-center items-center gap-3 text-sm rounded-3xl border-[1px] border-zinc-400 p-1 cursor-pointer text-slate-700 font-light font-mono italic"
+    >
+      UnFollow
+    </button>
   </div>
 </section>

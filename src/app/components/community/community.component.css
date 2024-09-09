@@ -1,0 +1,6 @@
+.card-best-interations {
+  background: url("../../../assets/images/me.jpg");
+  background-repeat: none;
+  background-size: cover;
+  filter: brightness(70%);
+}

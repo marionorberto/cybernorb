@@ -1,7 +1,5 @@
 <app-top-navbar></app-top-navbar>
-<section
-  class="flex flex-col gap-0 w-full mb-6 bg-white border-[1px] border-zinc-100"
->
+<section class="flex flex-col gap-0 w-full mb-6 bg-white">
   <section class="relative">
     <img
       src="../../../../assets/images/mountain.jpg"
@@ -61,28 +59,20 @@
         >Joined July 29 <i class="bi bi-calendar-date"></i
       ></span>
     </div>
-
-    <div class="flex flex-col justify-center items-center">
-      <span class="font-semibold text-lg mt-2">profile complete</span>
-      <div class="flex gap-1 items-center justify-center">
-        <div class="bg-zinc-300 w-48 h-1 rounded-md">
-          <div class="bg-green-600 w-20 h-1 rounded-md"></div>
-        </div>
-        <span class="text-[9px]">60%</span>
-      </div>
-    </div>
   </section>
 </section>
 
 <section
-  class="flex flex-col justify-between items-stretch gap-2 mb-6 mt-8 mx-auto w-[70%] bg-white rounded-lg p-6 shadow-sm"
+  class="flex flex-col justify-between items-stretch gap-2 mt-8 mx-auto w-[60%] bg-white rounded-lg p-6 shadow-sm mb-28"
 >
-  <h3 class="text-black font-semibold">Edit your profile information</h3>
+  <h3 class="text-slate-800 text-xl mb-10 font-semibold">
+    Profile information
+  </h3>
   <div class="flex gap-1 w-full">
     <div class="w-1/2">
       <input
         type="text"
-        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        class="text-[15px] border-b-[1px] border-zinc-400 text-black w-full p-2 bg-zinc-50"
         name="firstname"
         placeholder="Firstname"
       />
@@ -90,7 +80,7 @@
     <div class="w-1/2">
       <input
         type="text"
-        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        class="text-[15px] border-b-[1px] border-zinc-400 text-black w-full p-2 bg-zinc-50"
         name="lastname"
         placeholder="Lastname"
       />
@@ -100,15 +90,40 @@
     <div class="w-1/2">
       <input
         type="text"
-        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
-        name="job"
-        placeholder="Job Title"
+        class="text-[15px] border-b-[1px] border-zinc-400 text-black w-full p-2 bg-zinc-50"
+        name="phone"
+        placeholder="Phone Number"
       />
+    </div>
+
+    <div class="w-1/2">
+      <input
+        type="text"
+        class="text-[15px] border-b-[1px] border-zinc-400 text-black w-full p-2 bg-zinc-50"
+        name="email"
+        placeholder="Email Address"
+      />
+    </div>
+  </div>
+  <div class="flex gap-1 w-full">
+    <!--  -->
+    <div class="w-1/2">
+      <select
+        name="country"
+        id="country"
+        class="bg-zinc-50 text-[15px] border-b-[1px] border-zinc-400 text-zinc-400 w-full p-2 placeholder:text-white"
+      >
+        <option value="">choose country</option>
+        <option value="ao">🇦🇴 Angola</option>
+        <option value="pt">🇵🇹 Portugal</option>
+        <option value="br">🇧🇷 Brasil</option>
+        <option value="us">🇺🇸 USA</option>
+      </select>
     </div>
     <div class="w-1/2">
       <input
         type="text"
-        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        class="text-[15px] border-b-[1px] border-zinc-400 text-black w-full p-2 bg-zinc-50"
         name="company"
         placeholder="Company Name"
       />
@@ -118,15 +133,15 @@
     <div class="w-1/2">
       <input
         type="text"
-        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
-        name="phone"
-        placeholder="Phone Number"
+        class="text-[15px] border-b-[1px] border-zinc-400 text-black w-full p-2 bg-zinc-50"
+        name="job"
+        placeholder="Job Title"
       />
     </div>
     <div class="w-1/2">
       <input
         type="text"
-        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        class="text-[15px] border-b-[1px] border-zinc-400 text-black w-full p-2 bg-zinc-50"
         name="email"
         placeholder="Email Address"
       />
@@ -135,32 +150,14 @@
   <textarea
     type="text"
     name="bio"
-    class="border-zinc-200 border-[1px] rounded-md h-40 w-full justify-items-start p-2 text-black flex justify-start items-stretch"
+    class="border-zinc-400 border-[1px] rounded-md h-40 w-full justify-items-start p-2 text-black flex justify-start items-stretch bg-zinc-50"
     placeholder="write your bio information here!"
   ></textarea>
-  <div class="flex gap-2">
-    <button
-      class="transition-all text-[14px] transition-[all 0.4s ease-in-out] font-medium hover:text-white hover:bg-neutral-800 border-[1px] border-black text-white bg-black hover:shadow-md px-6 py-2 rounded-md shadow-sm"
-    >
-      Save
-    </button>
-    <button
-      class="transition-all text-[14px] transition-[all 0.4s ease-in-out] font-medium hover:text-white hover:bg-neutral-800 border-[1px] border-black text-black bg-white px-6 py-2 rounded-md hover:shadow-md"
-    >
-      Cancel
-    </button>
-  </div>
-</section>
-
-<section
-  class="flex flex-col justify-between items-stretch gap-2 mb-6 mt-8 mx-auto w-[70%] bg-white rounded-lg p-6 shadow-sm"
->
-  <h3 class="text-black font-semibold">Profissional information</h3>
   <div class="flex gap-1 w-full">
     <div class="w-1/2">
       <input
         type="text"
-        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        class="text-[15px] border-b-[1px] border-zinc-400 text-black w-full p-2 bg-zinc-50"
         name="mainJob"
         placeholder="Main job"
       />
@@ -168,7 +165,7 @@
     <div class="w-1/2">
       <input
         type="text"
-        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        class="text-[15px] border-b-[1px] border-zinc-400 text-black w-full p-2 bg-zinc-50"
         name="firstJob"
         placeholder="Is your Firs Job?"
       />
@@ -178,7 +175,7 @@
     <div class="w-1/2">
       <input
         type="text"
-        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        class="text-[15px] border-b-[1px] border-zinc-400 text-black w-full p-2 bg-zinc-50"
         name="remoteJob"
         placeholder="Is you work remote?"
       />
@@ -186,78 +183,24 @@
     <div class="w-1/2">
       <input
         type="text"
-        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
+        class="text-[15px] border-b-[1px] border-zinc-400 text-black w-full p-2 bg-zinc-50"
         name="jobPlace"
         placeholder="Where is your job placed?"
       />
     </div>
   </div>
-  <div class="flex gap-1 w-full">
-    <div class="w-1/2">
-      <input
-        type="text"
-        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
-        name="phone"
-        placeholder="Phone Number"
-      />
-    </div>
-    <div class="w-1/2">
-      <input
-        type="text"
-        class="rounded-md text-[15px] border-[1px] border-zinc-200 text-black w-full p-2"
-        name="email"
-        placeholder="Email Address"
-      />
-    </div>
-  </div>
-  <div class="flex gap-2">
+
+  <div class="flex gap-2 mt-5">
     <button
-      class="transition-all text-[14px] transition-[all 0.4s ease-in-out] font-medium hover:text-white hover:bg-neutral-800 border-[1px] border-black text-white bg-black hover:shadow-md px-6 py-2 rounded-md shadow-sm"
+      type="submit"
+      class="transition-all text-[14px] transition-[all 0.4s ease-in-out] font-medium hover:text-white hover:bg-slate-800 text-white bg-slate-900 hover:shadow-md px-6 py-2 rounded-md shadow-sm"
     >
-      Save
+      Submit
     </button>
     <button
-      class="transition-all text-[14px] transition-[all 0.4s ease-in-out] font-medium hover:text-white hover:bg-neutral-800 border-[1px] border-black text-black bg-white px-6 py-2 rounded-md hover:shadow-md"
+      class="transition-all text-[14px] transition-[all 0.4s ease-in-out] font-medium hover:text-white hover:bg-slate-900 border-[1px] border-zinc-400 text-zinc-400 px-6 py-2 rounded-md hover:shadow-md bg-transparent"
     >
       Cancel
     </button>
   </div>
 </section>
-
-<section
-  class="flex flex-col justify-between items-stretch gap-2 mb-6 mt-8 mx-auto w-[70%] bg-white rounded-lg p-6 shadow-sm"
->
-  <h3 class="text-black font-semibold">Connected Account</h3>
-  <div class="flex gap-1 w-[50%]">
-    <div class="flex gap-1 w-full">
-      <div class="w-1/2 flex justify-start gap-2 items-center">
-        <div class="flex gap-2 items-center justify-start">
-          <i class="bi bi-google text-black"></i>
-          <h3 class="text-sm">Google</h3>
-        </div>
-        <button
-          class="bg-red-100 text-sm cursor-pointer p-1 rounded-md text-red-500"
-        >
-          Disconnect
-        </button>
-      </div>
-      <div class="w-1/2 flex justify-start gap-2 items-center">
-        <div class="flex gap-2 items-center justify-start">
-          <i class="bi bi-linkedin text-blue-500"></i>
-          <h3 class="text-[15px]">Linkedin</h3>
-        </div>
-        <button
-          class="bg-blue-100 text-sm cursor-pointer p-1 rounded-md text-blue-500"
-        >
-          connect
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- <section
-  class="flex justify-between items-stretch mb-6 mt-8 w-full bg-white rounded-lg p-6"
->
-  ada
-</section> -->

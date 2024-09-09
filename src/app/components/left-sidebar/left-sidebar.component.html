@@ -3,7 +3,7 @@
     <h2
       class="font-bold text-sm text-black flex justify-end items-center gap-1 mb-4"
     >
-      Top Interests
+      Top Interest
     </h2>
     <div
       class="flex flex-col justify-stretch items-end gap-3 pb-3 border-zinc-50 border-e-[1px] pe-3"
@@ -13,56 +13,81 @@
       >
         <div class="bg-slate-300 h-3 w-3 rounded-full"></div>
 
-        <span class="text-sm text-zinc-600">backend</span>
+        <span class="text-sm font-light text-zinc-600">{{ interests[0] }}</span>
       </div>
       <div
         class="flex justify-end items-center hover:shadow-md border-[1px] p-1 gap-3 border-zinc-200 rounded-full"
       >
         <div class="bg-slate-400 h-3 w-3 rounded-full"></div>
 
-        <span class="text-sm text-zinc-600">backend</span>
+        <span class="text-sm font-light text-zinc-600">{{ interests[1] }}</span>
       </div>
       <div
         class="flex justify-end items-center hover:shadow-md border-[1px] p-1 gap-3 border-zinc-200 rounded-full"
       >
         <div class="bg-slate-500 h-3 w-3 rounded-full"></div>
 
-        <span class="text-sm text-zinc-600">backend</span>
+        <span class="text-sm font-light text-zinc-600">{{ interests[2] }}</span>
       </div>
       <div
         class="flex justify-end items-center hover:shadow-md border-[1px] p-1 gap-3 border-zinc-200 rounded-full"
       >
         <div class="bg-slate-600 h-3 w-3 rounded-full"></div>
 
-        <span class="text-sm text-zinc-600">frontend</span>
+        <span class="text-sm font-light text-zinc-600">{{ interests[3] }}</span>
       </div>
       <div
         class="flex justify-end items-center hover:shadow-md border-[1px] p-1 gap-3 border-zinc-200 rounded-full"
       >
         <div class="bg-slate-700 h-3 w-3 rounded-full"></div>
 
-        <span class="text-sm text-zinc-600">pentest</span>
+        <span class="text-sm font-light text-zinc-600">{{ interests[4] }}</span>
       </div>
       <div
         class="flex justify-end items-center hover:shadow-md border-[1px] p-1 gap-3 border-zinc-200 rounded-full"
       >
         <div class="bg-slate-800 h-3 w-3 rounded-full"></div>
-        <span class="text-sm text-zinc-600">web dev</span>
+        <span class="text-sm font-light text-zinc-600">{{ interests[5] }}</span>
       </div>
       <div
         class="flex justify-end items-center hover:shadow-md border-[1px] p-1 gap-3 border-zinc-200 rounded-full"
       >
         <div class="bg-slate-900 h-3 w-3 rounded-full"></div>
 
-        <span class="text-sm text-zinc-600">devops</span>
+        <span class="text-sm font-light text-zinc-600">{{ interests[6] }}</span>
       </div>
     </div>
-    <hr class="text-zinc-200 py-2" />
-    <button
-      class="self-end bg-slate-900 rounded-md p-1 px-2 flex justify-center items-center font-semibold text-white gap-2 hover:shadow-md ms-auto"
-    >
-      <i class="bi bi-pencil-square bg-zinc-500 w-7 rounded-sm p-1"></i>Create
-      Post
-    </button>
   </section>
+
+  <div class="bg-white shadow-md p-3 w-full border-[1px] border-zinc-100">
+    <div class="flex justify-between items-center text-slate-600 my-3">
+      <a class="font-bold text-sm">Events</a>
+      <i
+        class="bi bi-arrow-right text-sm font-bold p-1 py-[1px] bg-slate-500 rounded-sm text-white"
+      ></i>
+    </div>
+    <div class="flex justify-between items-center text-slate-600 my-3">
+      <a class="font-bold text-sm">Community</a>
+      <i
+        class="bi bi-arrow-right text-sm font-bold p-1 py-[1px] bg-slate-500 rounded-sm text-white"
+      ></i>
+    </div>
+    <hr />
+    <div class="flex justify-start items-center gap-2 my-3">
+      <button
+        class="text-slate-600 text-sm border-[1px] border-slate-500 rounded-full p-1 font-bold hover:border-zinc-400 shadow-md"
+      >
+        + create post +
+      </button>
+    </div>
+    <div class="flex justify-start items-center gap-2 my-3">
+      <i class="bi bi-bookmark-plus-fill text-slate-700 font-mono"></i>
+      <span class="text-slate-600 text-sm">saved posts</span>
+    </div>
+
+    <div class="flex justify-start items-center gap-2 my-3">
+      <i class="bi bi-share-fill text-slate-700 font-mono"></i>
+      <span class="text-slate-600 text-sm">share posts</span>
+    </div>
+  </div>
 </section>

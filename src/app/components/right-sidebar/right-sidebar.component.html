@@ -12,21 +12,28 @@
       ></i>
     </a>
     <div class="border-s-[1px] border-zinc-50 ps-2">
-      <app-card-most-read></app-card-most-read>
-      <app-card-most-read></app-card-most-read>
-      <app-card-most-read></app-card-most-read>
-      <app-card-most-read></app-card-most-read>
-      <app-card-most-read></app-card-most-read>
+      <app-card-most-read
+        [mostReadData]="mostReadCardContent"
+      ></app-card-most-read>
     </div>
   </section>
   <section
-    class="bg-slate-50 w-full h-72 flex flex-col justify-center items-center"
+    class="w-full h-72 flex flex-col rounded-sm justify-center items-center mb-2 mt-3"
   >
-    Ad
+    <span class="text-zinc-300 me-auto pb-2">Ads</span>
+    <img
+      src="../../../assets/images/ad2.png"
+      class="w-full rounded-md h-full"
+      alt=""
+    />
   </section>
   <section
     class="bg-slate-50 w-full h-72 flex flex-col justify-center items-center"
   >
-    Ad
+    <img
+      src="../../../assets/images/ad1.png"
+      class="w-full h-full rounded-md"
+      alt=""
+    />
   </section>
 </section>

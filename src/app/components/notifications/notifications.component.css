@@ -1,0 +1,10 @@
+#notfificationsOptions option {
+  background: #475569;
+  color: #fff;
+  font-weight: 400;
+}
+
+.card-notification-settings {
+  background-color: rgb(0, 0, 0, 0.5);
+  z-index: 10;
+}

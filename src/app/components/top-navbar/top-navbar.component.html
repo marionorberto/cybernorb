@@ -1,37 +1,66 @@
 <nav
   class="relative p-2 py-3 flex justify-around items-center border-b-[1px] border-zinc-300"
 >
-  <a routerLink="/" class="font-bold"> cybernorb </a>
-  <ul class="flex justify-center items-center gap-1">
+  <a routerLink="/" class="font-bold">
+    <img src="../../../assets/images/logo.png" alt="" srcset=""
+  /></a>
+  <ul class="flex justify-center items-center gap-1 me-10">
     <li>
       <a
         routerLink="/"
         routerLinkActive="nav-active"
-        class="text-slate-500 hover:bg-slate-200 p-1 px-3"
+        class="text-slate-500 hover:bg-slate-100 p-1 px-2 rounded-sm text-sm"
         >Home</a
       >
     </li>
     <li>
       <a
-        routerLink="/perfil"
+        routerLink="/news"
         routerLinkActive="nav-active"
-        class="text-slate-500 hover:bg-slate-200 p-1 px-3"
+        class="text-slate-500 hover:bg-slate-100 p-1 px-2 rounded-sm text-sm"
         >News</a
       >
     </li>
-    <li>
+    <li class="relative">
       <a
-        routerLink="/contacts"
-        routerLinkActive="nav-active"
-        class="text-slate-500 hover:bg-slate-200 p-1 px-3"
-        >Resources</a
+        routerLink="/resources"
+        class="text-slate-500 hover:bg-slate-100 p-1 px-2 rounded-sm text-sm"
+        >Resources <i class="bi bi-chevron-down"></i
+      ></a>
+      <div
+        class="absolute top-7 z-50 left-3 shadow-md rounded-md p-4 bg-white flex flex-col justify-start items-between gap-3 w-48"
       >
+        <a
+          href=""
+          class="text-slate-600 font-semibold text-sm flex justify-between items-center hover:bg-zinc-50 px-2 rounded-sm"
+          >Events
+          <i
+            class="bi bi-arrow-right text-sm font-bold p-1 py-[1px] rounded-sm text-slate-500"
+          ></i
+        ></a>
+        <a
+          href=""
+          class="text-slate-600 font-semibold text-sm flex justify-between items-center hover:bg-zinc-50 px-2 rounded-sm"
+          >Newsletters
+          <i
+            class="bi bi-arrow-right text-sm font-bold p-1 py-[1px] text-slate-500 rounded-sm"
+          ></i>
+        </a>
+        <a
+          href=""
+          class="text-slate-600 font-semibold text-sm flex justify-between items-center hover:bg-zinc-50 px-2 rounded-sm"
+          >Support
+          <i
+            class="bi bi-arrow-right text-sm font-bold p-1 py-[1px] text-slate-500 rounded-sm"
+          ></i
+        ></a>
+      </div>
     </li>
     <li>
       <a
         routerLink="/about"
         routerLinkActive="nav-active"
-        class="text-slate-500 hover:bg-slate-200 p-1 px-3"
+        class="text-slate-500 hover:bg-slate-100 p-1 px-2 rounded-sm text-sm"
         >About</a
       >
     </li>
@@ -50,14 +79,6 @@
       >
     </a>
     <a
-      routerLink="/usage"
-      class="cursor-pointer hover:shadow-md h-8 w-8 rounded-full"
-    >
-      <i
-        class="bi bi-exclamation-circle-fill text-slate-950 text-lg border-[1px] border-zinc-100 h-8 w-8 p-1 rounded-full flex justify-center items-center"
-      ></i>
-    </a>
-    <a
       routerLink="/community"
       class="cursor-pointer hover:shadow-md h-8 w-8 rounded-full"
     >
@@ -65,6 +86,15 @@
         class="bi bi-people-fill text-slate-950 text-lg border-[1px] border-zinc-100 h-8 w-8 p-1 rounded-full flex justify-center items-center"
       ></i>
     </a>
+    <a
+      routerLink="/usage"
+      class="cursor-pointer hover:shadow-md h-8 w-8 rounded-full"
+    >
+      <i
+        class="bi bi-exclamation-circle-fill text-slate-950 text-lg border-[1px] border-zinc-100 h-8 w-8 p-1 rounded-full flex justify-center items-center"
+      ></i>
+    </a>
+
     <div
       class="btnCardProfile flex justify-center items-center gap-2 border-[1px] cursor-pointer rounded-full px-[3px] hover:shadow-md"
     >
@@ -86,7 +116,7 @@
         />
         <div class="flex flex-col gap-0">
           <h4 class="text-white text-[12px] font-bold">Mário Norberto</h4>
-          <h6 class="text-[8px] overflow-hidden font-lighter">
+          <h6 class="text-[10px] overflow-hidden font-lighter">
             marionorberto2018&#64;gmail.com
           </h6>
         </div>

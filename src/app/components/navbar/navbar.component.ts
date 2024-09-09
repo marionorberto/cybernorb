@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
@@ -5,6 +6,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   selector: 'app-navbar',
   standalone: true,
   imports: [
+    CommonModule,
     RouterLink,
     RouterLinkActive,
   ],
@@ -12,5 +14,25 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+
+  techs: string[];
+
+  constructor() {
+    this.techs = [
+      'Breaking News',
+      'Hacking',
+      'Backend',
+      'SOC',
+      'News',
+      'Javascrip',
+      'Vunerabilites',
+      'UX',
+      'Pesting',
+      'php',
+      'laravel',
+      '.Net',
+      'Angular',
+    ]
+  }
 
 }

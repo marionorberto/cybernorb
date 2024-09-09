@@ -10,8 +10,14 @@ import { InterestsComponent } from "../interests/interests.component";
 })
 export class LeftSidebarComponent {
 
-  receive(e: any) {
-    console.log(e);
-  }
+ interests = [
+  'Backend',
+  'Pentest',
+  'Angular',
+  'Docker',
+  'Sql',
+  'NodeJs',
+  'NestJs'
+ ]
 
 }

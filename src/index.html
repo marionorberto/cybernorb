@@ -16,9 +16,21 @@
       const btnCardProfile = document.querySelector(".btnCardProfile");
       const cardProfile = document.querySelector(".cardProfile");
 
-      btnCardProfile.addEventListener("click", (event) => {
-        cardProfile.classList.toggle("showCardProfile");
+      btnCardProfile.addEventListener("mouseenter", (event) => {
+        cardProfile.classList.add("showCardProfile");
       });
+
+      btnCardProfile.addEventListener("mouseleave", (event) => {
+        cardProfile.classList.remove("showCardProfile");
+      });
+
+      // cardProfile.addEventListener("mouseover", (event) => {
+      //   cardProfile.classList.remove("showCardProfile");
+      // });
+
+      // cardProfile.addEventListener("mouseleave", (event) => {
+      //   cardProfile.classList.remove("showCardProfile");
+      // });
     </script>
 
     <script>
@@ -53,6 +65,29 @@
           });
         }, 250);
       }
+    </script>
+
+    <script>
+      const navbarTechleft = document.querySelector(".navbar-tech-left");
+      const navbarTechRight = document.querySelector(".navbar-tech-right");
+      const iconSearchCenter = document.querySelector(".icon-search-center");
+
+      const parentIconSearchCenter = iconSearchCenter.parentElement;
+      parentIconSearchCenter.addEventListener("focusin", () => {
+        iconSearchCenter.classList.remove("bi-search");
+      });
+
+      parentIconSearchCenter.addEventListener("focusout", () => {
+        iconSearchCenter.classList.add("bi-search");
+      });
+
+      navbarTechleft.addEventListener("click", () => {
+        alert("left");
+      });
+
+      navbarTechRight.addEventListener("click", () => {
+        alert("right");
+      });
     </script>
   </body>
 </html>

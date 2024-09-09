@@ -1,27 +1,19 @@
 missing: 
 
-* logo
-* navbar concrete links
+*favicon
 * concrete images
-* concrete post personal user(image/ name /the  user that posted);
-
-
-
 * navbar rool chevron button
 
-
-
-*footer infinite filter post rool
-
-
 pages:
-*register
 *notification
 *commnunity
 *usage
 *about
 *singular post page
-*add new post
+
+
+
+
 
 
 `create an app to help you manage the time and the taks while you're programming

@@ -6,6 +6,10 @@
 /out-tsc
 /bazel-out
 
+dark-mode-strategy.txt
+text.txt
+file.txt
+
 # Node
 /node_modules
 npm-debug.log

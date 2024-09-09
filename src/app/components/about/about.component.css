@@ -1,0 +1,6 @@
+.bg-img {
+  background: url("../../../assets/images/about.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(30%);
+}

@@ -12,11 +12,21 @@ import { privateDecrypt } from 'crypto';
 import { PrivacyComponent } from './components/privacy/privacy.component';
 import { AdviceUsageComponent } from './components/advice-usage/advice-usage.component';
 import { MostReadComponent } from './components/most-read/most-read.component';
+import { NewsComponent } from './components/news/news.component';
+import { ResourcesComponent } from './components/resources/resources.component';
 
 export const routes: Routes = [
   {
     path: '',
     component: MainLayoutComponent
+  },
+  {
+    path: 'news',
+    component: NewsComponent, 
+  },
+  {
+    path: 'resources',
+    component: ResourcesComponent, 
   },
   {
     path: 'login',

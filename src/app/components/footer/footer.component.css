@@ -1,0 +1,12 @@
+.scroll-content {
+  animation: scroll 35s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
