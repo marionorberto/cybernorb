@@ -21,40 +21,24 @@
         >News</a
       >
     </li>
-    <li class="relative">
-      <a
-        routerLink="/resources"
-        class="text-slate-500 hover:bg-slate-100 p-1 px-2 rounded-sm text-sm"
-        >Resources <i class="bi bi-chevron-down"></i
-      ></a>
-      <div
-        class="absolute top-7 z-50 left-3 shadow-md rounded-md p-4 bg-white flex flex-col justify-start items-between gap-3 w-48"
-      >
-        <a
-          href=""
-          class="text-slate-600 font-semibold text-sm flex justify-between items-center hover:bg-zinc-50 px-2 rounded-sm"
-          >Events
-          <i
-            class="bi bi-arrow-right text-sm font-bold p-1 py-[1px] rounded-sm text-slate-500"
-          ></i
-        ></a>
-        <a
-          href=""
-          class="text-slate-600 font-semibold text-sm flex justify-between items-center hover:bg-zinc-50 px-2 rounded-sm"
-          >Newsletters
-          <i
-            class="bi bi-arrow-right text-sm font-bold p-1 py-[1px] text-slate-500 rounded-sm"
-          ></i>
-        </a>
-        <a
-          href=""
-          class="text-slate-600 font-semibold text-sm flex justify-between items-center hover:bg-zinc-50 px-2 rounded-sm"
-          >Support
-          <i
-            class="bi bi-arrow-right text-sm font-bold p-1 py-[1px] text-slate-500 rounded-sm"
-          ></i
-        ></a>
-      </div>
+    <li
+      routerLinkActive="nav-active"
+      class="relative text-slate-500 bg-white hover:bg-slate-100 rounded-sm text-sm pe-2"
+    >
+      <p-menubar [model]="items">
+        <ng-template #noLink pTemplate="item" let-item>
+          <div class="p-menuitem-link hover:bg-slate-100">
+            <a
+              [routerLink]="item.route"
+              class="font-light bg-white text-slate-500 p-1 hover:bg-slate-100"
+              >{{ item.label }}</a
+            >
+          </div>
+        </ng-template>
+      </p-menubar>
+      <i
+        class="bi bi-chevron-down text-[11px] absolute -right-[-0px] top-[7px]"
+      ></i>
     </li>
     <li>
       <a
@@ -86,17 +70,9 @@
         class="bi bi-people-fill text-slate-950 text-lg border-[1px] border-zinc-100 h-8 w-8 p-1 rounded-full flex justify-center items-center"
       ></i>
     </a>
-    <a
-      routerLink="/usage"
-      class="cursor-pointer hover:shadow-md h-8 w-8 rounded-full"
-    >
-      <i
-        class="bi bi-exclamation-circle-fill text-slate-950 text-lg border-[1px] border-zinc-100 h-8 w-8 p-1 rounded-full flex justify-center items-center"
-      ></i>
-    </a>
-
     <div
-      class="btnCardProfile flex justify-center items-center gap-2 border-[1px] cursor-pointer rounded-full px-[3px] hover:shadow-md"
+      (click)="onClick()"
+      class="flex justify-center items-center gap-2 border-[1px] cursor-pointer rounded-full px-[3px] hover:shadow-md"
     >
       <img
         src="../../../assets/images/me.jpg"
@@ -106,7 +82,8 @@
       <i class="bi bi-upc text-2xl"></i>
     </div>
     <div
-      class="cardProfile hidden p-4 overflow-x-hidden overflow-y-scroll flex-col justify-stretch items-start z-10 absolute top-10 right-0 overflow-y bg-slate-800 rounded-s-md rounded-b-md shadow-md h-96 w-56 text-zinc-300 shadow-md"
+      *ngIf="showCardProfile"
+      class="p-4 overflow-x-hidden overflow-y-scroll flex-col justify-stretch items-start z-10 absolute top-10 right-0 overflow-y bg-slate-800 rounded-s-md rounded-b-md shadow-md h-96 w-56 text-zinc-300 shadow-md"
     >
       <div class="flex gap-1 justify-center items-center pt-1">
         <img
@@ -125,17 +102,18 @@
         class="flex w-full flex-col justify-center items-start gap-2 border-t-[1px] mt-4 border-slate-700 pt-2"
       >
         <a
-          routerLink="/profile"
-          class="flex justify-center items-center gap-2 text-[14px] hover:text-zinc-400 text-zinc-300"
-          ><i class="bi bi-person-fill text-lg"></i> Profile</a
+          class="font-light flex justify-center items-center gap-2 text-[14px] hover:text-zinc-400 text-zinc-300"
         >
+          <i class="bi bi-person-fill text-lg"></i>
+          <p-button (onClick)="handleCreatePost(true)" label="Profile">
+            <app-modal-large [cardProfileData]="dataToCardProfile">
+              <app-profile></app-profile>
+            </app-modal-large>
+          </p-button>
+        </a>
+
         <a
-          routerLink="/posts?arquived=true"
-          class="flex justify-center items-center gap-2 text-[14px] hover:text-zinc-400 text-zinc-300"
-          ><i class="bi bi-save-fill text-lg"></i> Saved</a
-        >
-        <a
-          routerLink="/profile-setting"
+          routerLink="/settings"
           class="flex justify-center items-center gap-2 text-[14px] text-zinc-300 hover:text-zinc-400"
           ><i class="bi bi-gear-fill text-lg"></i> Settings</a
         >
@@ -144,23 +122,23 @@
         class="flex w-full flex-col justify-center items-start gap-2 border-t-[1px] mt-4 border-slate-700 pt-2"
       >
         <a
-          routerLink="/new-post"
+          routerLink="/my-posts"
           class="flex justify-center items-center gap-2 text-[14px] hover:text-zinc-400 text-zinc-300"
-          ><i class="bi bi-plus text-lg"></i> Compose new Post</a
-        >
-        <a
-          routerLink="/arquived-post"
-          class="flex justify-center items-center gap-2 text-[14px] hover:text-zinc-400 text-zinc-300"
-          ><i class="bi bi-download text-lg"></i> Check Arquived Post</a
+          ><i class="bi bi-download text-lg"></i> My Posts</a
         >
         <a
           routerLink="/notifications"
           class="flex justify-center items-center gap-2 text-[14px] hover:text-zinc-400 text-zinc-300"
           ><i class="bi bi-bell-fill text-lg"></i> Check Notifications</a
         >
+        <a
+          routerLink="/events"
+          class="flex justify-center items-center gap-2 text-[14px] hover:text-zinc-400 text-zinc-300"
+          ><i class="bi bi-calendar-event text-lg"></i>Events</a
+        >
       </div>
       <div
-        class="border-t-[1px] mb-4 border-slate-700 flex justify-start items-center gap-3 pt-3 w-full mt-2"
+        class="border-t-[1px] mb-8 border-slate-700 flex justify-start items-center gap-3 pt-3 w-full mt-2"
       >
         <button
           class="relative bg-white rounded-md h-14 w-20 p-1 hover:shadow-zinc-600 hover:shadow-md"
@@ -197,9 +175,9 @@
       </div>
       <a
         routerLink="/login"
-        class="py-3 w-full border-t-[1px] mt-4 border-slate-700 hover:text-zinc-400 text-zinc-300 font-semibold flex justify-start items-center gap-2 cursor-pointer"
+        class="py-3 pt-5 w-full border-t-[1px] mt-4 border-slate-700 hover:text-zinc-400 text-zinc-300 font-semibold flex justify-start items-center gap-2 cursor-pointer"
       >
-        <i class="bi bi-box-arrow-left font-bold text-2xl"></i> logout
+        <i class="bi bi-box-arrow-left font-light text-base"></i> Logout
       </a>
     </div>
   </section>

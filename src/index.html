@@ -7,32 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
 
   <body class="relative">
     <app-root></app-root>
-
-    <script>
-      const btnCardProfile = document.querySelector(".btnCardProfile");
-      const cardProfile = document.querySelector(".cardProfile");
-
-      btnCardProfile.addEventListener("mouseenter", (event) => {
-        cardProfile.classList.add("showCardProfile");
-      });
-
-      btnCardProfile.addEventListener("mouseleave", (event) => {
-        cardProfile.classList.remove("showCardProfile");
-      });
-
-      // cardProfile.addEventListener("mouseover", (event) => {
-      //   cardProfile.classList.remove("showCardProfile");
-      // });
-
-      // cardProfile.addEventListener("mouseleave", (event) => {
-      //   cardProfile.classList.remove("showCardProfile");
-      // });
-    </script>
-
     <script>
       function activeConfettiEffect() {
         var duration = 15 * 1000;
@@ -89,5 +75,7 @@
         alert("right");
       });
     </script>
+
+    <script src="../node_modules/chart.js/auto/auto.js"></script>
   </body>
 </html>

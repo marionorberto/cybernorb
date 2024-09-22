@@ -1,1 +1,199 @@
-<p>create-post works!</p>
+<section class="p-8 pb-32">
+  <h1 class="text-4xl text-slate-600 font-bold">Create new Post</h1>
+  <p class="text-zinc-400">
+    Publish a new post and start interacting with your tech community.
+  </p>
+
+  <section
+    class="post-section flex flex-col justify-center items-center gap-3 mt-5 w-[30rem] mx-auto"
+  >
+    <div class="mt-8 flex flex-col justify-center items-start">
+      <label for="" class="text-lg text-slate-600 font-semibold mb-1"
+        >Title*</label
+      >
+      <input
+        type="text"
+        placeholder="Post Title"
+        class="text-sm bg-slate-50 active:border-blue-400 border-[1px] rounded-md p-4 gap-0 text-slate-600 font-semibold hover:bg-slate-200 w-96"
+      />
+      <span class="text-slate-400 text-sm mt-1"
+        >Tile must have between 10 to 200 caracters</span
+      >
+    </div>
+    <div class="mt-8 flex flex-col justify-center items-start">
+      <label for="" class="text-lg text-slate-600 font-semibold mb-1"
+        >Subtitle*</label
+      >
+      <input
+        type="text"
+        placeholder="Post Subtitle"
+        class="text-sm bg-slate-50 border-[1px] rounded-md p-4 gap-0 text-slate-600 font-semibold hover:bg-slate-200 w-96"
+      />
+
+      <span class="text-slate-400 text-sm mt-1"
+        >Subtitile must have between 10 to 200 caracters</span
+      >
+    </div>
+    <div class="mt-8 flex flex-col justify-center items-start">
+      <label for="" class="text-lg text-slate-600 font-semibold mb-1"
+        >Tags*</label
+      >
+      <span class="text-slate-400 text-sm my-1">*Two at most</span>
+      <div class="relative">
+        <button
+          class="absolute top-3 left-2 text-base bg-slate-200 rounded-md p-2 gap-0 text-slate-600 w-7 h-7 flex justify-center items-center font-semibold hover:bg-slate-300"
+        >
+          +
+        </button>
+        <select
+          name="tags"
+          id="tags"
+          class="ps-10 text-sm bg-slate-50 border-[1px] rounded-md p-4 gap-0 text-slate-600 font-semibold w-96"
+        >
+          <option
+            value="angular"
+            class="text-sm bg-slate-50 border-[1px] rounded-md p-4 gap-0 text-slate-600 font-semibold hover:bg-slate-200 w-96"
+          >
+            Angular
+          </option>
+          <option
+            value="react"
+            class="text-sm bg-slate-50 border-[1px] rounded-md p-4 gap-0 text-slate-600 font-semibold hover:bg-slate-200 w-96"
+          >
+            React
+          </option>
+          <option
+            value="vuejs"
+            class="text-sm bg-slate-50 border-[1px] rounded-md p-4 gap-0 text-slate-600 font-semibold hover:bg-slate-200 w-96"
+          >
+            VueJs
+          </option>
+        </select>
+        <div class="flex justify-start items-center gap-2 mt-2">
+          <button
+            class="text-sm bg-slate-100 rounded-md p-2 gap-0 text-slate-600 font-semibold hover:bg-slate-200"
+          >
+            Frontend
+          </button>
+
+          <button
+            class="text-sm bg-slate-100 rounded-md p-2 gap-0 text-slate-600 font-semibold hover:bg-slate-200"
+          >
+            Angular
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="mt-8 flex flex-col justify-center items-start">
+      <label for="" class="text-slate-600 font-semibold mb-1">Upload*</label>
+      <div class="relative">
+        <input
+          type="text"
+          placeholder="Upload Foto/Video"
+          class="cursor-pointer text-sm text-center bg-slate-50 border-[2px] rounded-md p-4 gap-0 text-slate-600 font-semibold hover:bg-slate-100 hover:border-slate-300 w-96 border-dashed"
+        />
+        <i
+          class="bi bi-cloud-arrow-up text-slate-600 absolute right-24 top-3 text-lg"
+        ></i>
+      </div>
+    </div>
+    <div class="bg-slate-100 p-1 rounded-lg mt-5">
+      <span class="text-slate-400 text-sm my-2 text-center p-1"
+        >Write content post*
+        <i class="bi bi-pencil-square text-slate-600 font-bold"></i>
+      </span>
+      <textarea
+        name=""
+        id=""
+        class="p-4 text-black bg-slate-50 rounded-lg outline-2 w-full h-64 mt-1"
+      ></textarea>
+    </div>
+
+    <div class="bg-slate-100 p-1 rounded-lg mt-1 w-96 hover:shadow-md">
+      <button
+        class="text-sm bg-slate-50 rounded-md p-4 py-2 gap-0 text-slate-600 font-semibold w-full"
+      >
+        + Post Section +
+      </button>
+    </div>
+    <div class="ms-9 mt-5 flex justify-start items-center gap-3 self-start">
+      <button
+        class="text-sm bg-slate-100 rounded-md p-4 py-2 gap-0 text-slate-600 font-semibold hover:bg-slate-200 hover:shadow-md"
+      >
+        Cancel
+      </button>
+      <button
+        class="text-sm bg-slate-600 rounded-md p-4 py-2 gap-0 text-white font-semibold hover:shadow-md hover:bg-slate-700"
+      >
+        Submit <i class="bi bi-send text-white"></i>
+      </button>
+    </div>
+    <hr class="my-5 w-1/2" />
+    <div>
+      <h1 class="text-xl text-slate-600 font-semibold">
+        Post Section
+        <span
+          class="text-sm bg-slate-100 rounded-md p-2 gap-0 text-slate-600 font-semibold h-8 w-8"
+          >2</span
+        >
+      </h1>
+    </div>
+    <div class="mt-8 flex flex-col justify-center items-start">
+      <label for="" class="text-lg text-slate-600 font-semibold mb-1"
+        >Subtitle*</label
+      >
+      <input
+        type="text"
+        placeholder="Post Subtitle"
+        class="text-sm bg-slate-50 border-[1px] rounded-md p-4 gap-0 text-slate-600 font-semibold hover:bg-slate-200 w-96"
+      />
+
+      <span class="text-slate-400 text-sm mt-1"
+        >Subtitile must have between 10 to 200 caracters</span
+      >
+    </div>
+    <div class="mt-8 flex flex-col justify-center items-start">
+      <label for="" class="text-slate-600 font-semibold mb-1">Upload*</label>
+      <div class="relative">
+        <input
+          type="text"
+          placeholder="Upload Foto/Video"
+          class="cursor-pointer text-sm text-center bg-slate-50 border-[2px] rounded-md p-4 gap-0 text-slate-600 font-semibold hover:bg-slate-100 hover:border-slate-300 w-96 border-dashed"
+        />
+        <i
+          class="bi bi-cloud-arrow-up text-slate-600 absolute right-24 top-3 text-lg"
+        ></i>
+      </div>
+    </div>
+    <div class="bg-slate-100 p-1 rounded-lg mt-5">
+      <span class="text-slate-400 text-sm my-2 text-center p-1"
+        >Write content post
+        <i class="bi bi-pencil-square text-slate-600 font-bold"></i>
+      </span>
+      <textarea
+        name=""
+        id=""
+        class="p-4 text-black bg-slate-50 rounded-lg outline-2 w-full h-64 mt-1"
+      ></textarea>
+    </div>
+    <div class="bg-slate-100 p-1 rounded-lg mt-1 w-96 hover:shadow-md">
+      <button
+        class="text-sm bg-slate-50 rounded-md p-4 py-2 gap-0 text-slate-600 font-semibold w-full"
+      >
+        + Post Section +
+      </button>
+    </div>
+    <div class="ms-9 mt-5 flex justify-start items-center gap-3 self-start">
+      <button
+        class="text-sm bg-slate-100 rounded-md p-4 py-2 gap-0 text-slate-600 font-semibold hover:bg-slate-200 hover:shadow-md"
+      >
+        Cancel
+      </button>
+      <button
+        class="text-sm bg-slate-600 rounded-md p-4 py-2 gap-0 text-white font-semibold hover:shadow-md hover:bg-slate-700"
+      >
+        Submit <i class="bi bi-send text-white"></i>
+      </button>
+    </div>
+  </section>
+</section>

@@ -1,86 +1,31 @@
 <nav
-  class="relative whitespace-nowrap flex justify-center items-center bg-slate-800 text-sm text-white p-3 px-16 w-full my-10 mb-10 shadow-lg"
+  class="pt-3 relative whitespace-nowrap flex justify-center items-center bg-slate-800 text-sm text-white w-full my-10 mb-10 shadow-lg"
 >
-  <i
-    class="navbar-tech-left absolute left-4 bi bi-chevron-left text-xl text-white hover:bg-slate-600 h-8 w-8 pe-1 rounded-full flex justify-center items-center cursor-pointer"
-  ></i>
-  <i
-    class="navbar-tech-right absolute right-4 bi bi-chevron-right text-xl text-white hover:bg-slate-600 h-8 w-8 ps-2 rounded-full flex justify-start items-center cursor-pointer"
-  ></i>
-  <ul
-    class="navbar-container flex justify-center items-center gap-6 overflow-hidden px-6"
+  <p-carousel
+    [value]="techs"
+    [numVisible]="13"
+    [numScroll]="1"
+    [responsiveOptions]="responsiveOptions"
   >
-    <li *ngFor="let tech of techs; let index">
-      <a
-        routerLink="breaking-news"
+    <ng-template let-tech pTemplate="item">
+      <!-- <ul
+        class="navbar-container flex justify-center items-center gap-6 overflow-hidden px-6"
+      ></ul> -->
+      <!-- <ul
+        class="navbar-container flex justify-center items-center gap-6 overflow-hidden px-6"
+      > -->
+      <!-- <a
         [style.nav-active]="true"
         class="font-semibold bg-slate-700 hover:bg-slate-700 p-1 border-t-[3px] border-zinc-400"
         >{{ tech }}</a
-      >
-    </li>
-    <!-- <li>
-      <a
-        routerLink="hacker news"
-        routerLinkActive="nav-active"
-        class="font-semibold p-1 hover:bg-slate-700"
-        >Hacker news</a
-      >
-    </li>
-    <li>
-      <a
-        routerLink="devops"
-        routerLinkActive="nav-active"
-        class="font-semibold p-1 hover:bg-slate-700"
-        >devops</a
-      >
-    </li>
-    <li>
-      <a
-        routerLink="tips-tricks"
-        routerLinkActive="nav-active"
-        class="font-semibold p-1 hover:bg-slate-700"
-        >Tips and Tricks</a
-      >
-    </li>
-    <li>
-      <a
-        routerLink="ctf"
-        routerLinkActive="nav-active"
-        class="font-semibold p-1 hover:bg-slate-700"
-        >ctf</a
-      >
-    </li>
-    <li>
-      <a
-        routerLink="soc"
-        routerLinkActive="nav-active"
-        class="font-semibold p-1 hover:bg-slate-700"
-        >soc</a
-      >
-    </li>
-    <li>
-      <a
-        routerLink="frontend-dev"
-        routerLinkActive="nav-active"
-        class="font-semibold p-1 hover:bg-slate-700"
-        >frontend dev</a
-      >
-    </li>
-    <li>
-      <a
-        routerLink="pentest"
-        routerLinkActive="nav-active"
-        class="font-semibold p-1 hover:bg-slate-700"
-        >pentest</a
-      >
-    </li>
-    <li>
-      <a
-        routerLink="backend-developer"
-        routerLinkActive="nav-active"
-        class="font-semibold p-1 hover:bg-slate-700"
-        >backend dev</a
-      >
-    </li> -->
-  </ul>
+      > -->
+      <!-- </ul> -->
+      <ul class="flex justify-evenly items-center gap-0 mt-[3px]">
+        <span
+          class="text-sm font-semibold bg-slate-700 border-zinc-400 p-[3px]"
+          >{{ tech }}</span
+        >
+      </ul>
+    </ng-template>
+  </p-carousel>
 </nav>

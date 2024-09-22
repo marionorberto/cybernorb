@@ -7,103 +7,45 @@
       Most highlighted people's interactions on cybernorb
     </h5>
   </div>
+  <app-modal-large [cardProfileData]="dataToCardProfile">
+    <app-single-post></app-single-post>
+  </app-modal-large>
+  <section class="mx-14 mt-14">
+    <div class="card">
+      <p-carousel
+        [value]="postUsers"
+        [numVisible]="7"
+        [numScroll]="1"
+        [circular]="true"
+        [responsiveOptions]="responsiveOptions"
+      >
+        <ng-template let-post pTemplate="item">
+          <div
+            class="hover:brightness-75 cursor-pointer border-1 surface-border border-round p-3"
+          >
+            <div
+              (click)="handleCardDialog(true)"
+              class="card-best-interations w-48 h-64 p-4 bg-slate-50 rounded-md shadow-sm flex flex-col justify-between items-start"
+            >
+              <h4 class="text-white">{{ post.content }}</h4>
 
-  <section class="relative mx-14 flex items-center justify-center mt-14 gap-4">
-    <i
-      class="navbar-tech-left absolute -left-9 bg-zinc-200 bi bi-chevron-left text-xl text-white hover:bg-slate-600 h-8 w-8 pe-1 rounded-full flex justify-center items-center cursor-pointer"
-    ></i>
-    <i
-      class="navbar-tech-right absolute -right-9 bg-zinc-200 bi bi-chevron-right text-xl text-white hover:bg-slate-600 h-8 w-8 ps-2 rounded-full flex justify-start items-center cursor-pointer"
-    ></i>
-
-    <div
-      class="card-best-interations w-60 h-64 p-4 bg-slate-50 rounded-md shadow-sm flex flex-col justify-between items-start"
-    >
-      <h4 class="text-white">Lorem ipsum dolor sit . Recusandae, provident.</h4>
-
-      <div class="flex justify-center items-center gap-2">
-        <img
-          src="../../../assets/images/how-to-install-images-on-vscode.png"
-          alt=""
-          class="w-5 h-5 rounded-full"
-        />
-        <span class="text-white">Mário Norberto</span>
-      </div>
-    </div>
-    <div
-      class="card-best-interations w-60 h-64 p-4 bg-slate-50 rounded-md shadow-sm flex flex-col justify-between items-start"
-    >
-      <h4 class="text-white">Lorem ipsum dolor sit . Recusandae, provident.</h4>
-
-      <div class="flex justify-center items-center gap-2">
-        <img
-          src="../../../assets/images/how-to-install-images-on-vscode.png"
-          alt=""
-          class="w-5 h-5 rounded-full"
-        />
-        <span class="text-white">Mário Norberto</span>
-      </div>
-    </div>
-    <div
-      class="card-best-interations w-60 h-64 p-4 bg-slate-50 rounded-md shadow-sm flex flex-col justify-between items-start"
-    >
-      <h4 class="text-white">Lorem ipsum dolor sit . Recusandae, provident.</h4>
-
-      <div class="flex justify-center items-center gap-2">
-        <img
-          src="../../../assets/images/how-to-install-images-on-vscode.png"
-          alt=""
-          class="w-5 h-5 rounded-full"
-        />
-        <span class="text-white">Mário Norberto</span>
-      </div>
-    </div>
-    <div
-      class="card-best-interations w-60 h-64 p-4 bg-slate-50 rounded-md shadow-sm flex flex-col justify-between items-start"
-    >
-      <h4 class="text-white">Lorem ipsum dolor sit . Recusandae, provident.</h4>
-
-      <div class="flex justify-center items-center gap-2">
-        <img
-          src="../../../assets/images/how-to-install-images-on-vscode.png"
-          alt=""
-          class="w-5 h-5 rounded-full"
-        />
-        <span class="text-white">Mário Norberto</span>
-      </div>
-    </div>
-    <div
-      class="card-best-interations w-60 h-64 p-4 bg-slate-50 rounded-md shadow-sm flex flex-col justify-between items-start"
-    >
-      <h4 class="text-white">Lorem ipsum dolor sit . Recusandae, provident.</h4>
-
-      <div class="flex justify-center items-center gap-2">
-        <img
-          src="../../../assets/images/how-to-install-images-on-vscode.png"
-          alt=""
-          class="w-5 h-5 rounded-full"
-        />
-        <span class="text-white">Mário Norberto</span>
-      </div>
-    </div>
-    <div
-      class="card-best-interations w-60 h-64 p-4 bg-slate-50 rounded-md shadow-sm flex flex-col justify-between items-start"
-    >
-      <h4 class="text-white">Lorem ipsum dolor sit . Recusandae, provident.</h4>
-
-      <div class="flex justify-center items-center gap-2">
-        <img
-          src="../../../assets/images/how-to-install-images-on-vscode.png"
-          alt=""
-          class="w-5 h-5 rounded-full"
-        />
-        <span class="text-white">Mário Norberto</span>
-      </div>
+              <div class="flex justify-center items-center gap-2">
+                <img
+                  src="../../../assets/images/how-to-install-images-on-vscode.png"
+                  alt=""
+                  class="w-8 h-8 rounded-full"
+                />
+                <span class="text-white">{{ post.username }}</span>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
     </div>
   </section>
   <section class="w-full px-14 my-14 flex justify-center items-stretch gap-3">
     <div
-      class="w-[70%] rounded-md flex flex-col justify-start items-center gap-4"
+      class="w-[80%] rounded-md flex flex-col justify-start items-center gap-4 overflow-y-scroll p-2"
     >
       <div
         class="cursor-pointer hover:border-slate-100 w-full border-[1px] border-zinc-100 rounded-sm shadow-md p-3"
@@ -337,27 +279,27 @@
       </div>
     </div>
     <div
-      class="w-[30%] flex flex-col gap-3 justify-stretch items-center bg-white"
+      class="ms-2 w-[20%] flex flex-col gap-3 justify-stretch items-center bg-white"
     >
       <div
         class="relative p-4 border-[1px] border-zinc-100 shadow-md rounded-sm w-full"
       >
         <div class="flex justify-between items-center mb-1">
-          <span class="text-slate-300">Total Posts</span>
+          <span class="text-zinc-300">Total Posts</span>
           <h4 class="font-semibold text-slate-800">3,456</h4>
         </div>
         <div class="flex justify-between items-center mb-1">
-          <span class="text-slate-300">Total Topics</span>
+          <span class="text-zinc-300">Total Topics</span>
           <h4 class="font-semibold text-slate-800">56</h4>
         </div>
         <div class="flex justify-between items-center mb-3">
-          <span class="text-slate-300">Total Members</span>
+          <span class="text-zinc-300">Total Members</span>
           <h4 class="font-semibold text-slate-800">7,480</h4>
         </div>
         <hr />
         <h4 class="text-black font-semibold my-3">New Members</h4>
         <div class="flex justify-start items-center gap-2">
-          <span class="text-slate-400 italic">+33</span>
+          <span class="text-zinc-400 italic">+33</span>
           <div class="relative flex">
             <img
               src="../../../assets/images/me.jpg"
@@ -387,10 +329,52 @@
           </div>
         </div>
       </div>
+      <div
+        class="p-4 border-[1px] bg-white border-zinc-100 shadow-sm rounded-sm w-full"
+      >
+        <h4 class="text-black font-bold">Weekly</h4>
+        <h3 class="text-[11px] text-zinc-400">Posts Increasing</h3>
+
+        <div
+          class="border-[1px] border-zinc-300 h-28 w-28 p-5 mx-auto rounded-full flex justify-center items-center"
+        >
+          <div
+            class="border-[1px] border-zinc-300 p-4 h-22 w-22 rounded-full flex justify-center items-center"
+          >
+            <div
+              class="border-4 border- border-orange-400 h-14 w-14 p-4 rounded-full flex justify-center items-center"
+            >
+              <h1 class="font-bold text-black text-lg">87%</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="my-6 w-full" />
+      <span class="text-zinc-300 me-auto pb-2">Ads</span>
+      <section
+        class="hover:brightness-50 cursor-pointer bg-slate-500 w-full h-72 flex flex-col rounded-sm justify-center items-center mb-2 mt-3"
+      >
+        <!-- <img
+          src="../../../assets/images/ad2.png"
+          class="w-full rounded-md h-full"
+          alt=""
+        /> -->
+        <span>video ads</span>
+      </section>
+      <section
+        class="hover:brightness-50 cursor-pointer bg-slate-300 w-full h-72 flex flex-col justify-center items-center"
+      >
+        <!-- <img
+          src="../../../assets/images/ad1.png"
+          class="w-full h-full rounded-md"
+          alt=""
+        /> -->
+        <span>video ads</span>
+      </section>
     </div>
   </section>
 
-  <section class="bg-zinc-50 px-14 pb-24">
+  <section class="bg-zinc-50 px-14 pb-72 mt-56">
     <h4 class="font-bold py-10 text-4xl text-slate-600">
       community's Testimony
     </h4>
@@ -506,4 +490,5 @@
     </div>
   </section>
 </section>
+
 <app-footer></app-footer>

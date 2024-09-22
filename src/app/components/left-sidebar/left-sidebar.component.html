@@ -61,33 +61,44 @@
 
   <div class="bg-white shadow-md p-3 w-full border-[1px] border-zinc-100">
     <div class="flex justify-between items-center text-slate-600 my-3">
-      <a class="font-bold text-sm">Events</a>
+      <a routerLink="/events" class="font-bold text-sm hover:text-slate-500"
+        >Events</a
+      >
       <i
         class="bi bi-arrow-right text-sm font-bold p-1 py-[1px] bg-slate-500 rounded-sm text-white"
       ></i>
     </div>
     <div class="flex justify-between items-center text-slate-600 my-3">
-      <a class="font-bold text-sm">Community</a>
+      <a routerLink="/community" class="font-bold text-sm hover:text-slate-500"
+        >Community</a
+      >
       <i
         class="bi bi-arrow-right text-sm font-bold p-1 py-[1px] bg-slate-500 rounded-sm text-white"
       ></i>
     </div>
     <hr />
     <div class="flex justify-start items-center gap-2 my-3">
-      <button
+      <div
         class="text-slate-600 text-sm border-[1px] border-slate-500 rounded-full p-1 font-bold hover:border-zinc-400 shadow-md"
       >
-        + create post +
-      </button>
+        <p-button (onClick)="handleProfileCard(true)" label="+ create post +" />
+      </div>
+      <app-modal-large [cardProfileData]="dataToCardProfile">
+        <app-create-post></app-create-post>
+      </app-modal-large>
     </div>
     <div class="flex justify-start items-center gap-2 my-3">
       <i class="bi bi-bookmark-plus-fill text-slate-700 font-mono"></i>
-      <span class="text-slate-600 text-sm">saved posts</span>
+      <a routerLink="/single-post" class="text-slate-600 text-sm"
+        >saved posts</a
+      >
     </div>
 
     <div class="flex justify-start items-center gap-2 my-3">
       <i class="bi bi-share-fill text-slate-700 font-mono"></i>
-      <span class="text-slate-600 text-sm">share posts</span>
+      <a routerLink="/single-post" class="text-slate-600 text-sm"
+        >share posts</a
+      >
     </div>
   </div>
 </section>

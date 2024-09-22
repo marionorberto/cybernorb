@@ -1,4 +1,7 @@
-@import url("../node_modules/bootstrap-icons/font/bootstrap-icons.min.css");
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
+@import url("./assets/fonts/bootstrap-icons/font/bootstrap-icons.min.css");
 
 @font-face {
   font-family: "Monserat";
@@ -11,6 +14,24 @@
 }
 
 @tailwind base;
+
+@layer tailwind-base, primeng, tailwind-utilities;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
+@layer reset {
+  :host ::ng-deep .p-menuitem-link {
+    background: #2a3a;
+  }
+}
+
 @tailwind components;
 @tailwind utilities;
 
@@ -20,8 +41,12 @@
   box-sizing: border-box;
 }
 
+.blue-menubar {
+  color: red;
+}
+
 body {
-  font-family: "Monserat";
+  font-family: "Monserat", "Helvetica Neue", sans-serif;
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;

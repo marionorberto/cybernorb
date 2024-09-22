@@ -15,7 +15,13 @@
     <p class="text-[11px] text-black font-semibold">
       {{ data.content }}
     </p>
-    <a href="" class="text-blue-900 underline text-[12px]">continue to see</a>
+
+    <a class="font-light cursor-pointer text-slate-600 underline text-[12px]">
+      <p-button (onClick)="handleCardDialog(true)" label="continue to see" />
+      <app-modal-large [cardProfileData]="dataToCardProfile">
+        <app-single-post></app-single-post>
+      </app-modal-large>
+    </a>
   </div>
   <img
     src="../../../assets/images/{{ data.urlImg }}"

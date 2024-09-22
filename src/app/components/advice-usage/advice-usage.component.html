@@ -1,1 +1,268 @@
 <app-top-navbar></app-top-navbar>
+<section class="p-14 pt-10 px-32">
+  <div class="flex flex-col justify-center items-center">
+    <div
+      class="hover:shadow-md bg-zinc-50 border-[1px] border-zinc-100 rounded-full w-72 flex justify-center items-center gap-2 p-[2px]"
+    >
+      <span class="text-white bg-blue-700 rounded-full p-[2px] font-bold"
+        >usage</span
+      >
+      <span class="text-zinc-800 font-semibold text-sm"
+        >Usage guide for CyberNorb 🎊</span
+      >
+    </div>
+    <h1 class="text-4xl mb-2 mt-8 text-slate-700 font-semibold">CyberNorb</h1>
+    <p class="text-center text-zinc-600">
+      Create <span class="font-semibold">post</span>, be in touch with tech
+      <span class="font-bold">community</span>, share
+      <span class="font-semibold">knowledge</span>.
+    </p>
+  </div>
+  <div class="flex flex-col justify-center items-center gap-1 mt-5">
+    <h1 class="text-xl text-slate-700 font-bold">What's cybernorb?</h1>
+    <p class="text-[16px] text-center text-zinc-900 font-light w-96">
+      <span class="bg-slate-100 text-slate-600 rounded-sm font-semibold p-1"
+        >Cybernorb</span
+      >
+      is a website made for joining tech lovers by making posting about the tech
+      or issue they are passionated with. For be updated, easy tech lovers
+      interactions and share knowledge across the globe.
+    </p>
+  </div>
+
+  <div
+    class="w-[48rem] my-14 mx-auto mt-14 grid grid-cols-2 grid-rows-2 place-content-center place-items-center gap-y-5 gap-x-8 columns-lg"
+  >
+    <div
+      class="hover:shadow-md shadow-sm flex justify-center rounded-md items-stretch border-[1px] border-slate-200 p-4 gap-1 w-96"
+    >
+      <i class="bi bi-ethernet text-blue-600"></i>
+      <div>
+        <h3 class="text-black font-bold mb-1">Share your knownledge</h3>
+        <p class="text-sm text-zinc-900 text-start font-light">
+          you can share your knownledge about the tecnologies you master with
+          community.
+        </p>
+      </div>
+    </div>
+    <div
+      class="hover:shadow-md shadow-sm flex justify-center rounded-md items-stretch border-[1px] border-slate-200 p-4 gap-1 w-96"
+    >
+      <i class="bi bi-calendar-event text-blue-600"></i>
+      <div>
+        <h3 class="text-black font-bold mb-1">Participate in tech events</h3>
+        <p class="text-sm text-zinc-900 text-start font-light">
+          you can participate in technology events with interesting speakers
+        </p>
+      </div>
+    </div>
+    <div
+      class="hover:shadow-md shadow-sm flex justify-center rounded-md items-stretch border-[1px] border-slate-200 p-4 gap-1 w-96"
+    >
+      <i class="bi bi-globe text-blue-600"></i>
+      <div>
+        <h3 class="text-black font-bold mb-1">Meet interesting people</h3>
+        <p class="text-sm text-zinc-900 text-start font-light">
+          you can be in touch with very interesting people that share similaries
+          goals.
+        </p>
+      </div>
+    </div>
+    <div
+      class="hover:shadow-md border-slate-200 shadow-sm flex justify-center rounded-md items-stretch border-[1px] p-4 gap-1 w-96"
+    >
+      <i class="bi bi-smartwatch text-blue-600"></i>
+      <div>
+        <h3 class="text-black font-bold mb-1">Be up to date</h3>
+        <p class="text-sm text-zinc-900 text-start font-light">
+          Stay up to date with news and new technologies every day.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h1 class="mb-3 text-center text-xl text-slate-700 font-bold">
+      FAQS - Frequently Questions Asked
+    </h1>
+
+    <div class="w-[40rem] mx-auto">
+      <p-accordion [activeIndex]="0">
+        <p-accordionTab [header]="tab.title" *ngFor="let tab of tabs">
+          <p class="m-4 text-zinc-800 text-justify">
+            {{ tab.content }}
+          </p>
+        </p-accordionTab>
+      </p-accordion>
+    </div>
+  </div>
+
+  <div class="mt-8 mb-36">
+    <p class="text-zinc-400 text-sm">
+      <span class="text-slate-700 font-bold text-base"
+        >For more information</span
+      >
+      Visit our support page to get help
+      <a routerLink="/support" class="text-slate-600 italic underline"
+        >support <i class="bi bi-arrow-right"></i
+      ></a>
+    </p>
+  </div>
+  <!-- 
+  <div class="border-b-2 border-zinc-300">
+    <h1 class="font-semibold text-4xl text-slate-600">Usage</h1>
+    <p class="text-sm text-slate-300 mt-1">
+      Learn how to navegate properly to cybernorb
+    </p>
+  </div>
+  <p class="mt-5 text-base text-slate-800 w-[70rem] text-justify">
+    Cybernorber is Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+    Pariatur dicta reprehenderit doloribus unde excepturi dignissimos molestias
+    dolore ipsam a iure, voluptatibus vitae ut suscipit repellendus vero cum
+    eligendi similique eum.
+  </p>
+  <p class="mt-5 text-base text-slate-800 w-[70rem] text-justify">
+    The main cybernorb usage page purpose is to guide new users on how to use
+    the platform Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+    Assumenda obcaecati ipsa deleniti doloribus deserunt possimus repellat,
+    voluptatibus in amet? Debitis.
+  </p>
+  <hr class="my-3" class="my-5" />
+  <h2 class="text-xl font-bold text-slate-600">#Creating a new account</h2>
+  <p class="mt-2 text-base text-slate-800 w-[70rem] text-justify">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis nulla
+    vel illo impedit iusto! Harum quidem ullam eius pariatur, obcaecati ab
+    officiis quas sint, vitae dignissimos expedita. Blanditiis, culpa nihil!
+  </p>
+  <p class="my-5 mt-2 text-base text-slate-800 w-[70rem] text-justif">
+    - Step-by-step instructions for signing up. - Information about account
+    creation options (email, social logins, etc.). - Account verification
+    process and securing your account (password setup, two-factor
+    authentication).
+  </p>
+  <hr class="my-3" />
+  <h2 class="text-xl font-bold text-slate-600">#Navegating to cybernorb</h2>
+  <p class="mt-5 text-base text-slate-800 w-[70rem] text-justify">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis nulla
+    vel illo impedit iusto! Harum quidem ullam eius pariatur, obcaecati ab
+    officiis quas sint, vitae dignissimos expedita. Blanditiis, culpa nihil!
+  </p>
+  <p class="mt-5 text-base text-slate-800 w-[70rem] text-justify">
+    - How to browse different categories (cybersecurity, programming, etc.). -
+    Using the search function to find specific posts or topics. - Understanding
+    the homepage layout (featured articles, latest news, trending topics).
+  </p>
+  <hr class="my-3" />
+
+  <h1 class="text-xl font-bold text-slate-600">#Posting</h1>
+  <h2 class="ps-4 mt-3 text-xl font-bold text-slate-600">
+    Creating and publishing a post
+  </h2>
+
+  <p class="mt-5 ps-4 text-base text-slate-800 w-[70rem] text-justify">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis nulla
+    vel illo impedit iusto! Harum quidem ullam eius pariatur, obcaecati ab
+    officiis quas sint, vitae dignissimos expedita. Blanditiis, culpa nihil!
+  </p>
+
+  <p class="mt-5 ps-4 text-base text-slate-800 w-[70rem] text-justify">
+    - Detailed guide on writing a post. - Instructions on using the editor
+    (e.g., adding headings, images, code snippets). - Using markdown for
+    formatting (if applicable). - Previewing and publishing a post. - Best
+    practices for writing posts related to cybersecurity and programming.
+  </p>
+
+  <h2 class="text-xl ps-4 mt-3 font-bold text-slate-600">
+    Editing and manage your posts post
+  </h2>
+  <p class="mt-5 ps-4 text-base text-slate-800 w-[70rem] text-justify">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis nulla
+    vel illo impedit iusto! Harum quidem ullam eius pariatur, obcaecati ab
+    officiis quas sint, vitae dignissimos expedita. Blanditiis, culpa nihil!
+  </p>
+
+  <p class="mt-5 ps-4 text-base text-slate-800 w-[70rem] text-justify">
+    - How to edit an existing post. - Deleting or archiving posts. - Managing
+    drafts. - Viewing post statistics (views, comments, likes, etc.).
+  </p>
+  <h2 class="text-xl ps-4 font-bold text-slate-600">Commenting on Posts</h2>
+  <p class="mt-5 ps-4 text-base text-slate-800 w-[70rem] text-justify">
+    7. **Commenting on Posts** - How to leave comments on blog posts. -
+    Guidelines for respectful and constructive discussions. - How to reply to or
+    upvote comments. - Managing notifications for comment replies.
+  </p>
+  <h2 class="text-xl ps-4 font-bold text-slate-600">Bookmark post</h2>
+  <p class="mt-5 ps-4 text-base text-slate-800 w-[70rem] text-justify">
+    ### 13. **Using the Bookmark Feature** - How to bookmark posts for future
+    reading. - Accessing and managing your saved bookmarks.
+  </p>
+  <hr class="my-3" />
+  <h2 class="text-xl mt-5 font-bold text-slate-600">
+    #Exploring Categories and Tags
+  </h2>
+  <p class="mt-5 text-base text-slate-800 w-[70rem] text-justify">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis nulla
+    vel illo impedit iusto! Harum quidem ullam eius pariatur, obcaecati ab
+    officiis quas sint, vitae dignissimos expedita. Blanditiis, culpa nihil!
+  </p>
+  <p class="mt-5 text-base text-slate-800 w-[70rem] text-justify">
+    - How categories and tags are organized on the blog. - How to follow a
+    category or subscribe to a particular tag for notifications.
+  </p>
+  <hr class="my-3" />
+  <h2 class="text-xl font-bold text-slate-600">Following authors</h2>
+  <p class="mt-5 text-base text-slate-800 w-[70rem] text-justify">
+    ### 11. **How to Follow Authors and Subscribe to Content** - Following
+    specific authors or subscribing to their content. - How to view your
+    followed authors and manage notifications from them.
+  </p>
+  <hr class="my-3" />
+  <h2 class="text-xl font-bold text-slate-600">
+    interacting with your community
+  </h2>
+  <p class="mt-5 text-base text-slate-800 w-[70rem] text-justify">
+    ### 12. **Interacting with the Community** - Guidelines for participating in
+    discussions and engaging with the community. - How to report inappropriate
+    comments or posts. - Earning badges or points (if you have a reward or
+    gamification system).
+  </p>
+  <hr class="my-3" />
+  <h2 class="text-xl font-bold text-slate-600">Subscribing to Notifications</h2>
+  <p class="mt-5 text-base text-slate-800 w-[70rem] text-justify">
+    ### 8. **Subscribing to Notifications** - How to subscribe to email
+    notifications for new posts or comments. - Managing notification preferences
+    (daily, weekly, only for specific topics). - How to unsubscribe or change
+    preferences.
+  </p>
+  <hr class="my-3" />
+  <h2 class="text-xl font-bold text-slate-600">personality your profile</h2>
+  <p class="mt-5 text-base text-slate-800 w-[70rem] text-justify">
+    ### 9. **Personalizing Your Profile** - How to update your profile
+    information (name, bio, profile picture). - Managing visibility settings
+    (public or private profile). - Adding links to personal websites, GitHub, or
+    LinkedIn.
+  </p>
+  <hr class="my-3" />
+  <h2 class="text-xl font-bold text-slate-600">
+    Security Tips for Cybernorb Users
+  </h2>
+  <p class="mt-5 text-base text-slate-800 w-[70rem] text-justify">
+    ### 10. **Security Tips for Cybernorb Users** - Best practices for keeping
+    your account secure (strong passwords, enabling 2FA). - Understanding
+    privacy settings for your posts and profile. - How Cybernorb handles user
+    data and privacy policies.
+  </p>
+  <hr class="my-3" />
+  <h2 class="text-xl font-bold text-slate-600">
+    FAQS - Frequently Asked Questions
+  </h2>
+  <p class="mt-5 text-base text-slate-800 w-[70rem] text-justify">
+    There are the most commonly asked questions about
+    <span class="font-bold">cybernorb</span><br />
+    Can't find what your're looking for?
+    <button class="underline font-bold">
+      get personal support with our team
+    </button>
+  </p> -->
+</section>
+<app-footer></app-footer>

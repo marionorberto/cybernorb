@@ -1,0 +1,6 @@
+.bg-img {
+  background: url("../../../assets/images/events.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(40%);
+}

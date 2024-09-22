@@ -6,7 +6,6 @@ import { RegisterComponent } from './register/components/register/register.compo
 import { NotificationsComponent } from './components/notifications/notifications.component';
 import { CommunityComponent } from './components/community/community.component';
 import { SettingsComponent } from './components/settings/settings.component';
-import { ProfileComponent } from './components/profile/profile.component';
 import { AboutComponent } from './components/about/about.component';
 import { privateDecrypt } from 'crypto';
 import { PrivacyComponent } from './components/privacy/privacy.component';
@@ -14,6 +13,11 @@ import { AdviceUsageComponent } from './components/advice-usage/advice-usage.com
 import { MostReadComponent } from './components/most-read/most-read.component';
 import { NewsComponent } from './components/news/news.component';
 import { ResourcesComponent } from './components/resources/resources.component';
+import { ActivitiesComponent } from './components/activities/activities.component';
+import { EventsComponent } from './components/events/events.component';
+import { SinglePostComponent } from './components/single-post/single-post.component';
+import { SupportComponent } from './components/support/support.component';
+import { MyPostsComponent } from './components/my-posts/my-posts.component';
 
 export const routes: Routes = [
   {
@@ -41,12 +45,20 @@ export const routes: Routes = [
     component: NotificationsComponent
   },
   {
+    path: 'ativities',
+    component: ActivitiesComponent
+  },
+  {
     path: 'about',
     component: AboutComponent
   },
   {
     path: 'regiter',
     component: RegisterComponent
+  },
+  {
+    path:'my-posts',
+    component: MyPostsComponent
   },
    {
     path: 'privacy',
@@ -57,10 +69,6 @@ export const routes: Routes = [
     component: AdviceUsageComponent
   },
   {
-    path: 'profile',
-    component: ProfileComponent, 
-  },
-  {
     path: 'settings',
     component: SettingsComponent
   },
@@ -68,9 +76,21 @@ export const routes: Routes = [
     path: 'community',
     component: CommunityComponent
   },
-   {
+  {
     path: 'most-read',
     component: MostReadComponent
+  },
+  {
+    path: 'events',
+    component: EventsComponent
+  },
+   {
+    path: 'single-post',
+    component: SinglePostComponent
+  },
+   {
+    path: 'support',
+    component: SupportComponent
   },
   {
     path: '**',

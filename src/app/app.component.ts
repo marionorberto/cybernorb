@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { TopNavbarComponent } from "./components/top-navbar/top-navbar.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { MainComponent } from "./components/main/main.component";
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,7 @@ import { MainComponent } from "./components/main/main.component";
     RouterLink,
     TopNavbarComponent,
     FooterComponent,
-    MainComponent
+    MainComponent,
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -20,6 +21,11 @@ import { MainComponent } from "./components/main/main.component";
 export class AppComponent {
   title = 'tablecoin';
   showCardNewMessage: boolean = false;
+
+  constructor(private primeNgConfig: PrimeNGConfig) {}
+  ngOnInit() {
+    this.primeNgConfig.ripple = true;
+  }
 
   showCardMessage(flag: boolean){
 

@@ -1,27 +1,90 @@
-<app-top-navbar></app-top-navbar>
+<!-- create a profile component and replace and introduce here: -->
 <section class="flex flex-col gap-0 w-full mb-6 bg-white">
   <section class="relative">
-    <img
-      src="../../../../assets/images/mountain.jpg"
-      class="w-full h-[300px]"
-      alt=""
-    />
-
-    <label
-      id="coverProfilePhotoLabel"
-      for="coverProfilePhoto"
-      class="absolute text-[12px] bg-zinc-50 hover:bg-zinc-100 p-4 right-4 top-4 rounded-md cursor-pointer"
+    <div class="w-full h-[300px] bg-gradient-to-tr bg-blue-800"></div>
+    <div class="absolute right-4 top-4">
+      <div class="relative">
+        <button
+          (mouseenter)="handleChangeBackgroundColorOnFocus()"
+          (mouseleave)="handleChangeBackgroundColorOnBlur()"
+          class="text-[12px] bg-zinc-50 hover:bg-zinc-200 p-4 rounded-md cursor-pointer font-semibold"
+        >
+          Change Background Color <i class="bi bi-palette"></i>
+        </button>
+        <div
+          *ngIf="isBackgroundButtonFocused"
+          class="absolute right-16 z-10 p-4 rounded-md mt-3 bg-white border-zinc-400 border-[1px] overflow-auto"
+        >
+          <h1 class="text-zinc-800 font-semibold text-nowrap text-start">
+            Choose Background Color
+          </h1>
+          <div class="p-2">
+            <div class="flex flex-col justify-center items-start gap-2">
+              <h3 class="text-zinc-400">Slate</h3>
+              <div class="flex justify-start items-center gap-3">
+                <div
+                  class="cursor-pointer flex flex-col justify-center items-center gap-2"
+                >
+                  <div class="bg-slate-200 w-12 h-12 rounded-md"></div>
+                  <span>200</span>
+                </div>
+              </div>
+              <div class="flex justify-start items-center gap-3">
+                <div
+                  class="cursor-pointer flex flex-col justify-center items-center gap-2"
+                >
+                  <div class="bg-slate-300 w-12 h-12 rounded-md"></div>
+                  <span>300</span>
+                </div>
+              </div>
+              <div class="flex justify-start items-center gap-3">
+                <div
+                  class="cursor-pointer flex flex-col justify-center items-center gap-2"
+                >
+                  <div class="bg-slate-400 w-12 h-12 rounded-md"></div>
+                  <span>400</span>
+                </div>
+              </div>
+              <div class="flex justify-start items-center gap-3">
+                <div
+                  class="cursor-pointer flex flex-col justify-center items-center gap-2"
+                >
+                  <div class="bg-slate-500 w-12 h-12 rounded-md"></div>
+                  <span>500</span>
+                </div>
+              </div>
+              <div class="flex justify-start items-center gap-3">
+                <div
+                  class="cursor-pointer flex flex-col justify-center items-center gap-2"
+                >
+                  <div class="bg-slate-600 w-12 h-12 rounded-md"></div>
+                  <span>600</span>
+                </div>
+              </div>
+              <div class="flex justify-start items-center gap-3">
+                <div
+                  class="cursor-pointer flex flex-col justify-center items-center gap-2"
+                >
+                  <div class="bg-slate-700 w-12 h-12 rounded-md"></div>
+                  <span>700</span>
+                </div>
+              </div>
+              <div class="flex justify-start items-center gap-3">
+                <div
+                  class="cursor-pointer flex flex-col justify-center items-center gap-2"
+                >
+                  <div class="bg-slate-800 w-12 h-12 rounded-md"></div>
+                  <span>800</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="absolute top-20 left-[10%] flex justify-center items-center gap-6"
     >
-      Upload cover photo <i class="bi bi-camera"></i>
-      <input
-        type="file"
-        accept=".png, .jpg, .jpeg"
-        name="coverProfilePhoto"
-        id="coverProfilePhoto"
-        class="hidden"
-      />
-    </label>
-    <div class="absolute bottom-[-40px] left-[45%]">
       <div class="relative">
         <img
           src="../../../../assets/images/me.jpg"
@@ -41,13 +104,14 @@
           />
         </label>
       </div>
+      <h1 class="font-semibold text-white text-5xl mt-8 mb-3 text-center">
+        Mário Norberto
+      </h1>
     </div>
   </section>
   <section
     class="p-6 pb-10 flex flex-col shadow-md justify-center items-center gap-3"
   >
-    <h1 class="font-semibold text-2xl mt-8 mb-3 text-center">Mário Norberto</h1>
-
     <div class="flex gap-3 justify-around text-[12px]">
       <span class="text-zinc-700"
         ><i class="bi bi-laptop"></i> Fullstack Developer
@@ -61,7 +125,6 @@
     </div>
   </section>
 </section>
-
 <section
   class="flex flex-col justify-between items-stretch gap-2 mt-8 mx-auto w-[60%] bg-white rounded-lg p-6 shadow-sm mb-28"
 >

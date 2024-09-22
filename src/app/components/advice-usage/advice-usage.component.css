@@ -1,0 +1,12 @@
+:host ::ng-deep .p-accordion-header-link {
+  color: #000;
+  background: transparent;
+  padding: 12px 0;
+  border-bottom: 1px solid #aaa;
+  border-radius: 0px;
+  margin-bottom: 10px;
+}
+
+:host ::ng-deep p-accordiontab {
+  background: #000;
+}

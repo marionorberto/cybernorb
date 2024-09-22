@@ -1,0 +1,13 @@
+<p-dialog
+  [modal]="true"
+  [(visible)]="cardProfileData.visible"
+  [draggable]="modalOptions.drag"
+  [maximizable]="modalOptions.maximize"
+  [style]="{
+            width: '100%',
+            height: '45rem',
+            marginTop: '60px',
+          }"
+>
+  <ng-content></ng-content>
+</p-dialog>
