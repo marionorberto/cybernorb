@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
-import { AboutComponent } from "../about/about.component";
-import { TopNavbarComponent } from "../top-navbar/top-navbar.component";
-import { FooterComponent } from "../footer/footer.component";
+
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
+import { KnobModule } from 'primeng/knob'
+
+import { AboutComponent } from "../about/about.component";
+import { TopNavbarComponent } from "../top-navbar/top-navbar.component";
+import { FooterComponent } from "../footer/footer.component";
 import { ModalLargeComponent } from "../modal-large/modal-large.component";
 import { SinglePostComponent } from "../single-post/single-post.component";
-import { Chart }  from 'chart.js/auto';
+
 @Component({
   selector: 'app-community',
   standalone: true,
@@ -23,7 +26,8 @@ import { Chart }  from 'chart.js/auto';
     ButtonModule,
     CarouselModule,
     ModalLargeComponent,
-    SinglePostComponent
+    SinglePostComponent,
+    KnobModule
 ],
   templateUrl: './community.component.html',
   styleUrl: './community.component.css'
@@ -31,9 +35,10 @@ import { Chart }  from 'chart.js/auto';
 export class CommunityComponent {
 
   dataToCardProfile: { visible: boolean, position: string } = { visible: false, position: '' };
-
   responsiveOptions: any[] = [];
   chartWeeklyPostIncreasing: any;
+  knockValue: number = 76;
+  isPostHover: boolean =  false;
 
   postUsers: any[] = [
      {
@@ -78,33 +83,7 @@ export class CommunityComponent {
      }
   ];
   
-  constructor() {
-      this.chartWeeklyPostIncreasing = new Chart("weeklyPostIncreasing",{
-      type: 'doughnut',
-      data: {
-        labels: ['Weekly Post Increasing'],
-        datasets: [
-          {
-            data: ['89'],
-            backgroundColor: ['#22c55e'],
-            borderRadius: 27,
-            circumference: 300,
-            borderWidth: 20,
-            rotation: 80
-          }
-        ]
-      },
-      options: {
-          aspectRatio: 2.5,
-      plugins: {
-        legend: {
-          display: false
-        }
-      }
-     }
-    })
-  }
- ngOnInit() {
+    ngOnInit() {
         this.responsiveOptions = [
             {
                 breakpoint: '1199px',
@@ -127,5 +106,13 @@ export class CommunityComponent {
     handleCardDialog(visible: boolean) {
         this.dataToCardProfile.position = 'bottom';
         this.dataToCardProfile.visible = visible;
+    }
+
+    handlePostHover() {
+      this.isPostHover = true;
+    }
+
+    handlePostBlur() {
+      this.isPostHover = false;
     }
 }

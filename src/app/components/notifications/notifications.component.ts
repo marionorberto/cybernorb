@@ -28,8 +28,11 @@ export class NotificationsComponent {
   dataToCardProfile: { visible: boolean, position: string } = { visible: false, position: '' };
   inputValue: string = '';
   isFocused: boolean = false;
+  indexArrays: number[] = [];
+  isSingleNotificationShown: boolean = false;
   customers: any[] = [
     {
+      id: 1,
       name: 'Mário Norberto',
       email: 'marionorberto2018@gmail.com',
       subject: 'Google Settings',
@@ -38,6 +41,7 @@ export class NotificationsComponent {
       image: '../../../assets/images/me.jpg'
    },
    {
+    id: 2,
       name: 'Vitali Meta',
       email: 'vitalimeta@hotmail.com',
       subject: 'Google Settings',
@@ -46,6 +50,7 @@ export class NotificationsComponent {
       image: '../../../assets/images/me.jpg'
    },
    {
+    id: 3,
       name: 'Diego Fernandes',
       email: 'diego3g@gmail.com',
       subject: 'Google Settings',
@@ -54,6 +59,7 @@ export class NotificationsComponent {
       image: '../../../assets/images/me.jpg'
    }
    ,{
+    id: 4,
       name: 'Mr Robot',
       email: 'mrobot@gmail.com',
       subject: 'Google Settings',
@@ -62,14 +68,16 @@ export class NotificationsComponent {
       image: '../../../assets/images/me.jpg'
    }
    ,{
+    id: 5,
       name: 'Filipe Lukebana',
       email: 'luke3d@gmail.com',
       subject: 'Google Settings',
-      content: 'Dear Mário Norberto..23 oct, 2024',
+      content: 'Dear Mário Norberto',
       date: '03 jan, 2024',
       image: '../../../assets/images/me.jpg'
    },
    {
+    id: 6,
       name: 'Gabriel Pato',
       email: 'patoacademy@gmail.com',
       subject: 'Google Settings',
@@ -89,5 +97,9 @@ export class NotificationsComponent {
   }
   onInputSearchBlur() {
     this.isFocused = false;
+  }
+
+  handleSingleNotificationOption() {
+    this.isSingleNotificationShown = !this.isSingleNotificationShown;
   }
 }

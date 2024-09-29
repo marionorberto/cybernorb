@@ -45,233 +45,303 @@
   </section>
   <section class="w-full px-14 my-14 flex justify-center items-stretch gap-3">
     <div
-      class="w-[80%] rounded-md flex flex-col justify-start items-center gap-4 overflow-y-scroll p-2"
+      class="w-[80%] rounded-md flex flex-col justify-start items-center gap-4 p-2 pt-0"
     >
       <div
-        class="cursor-pointer hover:border-slate-100 w-full border-[1px] border-zinc-100 rounded-sm shadow-md p-3"
+        (click)="handleCardDialog(true)"
+        class="px-8 pb-6 cursor-pointer hover:border-slate-200 w-full border-[1px] border-zinc-100 rounded-sm shadow-sm p-3"
       >
         <div>
-          <h4 class="font-bold mt-3">Something nice theme</h4>
-          <h6 class="mb-3 text-slate-500">
+          <h4 class="font-semibold my-4">
+            Configure Typeorm and PostGreSQL on NestJS aplications.
+          </h4>
+          <h6 class="mb-5 text-zinc-300">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta,
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta,
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta,
             sit.
           </h6>
-          <div class="flex justify-between items-stretch mt-3">
+          <div class="flex justify-start items-center gap-2 mt-3">
             <span
-              class="flex justify-center items-center text-sm h-8 bg-white border-[1px] border-zinc-200 text-black font-bold shadow-sm rounded-[3px] p-1 text-center"
+              class="flex justify-center items-center text-[12px] h-8 bg-white border-[1px] border-zinc-200 text-black font-bold shadow-sm rounded-[3px] p-1 text-center"
               >programming</span
             >
-            <div class="flex items-center gap-4">
-              <div class="flex flex-col items-center justify-center gap-1">
-                <h4 class="text-slate-600">12.433</h4>
-                <i class="bi bi-heart-fill text-slate-700 font-mono"></i>
-              </div>
-              <div class="flex flex-col items-center justify-center gap-1">
-                <h4 class="text-slate-600">1.433</h4>
-                <i
-                  class="bi bi-bookmark-plus-fill text-slate-700 font-mono"
-                ></i>
-              </div>
+            <span class="text-[12px] text-zinc-300">March 23, 2024</span>
+          </div>
+          <div class="flex justify-start mt-4 items-center gap-1">
+            <img
+              src="../../../assets/images/me.jpg"
+              alt=""
+              class="w-8 h-8 rounded-full shadow-md"
+            />
+            <div class="">
+              <h3 class="font-semibold text-sm text-slate-600">
+                Mário Norberto
+              </h3>
+              <h5 class="font-light text-sm text-slate-400">
+                Backend Developer
+              </h5>
             </div>
-            <div class="flex justify-center items-stretch gap-1">
-              <img
-                src="../../../assets/images/me.jpg"
-                alt=""
-                class="w-8 h-8 rounded-full shadow-md"
-              />
-              <div class="">
-                <h3 class="font-semibold text-sm text-slate-600">
-                  Mário Norberto
-                </h3>
-                <h5 class="font-light text-sm text-slate-400">
-                  Backend Developer
-                </h5>
+            <div class="flex items-center gap-4 ms-6">
+              <div class="flex items-center justify-center gap-1">
+                <i class="bi bi-heart text-slate-700 font-mono text-[14px]"></i>
+                <h4 class="text-slate-600 text-sm text-[12px]">12.433</h4>
+              </div>
+              <div class="flex items-center justify-center gap-1">
+                <i
+                  class="bi bi-bookmark-plus text-slate-700 font-mono text-[14px]"
+                ></i>
+                <h4 class="text-slate-600 text-[12px]">1.433</h4>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        class="cursor-pointer hover:border-slate-100 w-full border-[1px] border-zinc-100 rounded-sm shadow-md p-3"
+        (click)="handleCardDialog(true)"
+        class="px-8 pb-6 cursor-pointer hover:border-slate-200 w-full border-[1px] border-zinc-100 rounded-sm shadow-sm p-3"
       >
         <div>
-          <h4 class="font-bold mt-3">Something nice theme</h4>
-          <h6 class="mb-3 text-slate-500">
+          <h4 class="font-semibold my-4">
+            Configure Typeorm and PostGreSQL on NestJS aplications.
+          </h4>
+          <h6 class="mb-5 text-zinc-300">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta,
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta,
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta,
             sit.
           </h6>
-          <div class="flex justify-between items-stretch mt-3">
+          <div class="flex justify-start items-center gap-2 mt-3">
             <span
-              class="flex justify-center items-center text-sm h-8 bg-white border-[1px] border-zinc-200 text-black font-bold shadow-sm rounded-[3px] p-1 text-center"
+              class="flex justify-center items-center text-[12px] h-8 bg-white border-[1px] border-zinc-200 text-black font-bold shadow-sm rounded-[3px] p-1 text-center"
               >programming</span
             >
-            <div class="flex items-center gap-4">
-              <div class="flex flex-col items-center justify-center gap-1">
-                <h4 class="text-slate-600">12.433</h4>
-                <i class="bi bi-heart-fill text-slate-700 font-mono"></i>
-              </div>
-              <div class="flex flex-col items-center justify-center gap-1">
-                <h4 class="text-slate-600">1.433</h4>
-                <i
-                  class="bi bi-bookmark-plus-fill text-slate-700 font-mono"
-                ></i>
-              </div>
+            <span class="text-[12px] text-zinc-300">March 23, 2024</span>
+          </div>
+          <div class="flex justify-start mt-4 items-center gap-1">
+            <img
+              src="../../../assets/images/me.jpg"
+              alt=""
+              class="w-8 h-8 rounded-full shadow-md"
+            />
+            <div class="">
+              <h3 class="font-semibold text-sm text-slate-600">
+                Mário Norberto
+              </h3>
+              <h5 class="font-light text-sm text-slate-400">
+                Backend Developer
+              </h5>
             </div>
-            <div class="flex justify-center items-stretch gap-1">
-              <img
-                src="../../../assets/images/me.jpg"
-                alt=""
-                class="w-8 h-8 rounded-full shadow-md"
-              />
-              <div class="">
-                <h3 class="font-semibold text-sm text-slate-600">
-                  Mário Norberto
-                </h3>
-                <h5 class="font-light text-sm text-slate-400">
-                  Backend Developer
-                </h5>
+            <div class="flex items-center gap-4 ms-6">
+              <div class="flex items-center justify-center gap-1">
+                <i class="bi bi-heart text-slate-700 font-mono text-[14px]"></i>
+                <h4 class="text-slate-600 text-sm text-[12px]">12.433</h4>
+              </div>
+              <div class="flex items-center justify-center gap-1">
+                <i
+                  class="bi bi-bookmark-plus text-slate-700 font-mono text-[14px]"
+                ></i>
+                <h4 class="text-slate-600 text-[12px]">1.433</h4>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        class="cursor-pointer hover:border-slate-100 w-full border-[1px] border-zinc-100 rounded-sm shadow-md p-3"
+        (click)="handleCardDialog(true)"
+        class="px-8 pb-6 cursor-pointer hover:border-slate-200 w-full border-[1px] border-zinc-100 rounded-sm shadow-sm p-3"
       >
         <div>
-          <h4 class="font-bold mt-3">Something nice theme</h4>
-          <h6 class="mb-3 text-slate-500">
+          <h4 class="font-semibold my-4">
+            Configure Typeorm and PostGreSQL on NestJS aplications.
+          </h4>
+          <h6 class="mb-5 text-zinc-300">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta,
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta,
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta,
             sit.
           </h6>
-          <div class="flex justify-between items-stretch mt-3">
+          <div class="flex justify-start items-center gap-2 mt-3">
             <span
-              class="flex justify-center items-center text-sm h-8 bg-white border-[1px] border-zinc-200 text-black font-bold shadow-sm rounded-[3px] p-1 text-center"
+              class="flex justify-center items-center text-[12px] h-8 bg-white border-[1px] border-zinc-200 text-black font-bold shadow-sm rounded-[3px] p-1 text-center"
               >programming</span
             >
-            <div class="flex items-center gap-4">
-              <div class="flex flex-col items-center justify-center gap-1">
-                <h4 class="text-slate-600">12.433</h4>
-                <i class="bi bi-heart-fill text-slate-700 font-mono"></i>
-              </div>
-              <div class="flex flex-col items-center justify-center gap-1">
-                <h4 class="text-slate-600">1.433</h4>
-                <i
-                  class="bi bi-bookmark-plus-fill text-slate-700 font-mono"
-                ></i>
-              </div>
+            <span class="text-[12px] text-zinc-300">March 23, 2024</span>
+          </div>
+          <div class="flex justify-start mt-4 items-center gap-1">
+            <img
+              src="../../../assets/images/me.jpg"
+              alt=""
+              class="w-8 h-8 rounded-full shadow-md"
+            />
+            <div class="">
+              <h3 class="font-semibold text-sm text-slate-600">
+                Mário Norberto
+              </h3>
+              <h5 class="font-light text-sm text-slate-400">
+                Backend Developer
+              </h5>
             </div>
-            <div class="flex justify-center items-stretch gap-1">
-              <img
-                src="../../../assets/images/me.jpg"
-                alt=""
-                class="w-8 h-8 rounded-full shadow-md"
-              />
-              <div class="">
-                <h3 class="font-semibold text-sm text-slate-600">
-                  Mário Norberto
-                </h3>
-                <h5 class="font-light text-sm text-slate-400">
-                  Backend Developer
-                </h5>
+            <div class="flex items-center gap-4 ms-6">
+              <div class="flex items-center justify-center gap-1">
+                <i class="bi bi-heart text-slate-700 font-mono text-[14px]"></i>
+                <h4 class="text-slate-600 text-sm text-[12px]">12.433</h4>
+              </div>
+              <div class="flex items-center justify-center gap-1">
+                <i
+                  class="bi bi-bookmark-plus text-slate-700 font-mono text-[14px]"
+                ></i>
+                <h4 class="text-slate-600 text-[12px]">1.433</h4>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        class="cursor-pointer hover:border-slate-100 w-full border-[1px] border-zinc-100 rounded-sm shadow-md p-3"
+        (click)="handleCardDialog(true)"
+        class="px-8 pb-6 cursor-pointer hover:border-slate-200 w-full border-[1px] border-zinc-100 rounded-sm shadow-sm p-3"
       >
         <div>
-          <h4 class="font-bold mt-3">Something nice theme</h4>
-          <h6 class="mb-3 text-slate-500">
+          <h4 class="font-semibold my-4">
+            Configure Typeorm and PostGreSQL on NestJS aplications.
+          </h4>
+          <h6 class="mb-5 text-zinc-300">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta,
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta,
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta,
             sit.
           </h6>
-          <div class="flex justify-between items-stretch mt-3">
+          <div class="flex justify-start items-center gap-2 mt-3">
             <span
-              class="flex justify-center items-center text-sm h-8 bg-white border-[1px] border-zinc-200 text-black font-bold shadow-sm rounded-[3px] p-1 text-center"
+              class="flex justify-center items-center text-[12px] h-8 bg-white border-[1px] border-zinc-200 text-black font-bold shadow-sm rounded-[3px] p-1 text-center"
               >programming</span
             >
-            <div class="flex items-center gap-4">
-              <div class="flex flex-col items-center justify-center gap-1">
-                <h4 class="text-slate-600">12.433</h4>
-                <i class="bi bi-heart-fill text-slate-700 font-mono"></i>
-              </div>
-              <div class="flex flex-col items-center justify-center gap-1">
-                <h4 class="text-slate-600">1.433</h4>
-                <i
-                  class="bi bi-bookmark-plus-fill text-slate-700 font-mono"
-                ></i>
-              </div>
+            <span class="text-[12px] text-zinc-300">March 23, 2024</span>
+          </div>
+          <div class="flex justify-start mt-4 items-center gap-1">
+            <img
+              src="../../../assets/images/me.jpg"
+              alt=""
+              class="w-8 h-8 rounded-full shadow-md"
+            />
+            <div class="">
+              <h3 class="font-semibold text-sm text-slate-600">
+                Mário Norberto
+              </h3>
+              <h5 class="font-light text-sm text-slate-400">
+                Backend Developer
+              </h5>
             </div>
-            <div class="flex justify-center items-stretch gap-1">
-              <img
-                src="../../../assets/images/me.jpg"
-                alt=""
-                class="w-8 h-8 rounded-full shadow-md"
-              />
-              <div class="">
-                <h3 class="font-semibold text-sm text-slate-600">
-                  Mário Norberto
-                </h3>
-                <h5 class="font-light text-sm text-slate-400">
-                  Backend Developer
-                </h5>
+            <div class="flex items-center gap-4 ms-6">
+              <div class="flex items-center justify-center gap-1">
+                <i class="bi bi-heart text-slate-700 font-mono text-[14px]"></i>
+                <h4 class="text-slate-600 text-sm text-[12px]">12.433</h4>
+              </div>
+              <div class="flex items-center justify-center gap-1">
+                <i
+                  class="bi bi-bookmark-plus text-slate-700 font-mono text-[14px]"
+                ></i>
+                <h4 class="text-slate-600 text-[12px]">1.433</h4>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        class="cursor-pointer hover:border-slate-100 w-full border-[1px] border-zinc-100 rounded-sm shadow-md p-3"
+        (click)="handleCardDialog(true)"
+        class="px-8 pb-6 cursor-pointer hover:border-slate-200 w-full border-[1px] border-zinc-100 rounded-sm shadow-sm p-3"
       >
         <div>
-          <h4 class="font-bold mt-3">Something nice theme</h4>
-          <h6 class="mb-3 text-slate-500">
+          <h4 class="font-semibold my-4">
+            Configure Typeorm and PostGreSQL on NestJS aplications.
+          </h4>
+          <h6 class="mb-5 text-zinc-300">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta,
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta,
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta,
             sit.
           </h6>
-          <div class="flex justify-between items-stretch mt-3">
+          <div class="flex justify-start items-center gap-2 mt-3">
             <span
-              class="flex justify-center items-center text-sm h-8 bg-white border-[1px] border-zinc-200 text-black font-bold shadow-sm rounded-[3px] p-1 text-center"
+              class="flex justify-center items-center text-[12px] h-8 bg-white border-[1px] border-zinc-200 text-black font-bold shadow-sm rounded-[3px] p-1 text-center"
               >programming</span
             >
-            <div class="flex items-center gap-4">
-              <div class="flex flex-col items-center justify-center gap-1">
-                <h4 class="text-slate-600">12.433</h4>
-                <i class="bi bi-heart-fill text-slate-700 font-mono"></i>
+            <span class="text-[12px] text-zinc-300">March 23, 2024</span>
+          </div>
+          <div class="flex justify-start mt-4 items-center gap-1">
+            <img
+              src="../../../assets/images/me.jpg"
+              alt=""
+              class="w-8 h-8 rounded-full shadow-md"
+            />
+            <div class="">
+              <h3 class="font-semibold text-sm text-slate-600">
+                Mário Norberto
+              </h3>
+              <h5 class="font-light text-sm text-slate-400">
+                Backend Developer
+              </h5>
+            </div>
+            <div class="flex items-center gap-4 ms-6">
+              <div class="flex items-center justify-center gap-1">
+                <i class="bi bi-heart text-slate-700 font-mono text-[14px]"></i>
+                <h4 class="text-slate-600 text-sm text-[12px]">12.433</h4>
               </div>
-              <div class="flex flex-col items-center justify-center gap-1">
-                <h4 class="text-slate-600">1.433</h4>
+              <div class="flex items-center justify-center gap-1">
                 <i
-                  class="bi bi-bookmark-plus-fill text-slate-700 font-mono"
+                  class="bi bi-bookmark-plus text-slate-700 font-mono text-[14px]"
                 ></i>
+                <h4 class="text-slate-600 text-[12px]">1.433</h4>
               </div>
             </div>
-            <div class="flex justify-center items-stretch gap-1">
-              <img
-                src="../../../assets/images/me.jpg"
-                alt=""
-                class="w-8 h-8 rounded-full shadow-md"
-              />
-              <div class="">
-                <h3 class="font-semibold text-sm text-slate-600">
-                  Mário Norberto
-                </h3>
-                <h5 class="font-light text-sm text-slate-400">
-                  Backend Developer
-                </h5>
+          </div>
+        </div>
+      </div>
+      <div
+        (click)="handleCardDialog(true)"
+        class="px-8 pb-6 cursor-pointer hover:border-slate-200 w-full border-[1px] border-zinc-100 rounded-sm shadow-sm p-3"
+      >
+        <div>
+          <h4 class="font-semibold my-4">
+            Configure Typeorm and PostGreSQL on NestJS aplications.
+          </h4>
+          <h6 class="mb-5 text-zinc-300">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta,
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta,
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta,
+            sit.
+          </h6>
+          <div class="flex justify-start items-center gap-2 mt-3">
+            <span
+              class="flex justify-center items-center text-[12px] h-8 bg-white border-[1px] border-zinc-200 text-black font-bold shadow-sm rounded-[3px] p-1 text-center"
+              >programming</span
+            >
+            <span class="text-[12px] text-zinc-300">March 23, 2024</span>
+          </div>
+          <div class="flex justify-start mt-4 items-center gap-1">
+            <img
+              src="../../../assets/images/me.jpg"
+              alt=""
+              class="w-8 h-8 rounded-full shadow-md"
+            />
+            <div class="">
+              <h3 class="font-semibold text-sm text-slate-600">
+                Mário Norberto
+              </h3>
+              <h5 class="font-light text-sm text-slate-400">
+                Backend Developer
+              </h5>
+            </div>
+            <div class="flex items-center gap-4 ms-6">
+              <div class="flex items-center justify-center gap-1">
+                <i class="bi bi-heart text-slate-700 font-mono text-[14px]"></i>
+                <h4 class="text-slate-600 text-sm text-[12px]">12.433</h4>
+              </div>
+              <div class="flex items-center justify-center gap-1">
+                <i
+                  class="bi bi-bookmark-plus text-slate-700 font-mono text-[14px]"
+                ></i>
+                <h4 class="text-slate-600 text-[12px]">1.433</h4>
               </div>
             </div>
           </div>
@@ -282,7 +352,7 @@
       class="ms-2 w-[20%] flex flex-col gap-3 justify-stretch items-center bg-white"
     >
       <div
-        class="relative p-4 border-[1px] border-zinc-100 shadow-md rounded-sm w-full"
+        class="relative p-4 border-[1px] border-zinc-100 shadow-sm rounded-sm w-full"
       >
         <div class="flex justify-between items-center mb-1">
           <span class="text-zinc-300">Total Posts</span>
@@ -332,20 +402,17 @@
       <div
         class="p-4 border-[1px] bg-white border-zinc-100 shadow-sm rounded-sm w-full"
       >
+        <h3 class="text-base text-zinc-400">Posts Increasing</h3>
         <h4 class="text-black font-bold">Weekly</h4>
-        <h3 class="text-[11px] text-zinc-400">Posts Increasing</h3>
 
         <div
-          class="border-[1px] border-zinc-300 h-28 w-28 p-5 mx-auto rounded-full flex justify-center items-center"
+          class="my-4 border-[5px] border-zinc-100 h-28 w-28 p-5 mx-auto rounded-full flex justify-center items-center"
         >
-          <div
-            class="border-[1px] border-zinc-300 p-4 h-22 w-22 rounded-full flex justify-center items-center"
-          >
-            <div
-              class="border-4 border- border-orange-400 h-14 w-14 p-4 rounded-full flex justify-center items-center"
-            >
-              <h1 class="font-bold text-black text-lg">87%</h1>
-            </div>
+          <div class="card flex justify-content-center">
+            <p-knob
+              [(ngModel)]="knockValue"
+              valueTemplate="{{ knockValue }}%"
+            />
           </div>
         </div>
       </div>
@@ -362,130 +429,57 @@
         <span>video ads</span>
       </section>
       <section
-        class="hover:brightness-50 cursor-pointer bg-slate-300 w-full h-72 flex flex-col justify-center items-center"
+        class="hover:brightness-50 cursor-pointer bg-black w-full h-72 flex flex-col justify-center items-center"
       >
-        <!-- <img
-          src="../../../assets/images/ad1.png"
-          class="w-full h-full rounded-md"
-          alt=""
-        /> -->
-        <span>video ads</span>
+        <video
+          class="w-full h-72 rounded-md"
+          src="../../../assets/video/ad-video-1.mp4"
+        ></video>
       </section>
     </div>
   </section>
 
-  <section class="bg-zinc-50 px-14 pb-72 mt-56">
-    <h4 class="font-bold py-10 text-4xl text-slate-600">
-      community's Testimony
-    </h4>
-    <div class="grid grid-cols-3 grid-rows-2 mt-14 gap-14">
-      <div
-        class="relative bg-white transition delay-600 ease-in duration-400 hover:shadow-slate-400 hover:-translate-y-3 rounded-md p-3 h-40 w-96 border-[1px] border-zinc-200 flex flex-col justify-stretch items-between shadow-md"
-      >
-        <img
-          src="../../../assets/images/me.jpg"
-          alt=""
-          class="w-12 h-12 rounded-full absolute left-3 -top-7 shadow-md"
-        />
-        <i class="bi bi-quote text-3xl text-zinc-200 absolute left-2 top-5"></i>
-        <p class="relative mt-10 text-justify text-sm text-slate-400">
-          Lorem ipsum dolor sit amet consecteturcta esse saepe corrupti ullam,
-          magni facere incidunt ssds
-        </p>
-        <div class="mt-2">
-          <h3 class="font-semibold text-sm text-slate-600">Mário Norberto</h3>
-          <h5 class="font-light text-sm text-slate-400">Backend Developer</h5>
-        </div>
+  <section class="flex justify-evenly items-center bg-zinc-50 mt-56 h-[30rem]">
+    <div>
+      <h3 class="font-bold text-4xl text-slate-800">
+        See what people say <br />
+        about CyberNorb.
+      </h3>
+      <p class="text-light text-lg text-zinc-400 w-[28rem]">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat error
+        laborum fugiat veritatis, molestiae facere magnam ipsam doloribus
+        voluptatum incidunt. Molestias, et omnis. Modi quae similique rerum eos?
+        Autem, quo! Autem, quo!
+      </p>
+
+      <div class="flex justify-start items-center gap-1">
+        <div class="h-16 w-16 rounded-full bg-slate-700"></div>
+        <div class="h-16 w-16 rounded-full bg-slate-700"></div>
+        <div class="h-16 w-16 rounded-full bg-slate-700"></div>
       </div>
-      <div
-        class="relative bg-white transition delay-600 ease-in duration-400 hover:shadow-slate-400 hover:-translate-y-3 rounded-md p-3 h-40 w-96 border-[1px] border-zinc-200 flex flex-col justify-stretch items-between shadow-md"
-      >
-        <img
-          src="../../../assets/images/me.jpg"
-          alt=""
-          class="w-12 h-12 rounded-full absolute left-3 -top-7 shadow-md"
-        />
-        <i class="bi bi-quote text-3xl text-zinc-200 absolute left-2 top-5"></i>
-        <p class="relative mt-10 text-justify text-sm text-slate-400">
-          Lorem ipsum dolor sit amet consecteturcta esse saepe corrupti ullam,
-          magni facere incidunt ssds
-        </p>
-        <div class="mt-2">
-          <h3 class="font-semibold text-sm text-slate-600">Mário Norberto</h3>
-          <h5 class="font-light text-sm text-slate-400">Backend Developer</h5>
-        </div>
+    </div>
+    <div class="flex flex-col justify-center items-center gap-3">
+      <div class="flex justify-center items-center gap-0">
+        <div class="bg-slate-400 rounded-full h-44 w-44 -me-5 z-10"></div>
+        <div
+          class="bg-slate-400 rounded-full h-56 w-56 border-[6px] border-white z-20"
+        ></div>
+        <div class="bg-slate-400 rounded-full h-44 w-44 -ms-5 z-10"></div>
       </div>
-      <div
-        class="relative bg-white transition delay-600 ease-in duration-400 hover:shadow-slate-400 hover:-translate-y-3 rounded-md p-3 h-40 w-96 border-[1px] border-zinc-200 flex flex-col justify-stretch items-between shadow-md"
-      >
-        <img
-          src="../../../assets/images/me.jpg"
-          alt=""
-          class="w-12 h-12 rounded-full absolute left-3 -top-7 shadow-md"
-        />
-        <i class="bi bi-quote text-3xl text-zinc-200 absolute left-2 top-5"></i>
-        <p class="relative mt-10 text-justify text-sm text-slate-400">
-          Lorem ipsum dolor sit amet consecteturcta esse saepe corrupti ullam,
-          magni facere incidunt ssds
-        </p>
-        <div class="mt-2">
-          <h3 class="font-semibold text-sm text-slate-600">Mário Norberto</h3>
-          <h5 class="font-light text-sm text-slate-400">Backend Developer</h5>
-        </div>
+      <div>
+        <h2 class="text-slate-800 text-center font-bold text-2xl">
+          Mário Norberto
+        </h2>
+        <h4 class="text-slate-700 text-center">Software Developer</h4>
       </div>
-      <div
-        class="relative bg-white transition delay-600 ease-in duration-400 hover:shadow-slate-400 hover:-translate-y-3 rounded-md p-3 h-40 w-96 border-[1px] border-zinc-200 flex flex-col justify-stretch items-between shadow-md"
-      >
-        <img
-          src="../../../assets/images/me.jpg"
-          alt=""
-          class="w-12 h-12 rounded-full absolute left-3 -top-7 shadow-md"
-        />
-        <i class="bi bi-quote text-3xl text-zinc-200 absolute left-2 top-5"></i>
-        <p class="relative mt-10 text-justify text-sm text-slate-400">
-          Lorem ipsum dolor sit amet consecteturcta esse saepe corrupti ullam,
-          magni facere incidunt ssds
-        </p>
-        <div class="mt-2">
-          <h3 class="font-semibold text-sm text-slate-600">Mário Norberto</h3>
-          <h5 class="font-light text-sm text-slate-400">Backend Developer</h5>
-        </div>
-      </div>
-      <div
-        class="relative bg-white transition delay-600 ease-in duration-400 hover:shadow-slate-400 hover:-translate-y-3 rounded-md p-3 h-40 w-96 border-[1px] border-zinc-200 flex flex-col justify-stretch items-between shadow-md"
-      >
-        <img
-          src="../../../assets/images/me.jpg"
-          alt=""
-          class="w-12 h-12 rounded-full absolute left-3 -top-7 shadow-md"
-        />
-        <i class="bi bi-quote text-3xl text-zinc-200 absolute left-2 top-5"></i>
-        <p class="relative mt-10 text-justify text-sm text-slate-400">
-          Lorem ipsum dolor sit amet consecteturcta esse saepe corrupti ullam,
-          magni facere incidunt ssds
-        </p>
-        <div class="mt-2">
-          <h3 class="font-semibold text-sm text-slate-600">Mário Norberto</h3>
-          <h5 class="font-light text-sm text-slate-400">Backend Developer</h5>
-        </div>
-      </div>
-      <div
-        class="relative bg-white transition delay-600 ease-in duration-400 hover:shadow-slate-400 hover:-translate-y-3 rounded-md p-3 h-40 w-96 border-[1px] border-zinc-200 flex flex-col justify-stretch items-between shadow-md"
-      >
-        <img
-          src="../../../assets/images/me.jpg"
-          alt=""
-          class="w-12 h-12 rounded-full absolute left-3 -top-7 shadow-md"
-        />
-        <i class="bi bi-quote text-3xl text-zinc-200 absolute left-2 top-5"></i>
-        <p class="relative mt-10 text-justify text-sm text-slate-400">
-          Lorem ipsum dolor sit amet consecteturcta esse saepe corrupti ullam,
-          magni facere incidunt ssds
-        </p>
-        <div class="mt-2">
-          <h3 class="font-semibold text-sm text-slate-600">Mário Norberto</h3>
-          <h5 class="font-light text-sm text-slate-400">Backend Developer</h5>
-        </div>
+
+      <div class="flex justify-center items-center gap-3">
+        <i
+          class="bi bi-chevron-left text-slate-600 text-3xl cursor-pointer"
+        ></i>
+        <i
+          class="bi bi-chevron-right text-slate-300 text-3xl cursor-pointer"
+        ></i>
       </div>
     </div>
   </section>

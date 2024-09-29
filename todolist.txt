@@ -1,0 +1,43 @@
+missing: 
+
+#style:
+-favicon
+
+
+#features
+- when clicking on categories post on home page only show concerning category you choose
+
+page - event
+- event settings hover
+- change content by clicking by top nav event
+
+#pages:
+- settings page
+- most read page
+- my posts page
+
+#content
+page | about 
+-content
+- handle submit form
+- (profile page)above the section image put more visual information for the user | populate the data user on inputs 
+
+page | news
+-proper news content and video and image
+
+
+page | usage
+-content
+- faq proper questions and anser
+
+#component
+-modal sent confirmation
+-modal yes or not
+
+#files:
+-concrete images
+-video ads(page community)
+
+#finishing
+-consuming the api
+-deploy

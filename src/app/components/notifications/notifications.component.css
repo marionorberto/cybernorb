@@ -39,4 +39,5 @@ tfoot {
 
 select option {
   color: #475569;
+  width: 50px;
 }

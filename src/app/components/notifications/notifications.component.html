@@ -258,7 +258,7 @@
       </div>
     </div>
     <div class="flex justify-between items-center mt-10 mb-4">
-      <div class="">
+      <!-- <div class="">
         <select
           name="emailFilter"
           id="emailFilter"
@@ -268,7 +268,7 @@
           <option value="">saved</option>
           <option value="">arquived</option>
         </select>
-      </div>
+      </div> -->
       <div class="flex gap-1 relative justify-center items-center">
         <input
           (focus)="onInputSearchFocus()"
@@ -304,9 +304,17 @@
             </div>
           </div>
         </div>
-        <i
-          class="bi bi-three-dots-vertical bg-slate-50 rounded-sm p-[11px] border-[1px] border-slate-100 cursor-pointer text-slate-700"
-        ></i>
+        <select
+          name="emailFilter"
+          id="emailFilter"
+          class="p-3 bg-slate-50 text-sm rounded-sm text-zinc-500 border-[1px] border-slate-100"
+        >
+          <option value="">Filter</option>
+          <option value="">All</option>
+          <option value="">Saved</option>
+          <option value="">Read</option>
+          <option value="">Arquived</option>
+        </select>
         <i class="absolute left-3 top-3 text-slate-400 bi bi-search"></i>
       </div>
     </div>
@@ -347,13 +355,22 @@
           <td>{{ customer.subject }}</td>
           <td>{{ customer.content }}</td>
           <td>{{ customer.date }}</td>
-          <td class="pe-20">
+          <td class="pe-20" id="{{ customer.id }}">
             <div class="relative">
               <i
-                class="bi bi-three-dots-vertical rounded-sm p-[11px] hover:bg-zinc-50 cursor-pointer text-slate-700"
+                (click)="handleSingleNotificationOption()"
+                class="bi bi-three-dots rounded-sm p-[11px] hover:bg-zinc-50 cursor-pointer text-slate-700"
               ></i>
-              <div class="absolute bottom-full p-4 rounded-md">
-                settings option list
+              <div
+                *ngIf="isSingleNotificationShown && customer.id"
+                class="p-4 rounded-md bg-white absolute right-4 top-2 z-10 shadow-sm"
+              >
+                <ul>
+                  <li><a href="">See</a></li>
+                  <li><a href="">As seen</a></li>
+                  <li><a href="">Arquived</a></li>
+                  <li><a href="">Delete</a></li>
+                </ul>
               </div>
             </div>
           </td>

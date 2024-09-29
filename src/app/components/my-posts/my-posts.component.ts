@@ -9,20 +9,22 @@ import { DialogModule } from 'primeng/dialog';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { FormsModule } from '@angular/forms';
+import { CardPostComponent } from "../card-post/card-post.component";
 
 @Component({
   selector: 'app-my-posts',
   standalone: true,
   imports: [
-   FooterComponent,
-   TopNavbarComponent,
-   CommonModule,
-   TableModule,
-   DialogModule,
-   ButtonModule,
-   ModalLargeComponent,
-   FormsModule
-  ],
+    FooterComponent,
+    TopNavbarComponent,
+    CommonModule,
+    TableModule,
+    DialogModule,
+    ButtonModule,
+    ModalLargeComponent,
+    FormsModule,
+    CardPostComponent
+],
   templateUrl: './my-posts.component.html',
   styleUrl: './my-posts.component.css'
 })

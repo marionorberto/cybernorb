@@ -5,76 +5,52 @@
     <div class="absolute right-4 top-4">
       <div class="relative">
         <button
-          (mouseenter)="handleChangeBackgroundColorOnFocus()"
-          (mouseleave)="handleChangeBackgroundColorOnBlur()"
+          (click)="handleChangeBackgroundColorOnClick()"
           class="text-[12px] bg-zinc-50 hover:bg-zinc-200 p-4 rounded-md cursor-pointer font-semibold"
         >
           Change Background Color <i class="bi bi-palette"></i>
         </button>
         <div
           *ngIf="isBackgroundButtonFocused"
-          class="absolute right-16 z-10 p-4 rounded-md mt-3 bg-white border-zinc-400 border-[1px] overflow-auto"
+          class="h-[19rem] absolute right-16 z-10 p-4 rounded-md mt-3 bg-white border-zinc-400 border-[1px] overflow-auto"
         >
           <h1 class="text-zinc-800 font-semibold text-nowrap text-start">
             Choose Background Color
           </h1>
-          <div class="p-2">
-            <div class="flex flex-col justify-center items-start gap-2">
-              <h3 class="text-zinc-400">Slate</h3>
-              <div class="flex justify-start items-center gap-3">
+          <h4
+            class="text-sm text-nowrap text-slate-700 font-semibold text-start my-1 cursor-pointer hover:bg-slate-100 rounded-md p-2 w-24"
+          >
+            Reset color
+          </h4>
+          <p-toast />
+          <p-confirmPopup />
+          <p-button (click)="confirm1($event)" label="Save" [outlined]="true" />
+          <p-button
+            (click)="confirm2($event)"
+            label="Delete"
+            severity="danger"
+            [outlined]="true"
+          />
+          <div class="p-2" *ngFor="let colorName of paletteColorsTitle">
+            <h3 class="text-zinc-400 my-1 text-start">{{ colorName }}</h3>
+            <div class="flex justify-start items-center gap-2">
+              <div
+                *ngFor="let pointColor of palettePoints"
+                class="flex justify-start items-center gap-3"
+              >
                 <div
                   class="cursor-pointer flex flex-col justify-center items-center gap-2"
                 >
-                  <div class="bg-slate-200 w-12 h-12 rounded-md"></div>
-                  <span>200</span>
-                </div>
-              </div>
-              <div class="flex justify-start items-center gap-3">
-                <div
-                  class="cursor-pointer flex flex-col justify-center items-center gap-2"
-                >
-                  <div class="bg-slate-300 w-12 h-12 rounded-md"></div>
-                  <span>300</span>
-                </div>
-              </div>
-              <div class="flex justify-start items-center gap-3">
-                <div
-                  class="cursor-pointer flex flex-col justify-center items-center gap-2"
-                >
-                  <div class="bg-slate-400 w-12 h-12 rounded-md"></div>
-                  <span>400</span>
-                </div>
-              </div>
-              <div class="flex justify-start items-center gap-3">
-                <div
-                  class="cursor-pointer flex flex-col justify-center items-center gap-2"
-                >
-                  <div class="bg-slate-500 w-12 h-12 rounded-md"></div>
-                  <span>500</span>
-                </div>
-              </div>
-              <div class="flex justify-start items-center gap-3">
-                <div
-                  class="cursor-pointer flex flex-col justify-center items-center gap-2"
-                >
-                  <div class="bg-slate-600 w-12 h-12 rounded-md"></div>
-                  <span>600</span>
-                </div>
-              </div>
-              <div class="flex justify-start items-center gap-3">
-                <div
-                  class="cursor-pointer flex flex-col justify-center items-center gap-2"
-                >
-                  <div class="bg-slate-700 w-12 h-12 rounded-md"></div>
-                  <span>700</span>
-                </div>
-              </div>
-              <div class="flex justify-start items-center gap-3">
-                <div
-                  class="cursor-pointer flex flex-col justify-center items-center gap-2"
-                >
-                  <div class="bg-slate-800 w-12 h-12 rounded-md"></div>
-                  <span>800</span>
+                  <div
+                    [ngClass]="[
+                      'w-12',
+                      'h-12',
+                      'rounded-md',
+                      'bg-' + colorName + '-' + pointColor
+                    ]"
+                  ></div>
+
+                  <span>{{ pointColor }}</span>
                 </div>
               </div>
             </div>
@@ -112,7 +88,7 @@
   <section
     class="p-6 pb-10 flex flex-col shadow-md justify-center items-center gap-3"
   >
-    <div class="flex gap-3 justify-around text-[12px]">
+    <div class="flex gap-3 justify-around">
       <span class="text-zinc-700"
         ><i class="bi bi-laptop"></i> Fullstack Developer
       </span>
@@ -128,9 +104,9 @@
 <section
   class="flex flex-col justify-between items-stretch gap-2 mt-8 mx-auto w-[60%] bg-white rounded-lg p-6 shadow-sm mb-28"
 >
-  <h3 class="text-slate-800 text-xl mb-10 font-semibold">
-    Profile information
-  </h3>
+  <h3 class="text-slate-800 text-xl mb-2 font-semibold">Profile information</h3>
+
+  <h3 class="text-slate-800 text-xl font-semibold">Update your profile</h3>
   <div class="flex gap-1 w-full">
     <div class="w-1/2">
       <input
