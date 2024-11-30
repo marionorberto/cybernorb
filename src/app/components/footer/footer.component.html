@@ -1,5 +1,5 @@
 <footer
-  class="relative flex flex-col justify-around items-center bg-slate-950 text-sm text-white pb-14 pt-8 w-full"
+  class="relative flex flex-col justify-around items-center bg-slate-950 text-sm text-white pb-14 pt-8 w-full max-lg:w-screen max-lg:overflow-x-hidden"
 >
   <section
     class="overflow-hidden whitespace-nowrap border-y-[1px] mb-14 border-slate-800 text-zinc-400"
@@ -113,27 +113,29 @@
     </ul>
   </section>
   <section>
-    <ul class="flex justify-center items-stretch gap-10 text-zinc-400 mt-8">
+    <ul
+      class="flex justify-center items-stretch gap-10 max-lg:gap-2 max-lg:text-[95%] text-zinc-400 mt-8"
+    >
       <li class="flex flex-col justify-stretch items-start">
         <h3 class="p-1 text-base text-zinc-500">Cybernorb</h3>
         <ul class="flex flex-col gap-1 justify-center items-start">
           <li>
             <a
-              routerLink="/news"
+              routerLink="/cybernorb/news"
               class="font-semibold bg-slate-950 p-1 text-zinc-400 hover:text-zinc-500"
               >News</a
             >
           </li>
           <li>
             <a
-              routerLink="/notifications"
+              routerLink="/cybernorb/notifications"
               class="font-semibold bg-slate-950 p-1 text-zinc-400 hover:text-zinc-500"
               >Notifications</a
             >
           </li>
           <li>
             <a
-              routerLink="/community"
+              routerLink="/cybernorb/community"
               class="font-semibold bg-slate-950 p-1 text-zinc-400 hover:text-zinc-500"
               >Community</a
             >
@@ -145,21 +147,21 @@
         <ul class="flex flex-col gap-1 justify-center items-start">
           <li>
             <a
-              routerLink="/privacy"
+              routerLink="/cybernorb/privacy"
               class="font-semibold bg-slate-950 p-1 text-zinc-400 hover:text-zinc-500"
               >Profile</a
             >
           </li>
           <li>
             <a
-              routerLink="/privacy"
+              routerLink="/cybernorb/privacy"
               class="font-semibold bg-slate-950 p-1 text-zinc-400 hover:text-zinc-500"
               >Posts</a
             >
           </li>
           <li>
             <a
-              routerLink="/login"
+              routerLink="/cybernorb/login"
               class="font-semibold bg-slate-950 p-1 text-zinc-400 hover:text-zinc-500"
               >Logout</a
             >
@@ -171,28 +173,28 @@
         <ul class="flex flex-col gap-1 justify-center items-start">
           <li>
             <a
-              routerLink="/events"
+              routerLink="/cybernorb/events"
               class="font-semibold bg-slate-950 p-1 text-zinc-400 hover:text-zinc-500"
               >Events</a
             >
           </li>
           <li>
             <a
-              routerLink="/usage"
+              routerLink="/cybernorb/usage"
               class="font-semibold bg-slate-950 p-1 text-zinc-400 hover:text-zinc-500"
               >Usage</a
             >
           </li>
           <li>
             <a
-              routerLink="/support"
+              routerLink="/cybernorb/support"
               class="font-semibold bg-slate-950 p-1 text-zinc-400 hover:text-zinc-500"
               >Support</a
             >
           </li>
         </ul>
       </li>
-      <li class="flex flex-col justify-stretch items-start">
+      <li class="flex flex-col justify-stretch items-start max-lg:hidden">
         <h3 class="p-1 text-base text-zinc-500">Social</h3>
         <ul class="flex flex-col gap-1 justify-center items-start">
           <li>
@@ -230,28 +232,22 @@
         <ul class="flex flex-col gap-1 justify-center items-start">
           <li>
             <a
-              routerLink="/privacy"
+              routerLink="/cybernorb/privacy"
               class="font-semibold bg-slate-950 p-1 text-zinc-400 hover:text-zinc-500"
-              >Terms & Privacy</a
-            >
+              >Terms & Privacy
+            </a>
           </li>
+
           <li>
             <a
-              routerLink="/cookies"
-              class="font-semibold bg-slate-950 p-1 text-zinc-400 hover:text-zinc-500"
-              >Cookies</a
-            >
-          </li>
-          <li>
-            <a
-              routerLink="/settings"
+              routerLink="/cybernorb/settings"
               class="font-semibold bg-slate-950 p-1 text-zinc-400 hover:text-zinc-500"
               >Settings</a
             >
           </li>
           <li>
             <a
-              routerLink="/support"
+              routerLink="/cybernorb/support"
               class="font-semibold bg-slate-950 p-1 text-zinc-400 hover:text-zinc-500"
               >Support</a
             >

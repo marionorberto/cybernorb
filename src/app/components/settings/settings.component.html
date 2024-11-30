@@ -2,39 +2,59 @@
 
 <section class="p-8">
   <h1 class="text-start text-slate-600 text-4xl">Settings</h1>
-  <div
-    class="rounded-md flex justify-start items-center gap-4 p-3 mt-5 shadow-sm"
-  >
+
+  <div class="bg-zinc-50 rounded-md p-4 flex justify-start items-center gap-10">
     <button
-      class="text-sm bg-slate-200 rounded-md p-2 gap-0 text-slate-600 font-semibold hover:bg-slate-200"
+      (click)="filterEvents('account')"
+      class="text-sm {{
+        filterSettingsChosen == 'account' ? 'bg-slate-300' : 'bg-slate-100'
+      }} rounded-md p-2 gap-0 text-slate-600 font-semibold hover:bg-slate-300"
     >
       Account
     </button>
     <button
-      class="text-sm bg-slate-50 rounded-md p-2 gap-0 text-slate-600 font-semibold hover:bg-slate-200"
+      (click)="filterEvents('profile')"
+      class="text-sm {{
+        filterSettingsChosen == 'profile' ? 'bg-slate-300' : 'bg-slate-100'
+      }} rounded-md p-2 gap-0 text-slate-600 font-semibold hover:bg-slate-300"
     >
       Profile
     </button>
     <button
-      class="text-sm bg-slate-50 rounded-md p-2 gap-0 text-slate-600 font-semibold hover:bg-slate-200"
+      (click)="filterEvents('notifications')"
+      class="text-sm {{
+        filterSettingsChosen == 'notifications'
+          ? 'bg-slate-300'
+          : 'bg-slate-100'
+      }} rounded-md p-2 gap-0 text-slate-600 font-semibold hover:bg-slate-300"
     >
       Notifications
     </button>
     <button
-      class="text-sm bg-slate-50 rounded-md p-2 gap-0 text-slate-600 font-semibold hover:bg-slate-200"
+      (click)="filterEvents('apperance')"
+      class="text-sm {{
+        filterSettingsChosen == 'apperance' ? 'bg-slate-300' : 'bg-slate-100'
+      }} rounded-md p-2 gap-0 text-slate-600 font-semibold hover:bg-slate-300"
     >
       Apperance
     </button>
     <button
-      class="text-sm bg-slate-50 rounded-md p-2 gap-0 text-slate-600 font-semibold hover:bg-slate-200"
+      (click)="filterEvents('security')"
+      class="text-sm {{
+        filterSettingsChosen == 'security' ? 'bg-slate-300' : 'bg-slate-100'
+      }} rounded-md p-2 gap-0 text-slate-600 font-semibold hover:bg-slate-300"
     >
       Security
     </button>
     <button
-      class="text-sm bg-slate-50 rounded-md p-2 gap-0 text-slate-600 font-semibold hover:bg-slate-200"
+      (click)="filterEvents('integrations')"
+      class="text-sm {{
+        filterSettingsChosen == 'integrations' ? 'bg-slate-300' : 'bg-slate-100'
+      }} rounded-md p-2 gap-0 text-slate-600 font-semibold hover:bg-slate-300"
     >
       Integrations
     </button>
   </div>
+  <section class="w-full bg-yellow-200 min-h-14"></section>
 </section>
 <app-footer></app-footer>

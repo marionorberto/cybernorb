@@ -1,4 +1,6 @@
-<section class="flex flex-col justify-center items-start gap-3 pe-2 w-[11rem]">
+<section
+  class="flex flex-col justify-center items-start gap-3 pe-2 w-[11rem] max-lg:hidden"
+>
   <section class="w-full">
     <h2
       class="font-bold text-sm text-black flex justify-end items-center gap-1 mb-4"
@@ -61,7 +63,9 @@
 
   <div class="bg-white shadow-md p-3 w-full border-[1px] border-zinc-100">
     <div class="flex justify-between items-center text-slate-600 my-3">
-      <a routerLink="/events" class="font-bold text-sm hover:text-slate-500"
+      <a
+        routerLink="/cybernorb/events"
+        class="font-bold text-sm hover:text-slate-500"
         >Events</a
       >
       <i
@@ -69,7 +73,9 @@
       ></i>
     </div>
     <div class="flex justify-between items-center text-slate-600 my-3">
-      <a routerLink="/community" class="font-bold text-sm hover:text-slate-500"
+      <a
+        routerLink="/cybernorb/community"
+        class="font-bold text-sm hover:text-slate-500"
         >Community</a
       >
       <i
@@ -89,14 +95,14 @@
     </div>
     <div class="flex justify-start items-center gap-2 my-3">
       <i class="bi bi-bookmark-plus-fill text-slate-700 font-mono"></i>
-      <a routerLink="/single-post" class="text-slate-600 text-sm"
+      <a routerLink="/cybernorb/single-post" class="text-slate-600 text-sm"
         >saved posts</a
       >
     </div>
 
     <div class="flex justify-start items-center gap-2 my-3">
       <i class="bi bi-share-fill text-slate-700 font-mono"></i>
-      <a routerLink="/single-post" class="text-slate-600 text-sm"
+      <a routerLink="/cybernorb/single-post" class="text-slate-600 text-sm"
         >share posts</a
       >
     </div>

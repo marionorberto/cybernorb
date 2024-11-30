@@ -24,8 +24,4 @@ export class ModalLargeComponent {
     drag: false,
     maximize: true,
   }
-
-  constructor() {
-    console.log('i passed through modal-large');
-  }
 }

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { TopNavbarComponent } from "../top-navbar/top-navbar.component";
-import { FooterComponent } from "../footer/footer.component";
-import { CardMostReadComponent } from "../card-most-read/card-most-read.component";
+
+import { CardPostComponent } from "../card-post/card-post.component";
 
 interface ContentPostInterface {
   content: string
@@ -20,11 +19,10 @@ interface PostInterface {
   sections: SectionPostInterface[]
 }
 
-
 @Component({
   selector: 'app-single-post',
   standalone: true,
-  imports: [TopNavbarComponent, FooterComponent, CardMostReadComponent],
+  imports: [CardPostComponent],
   templateUrl: './single-post.component.html',
   styleUrl: './single-post.component.css'
 })

@@ -6,101 +6,70 @@
   >
     <span class="bg-slate-700 p-1">Breaking News</span>
   </h3>
-  <div class="flex justify-center items-stretch gap-8 px-40 pt-14">
-    <div class="flex-col justify-between items-stretch gap-1 w-96">
-      <h1 class="font-bold text-3xl text-slate-600">Lorem ipsum dolor sit.</h1>
-      <p class="text-slate-600 my-1 h-64 text-justify w-full">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
-        commodi placeat deserunt dolor est sed voluptatem officiis praesentium
-        esse soluta. Exercitationem commodi placeat deserunt dolor est sed esse
-        soluta. Exercitationem commodi placeat deserunt dolor est sed esse
-        soluta. Exercitationem commodi placeat deserunt dolor est sed voluptatem
-        officiis praesentium esse soluta.
+  <div
+    class="grid grid-cols-2 grid-rows-2 place-content-center place-items-center gap-8 px-40 pt-14"
+  >
+    <div
+      class="flex-col justify-between items-stretch gap-1 w-96 mb-8"
+      *ngFor="let value of breaknewsData"
+    >
+      <h1 class="font-bold text-3xl text-slate-600">
+        {{
+          value.title.length >= 45
+            ? value.title.slice(0, 45)
+            : value.title + "..."
+        }}
+      </h1>
+      <p class="text-slate-600 my-1 h-28 text-justify w-full">
+        {{ value.description }}
       </p>
-      <div class="bg-zinc-600 p-4 w-full h-64">img</div>
+      <div class="flex justify-between items-center my-1 mb-2">
+        <span class="text-sm text-slate-600 italic"
+          ><i class="bi bi-pencil-fill"></i>{{ value.author }}</span
+        >
+        <span class="text-slate-700 text-sm">{{ value.date }}</span>
+      </div>
+      <div class="bg-zinc-600 w-full h-64">
+        <img
+          src="../../../assets/images/{{ value.urlImage }}"
+          alt=""
+          class="w-full h-full"
+        />
+      </div>
+      <div class="flex justify-start items-center mt-2">
+        <div class="flex justify-center gap-2 items-center">
+          <i
+            class="bi bi-chevron-right text-sm bg-slate-600 text-white font-bold rounded-md p-1 px-2"
+          ></i
+          ><span
+            class="text-slate-600 hover:text-base hover:text-slate-700 cursor-pointer"
+            >Read Post <i class="text-slate-300 bi bi-arrow-bar-right"></i
+          ></span>
+        </div>
+      </div>
     </div>
-    <div class="flex-col justify-between items-stretch gap-1 w-96">
-      <h1 class="font-bold text-3xl text-slate-600">Lorem ipsum dolor sit.</h1>
-      <p class="text-slate-600 my-1 h-64 text-justify w-full">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
-        commodi placeat deserunt dolor est sed voluptatem officiis praesentium
-        esse soluta. Exercitationem commodi placeat deserunt dolor est sed esse
-        soluta. Exercitationem commodi placeat deserunt dolor est sed esse
-        soluta. Exercitationem commodi placeat deserunt dolor est sed voluptatem
-        officiis praesentium esse soluta.
-      </p>
-      <div class="bg-zinc-600 p-4 w-full h-64">img</div>
-    </div>
-  </div>
-  <div class="flex justify-center items-stretch gap-8 px-40 pt-14">
-    <div class="flex-col justify-between items-stretch gap-1 w-96">
-      <h1 class="font-bold text-3xl text-slate-600">Lorem ipsum dolor sit.</h1>
-      <p class="text-slate-600 my-1 h-64 text-justify w-full">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
-        commodi placeat deserunt dolor est sed voluptatem officiis praesentium
-        esse soluta. Exercitationem commodi placeat deserunt dolor est sed esse
-        soluta. Exercitationem commodi placeat deserunt dolor est sed esse
-        soluta. Exercitationem commodi placeat deserunt dolor est sed voluptatem
-        officiis praesentium esse soluta.
-      </p>
-      <div class="bg-zinc-600 p-4 w-full h-64">img</div>
-    </div>
-    <div class="flex-col justify-between items-stretch gap-1 w-96">
-      <h1 class="font-bold text-3xl text-slate-600">Lorem ipsum dolor sit.</h1>
-      <p class="text-slate-600 my-1 h-64 text-justify w-full">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
-        commodi placeat deserunt dolor est sed voluptatem officiis praesentium
-        esse soluta. Exercitationem commodi placeat deserunt dolor est sed esse
-        soluta. Exercitationem commodi placeat deserunt dolor est sed esse
-        soluta. Exercitationem commodi placeat deserunt dolor est sed voluptatem
-        officiis praesentium esse soluta.
-      </p>
-      <div class="bg-zinc-600 p-4 w-full h-64">img</div>
+    <div class="ms-auto">
+      <button
+        class="rounded-sm bg-slate-700 px-4 py-2 font-semibold text-white hover:-translate-y-[2px] transition duration-75 ease-in-out"
+      >
+        Next Page <i class="bi bi-chevron-right font-semibold"></i>
+      </button>
     </div>
   </div>
-  <section class="p-4">
+
+  <section class="p-4 mt-9">
     <h3
       class="p-4 rounded-sm bg-slate-800 text-white font-bold text-3xl my-4 mb-10 ps-14"
     >
       <span class="p-1 bg-slate-700">Hacker Attacks</span>
     </h3>
     <section
-      class="grid grid-cols-3 grid-rows-2 place-items-center gap-0 place-content-around px-40"
+      class="grid grid-cols-3 grid-rows-2 place-items-center gap-x-10 gap-y-10 place-content-around px-40 py-10"
     >
-      <div class="w-56 h-80">
-        <div class="bg-slate-50 p-10 w-full my-3">Img</div>
+      <div *ngFor="let card of hackerAttacksData" class="w-80">
+        <div class="bg-slate-50 h-44 w-full my-3"></div>
         <h1 class="font-bold text-lg">
-          Lorem ipsum dolor sit amet consectetur.
-        </h1>
-      </div>
-      <div class="w-56 h-80">
-        <div class="bg-slate-50 p-10 w-full my-3">Img</div>
-        <h1 class="font-bold text-lg">
-          Lorem ipsum dolor sit amet consectetur.
-        </h1>
-      </div>
-      <div class="w-56 h-80">
-        <div class="bg-slate-50 p-10 w-full my-3">Img</div>
-        <h1 class="font-bold text-lg">
-          Lorem ipsum dolor sit amet consectetur.
-        </h1>
-      </div>
-      <div class="w-56 h-80">
-        <div class="bg-slate-50 p-10 w-full my-3">Img</div>
-        <h1 class="font-bold text-lg">
-          Lorem ipsum dolor sit amet consectetur.
-        </h1>
-      </div>
-      <div class="w-56 h-80">
-        <div class="bg-slate-50 p-10 w-full my-3">Img</div>
-        <h1 class="font-bold text-lg">
-          Lorem ipsum dolor sit amet consectetur.
-        </h1>
-      </div>
-      <div class="w-56 h-80">
-        <div class="bg-slate-50 p-10 w-full my-3">Img</div>
-        <h1 class="font-bold text-lg">
-          Lorem ipsum dolor sit amet consectetur.
+          {{ card.title }}
         </h1>
       </div>
     </section>
@@ -113,42 +82,12 @@
       <span class="bg-slate-700 p-1"> IA News </span>
     </h3>
     <section
-      class="grid grid-cols-3 grid-rows-2 place-items-center place-content-around px-40"
+      class="grid grid-cols-3 grid-rows-2 place-items-center gap-x-10 gap-y-10 place-content-around px-40 py-10"
     >
-      <div class="w-56 h-80">
-        <div class="bg-slate-50 p-10 w-full my-3">Img</div>
+      <div *ngFor="let card of iaData" class="w-80">
+        <div class="bg-slate-50 h-44 w-full my-3"></div>
         <h1 class="font-bold text-lg">
-          Lorem ipsum dolor sit amet consectetur.
-        </h1>
-      </div>
-      <div class="w-56 h-80">
-        <div class="bg-slate-50 p-10 w-full my-3">Img</div>
-        <h1 class="font-bold text-lg">
-          Lorem ipsum dolor sit amet consectetur.
-        </h1>
-      </div>
-      <div class="w-56 h-80">
-        <div class="bg-slate-50 p-10 w-full my-3">Img</div>
-        <h1 class="font-bold text-lg">
-          Lorem ipsum dolor sit amet consectetur.
-        </h1>
-      </div>
-      <div class="w-56 h-80">
-        <div class="bg-slate-50 p-10 w-full my-3">Img</div>
-        <h1 class="font-bold text-lg">
-          Lorem ipsum dolor sit amet consectetur.
-        </h1>
-      </div>
-      <div class="w-56 h-80">
-        <div class="bg-slate-50 p-10 w-full my-3">Img</div>
-        <h1 class="font-bold text-lg">
-          Lorem ipsum dolor sit amet consectetur.
-        </h1>
-      </div>
-      <div class="w-56 h-80">
-        <div class="bg-slate-50 p-10 w-full my-3">Img</div>
-        <h1 class="font-bold text-lg">
-          Lorem ipsum dolor sit amet consectetur.
+          {{ card.title }}
         </h1>
       </div>
     </section>
@@ -160,79 +99,83 @@
       <span class="bg-slate-700 p-1">Software Development</span>
     </h3>
     <div class="flex justify-center items-stretch gap-3 cursor-pointer">
-      <div class="bg-zinc-600 w-96 h-52">IMG</div>
+      <div class="bg-zinc-600 w-96 h-64">IMG</div>
       <div class="flex flex-col justify-stretch items-start gap-3 w-96">
         <h2 class="font-bold text-2xl text-slate-600">
-          Lorem ipsum dolor sit amet.
+          GitHub updates Innovation Graph with latest developer trends
         </h2>
         <p class="text-slate-500 h-60 text-justify">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores,
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores,
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores,
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores,
+          GitHub's Innovation Graph has been updated with data from Q4 2023,
+          offering a comprehensive view of global developer activity over the
+          past four years.
         </p>
       </div>
     </div>
     <section
-      class="grid grid-cols-3 grid-rows-1 place-items-center place-content-around px-40 mt-8"
+      class="grid grid-cols-3 grid-rows-1 place-items-center place-content-around px-40 mb-11"
     >
-      <div class="w-56 h-80">
-        <div class="bg-slate-50 p-10 w-full my-3">Img</div>
+      <div class="w-80">
+        <div class="bg-slate-50 h-44 w-full my-3"></div>
         <h1 class="font-bold text-lg">
-          Lorem ipsum dolor sit amet consectetur.
+          Google releases Flutter 3.7 and teases future improvements
         </h1>
       </div>
-      <div class="w-56 h-80">
-        <div class="bg-slate-50 p-10 w-full my-3">Img</div>
+      <div class="w-80">
+        <div class="bg-slate-50 h-44 w-full my-3"></div>
         <h1 class="font-bold text-lg">
-          Lorem ipsum dolor sit amet consectetur.
+          Google releases Flutter 3.7 and teases future improvements
         </h1>
       </div>
-      <div class="w-56 h-80">
-        <div class="bg-slate-50 p-10 w-full my-3">Img</div>
+      <div class="w-80">
+        <div class="bg-slate-50 h-44 w-full my-3"></div>
         <h1 class="font-bold text-lg">
-          Lorem ipsum dolor sit amet consectetur.
+          Google releases Flutter 3.7 and teases future improvements
         </h1>
       </div>
     </section>
     <div class="flex justify-center items-stretch gap-3 cursor-pointer">
-      <div class="bg-zinc-600 w-96 h-52">IMG</div>
+      <div class="bg-zinc-600 w-96 h-64">IMG</div>
       <div class="flex flex-col justify-stretch items-start gap-3 w-96">
         <h2 class="font-bold text-2xl text-slate-600">
-          Lorem ipsum dolor sit amet.
+          Graphcore joins PyTorch Foundation as a general member
         </h2>
         <p class="text-slate-500 h-60 text-justify">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores,
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores,
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores,
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores,
+          The PyTorch Foundation, a home for the deep learning community to
+          collaborate on the open-source PyTorch framework and ecosystem, has
+          announced that Graphcore is joining its ranks.
         </p>
       </div>
     </div>
     <div class="flex justify-center items-stretch gap-3 cursor-pointer">
-      <div class="bg-zinc-600 w-96 h-52">IMG</div>
+      <div class="bg-zinc-600 w-96 h-64">IMG</div>
       <div class="flex flex-col justify-stretch items-start gap-3 w-96">
         <h2 class="font-bold text-2xl text-slate-600">
-          Lorem ipsum dolor sit amet.
+          Intel joins PyTorch Foundation as a ‘Premier’ member
         </h2>
-        <p class="text-slate-500 h-60 text-justify">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores,
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores,
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores,
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores,
+        <p class="text-slate-500 h-64 text-justify">
+          Intel has become a ‘Premier’ member of the PyTorch Foundation in a
+          move aimed at propelling the advancement of AI. PyTorch is a popular
+          open-source framework that accelerates AI application development and
+          facilitates experimentation that can lead to creative breakthroughs in
+          the field.
         </p>
       </div>
     </div>
   </section>
   <section class="flex justify-center items-stretch gap-4 mb-28 my-4">
-    <div class="w-56 h-80">
-      <div class="bg-slate-50 p-10 w-full">Img</div>
-      <h1 class="font-bold text-lg">Lorem ipsum dolor sit amet consectetur.</h1>
+    <div class="w-80">
+      <div class="bg-slate-50 h-44 w-full my-3"></div>
+      <h1 class="font-bold text-lg">
+        Snowflake Native Application Framework aims to help developers build and
+        monetise apps
+      </h1>
     </div>
     <div class="bg-slate-100 w-96 h-96">IMG</div>
-    <div class="w-56 h-80">
-      <div class="bg-slate-50 p-10 w-full">Img</div>
-      <h1 class="font-bold text-lg">Lorem ipsum dolor sit amet consectetur.</h1>
+    <div class="w-80">
+      <div class="bg-slate-50 h-44 w-full my-3"></div>
+      <h1 class="font-bold text-lg">
+        Google releases Flutter 3.7 and teases future improvements
+      </h1>
     </div>
   </section>
 

@@ -1,0 +1,73 @@
+<div class="p-2 flex justify-start items-center gap-4 w-full rounded-md">
+  <div
+    class="w-40 flex flex-col justify-center items-center border-r-[1px] p-5 ps-8"
+  >
+    <span class="font-bold text-4xl text-slate-600">Wed</span>
+    <span class="font-bold text-4xl text-slate-600">19</span>
+  </div>
+  <div class="flex justify-start items-center gap-20 relative">
+    <div class="text-lg flex flex-col gap-2 justify-center items-start">
+      <span class="text-zinc-500"
+        ><i class="bi bi-stopwatch"></i> 14h - 15h30
+        <i class="bi bi-exclamation-circle-fill text-red-500"></i
+      ></span>
+      <span class="text-zinc-500"
+        ><i class="bi bi-geo-alt-fill"></i> Online</span
+      >
+    </div>
+    <div class="flex flex-col justify-center items-start">
+      <h3 class="text-sm font-bold">
+        Nestjs Framework new release, whats new?
+      </h3>
+      <div *ngFor="let value of scheduleData">
+        <h5 class="text-zinc-400 italic text-sm">Feature Speakers</h5>
+        <div class="relative flex mt-2">
+          <img
+            *ngFor="let speaker of value.speakers"
+            src="{{ speaker.img }}"
+            alt=""
+            class="w-8 h-8 rounded-full z-10 shadow-md"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="absolute -right-64 top-6">
+      <div class="relative">
+        <i
+          (click)="handleShowSettingEvent()"
+          class="bi bi-three-dots-vertical bg-slate-50 rounded-sm p-[11px] border-[1px] border-slate-100 cursor-pointer text-slate-700 hover:bg-slate-100"
+        ></i>
+        <div
+          *ngIf="showSettingsEvent"
+          class="bg-white absolute -right-36 -bottom-20 p-4 rounded-sm border-[1px] border-zinc-100 w-32 h-32 text-zinc-400"
+        >
+          <ul>
+            <a routerLink="">
+              <li
+                class="text-slate-600 flex justify-start items-center gap-1 hover:bg-slate-100 px-2 py-1 font-semibold"
+              >
+                Share <i class="bi bi-share"></i>
+              </li>
+            </a>
+            <a routerLink="">
+              <li
+                class="text-slate-600 flex justify-start items-center gap-1 hover:bg-slate-100 py-1 px-2 font-semibold"
+              >
+                save <i class="bi bi-bookmark-fill"></i>
+              </li>
+            </a>
+
+            <a routerLink="">
+              <li
+                class="text-slate-600 flex justify-start items-center gap-1 hover:bg-slate-100 px-2 py-1 font-semibold"
+              >
+                Dismiss <i class="bi bi-journal-x"></i>
+              </li>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr class="my-3 w-[90%] mx-auto" />

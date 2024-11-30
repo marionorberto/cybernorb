@@ -1,11 +1,11 @@
 <!-- create a profile component and replace and introduce here: -->
 <section class="flex flex-col gap-0 w-full mb-6 bg-white">
   <section class="relative">
-    <div class="w-full h-[300px] bg-gradient-to-tr bg-blue-800"></div>
+    <div class="w-full h-[300px] bg-gradient-to-tr {{ bgColorChoosen }}"></div>
     <div class="absolute right-4 top-4">
       <div class="relative">
         <button
-          (click)="handleChangeBackgroundColorOnClick()"
+          (click)="onChangeBackgroundColorOnClick()"
           class="text-[12px] bg-zinc-50 hover:bg-zinc-200 p-4 rounded-md cursor-pointer font-semibold"
         >
           Change Background Color <i class="bi bi-palette"></i>
@@ -18,19 +18,11 @@
             Choose Background Color
           </h1>
           <h4
+            (click)="onResetBgColor()"
             class="text-sm text-nowrap text-slate-700 font-semibold text-start my-1 cursor-pointer hover:bg-slate-100 rounded-md p-2 w-24"
           >
             Reset color
           </h4>
-          <p-toast />
-          <p-confirmPopup />
-          <p-button (click)="confirm1($event)" label="Save" [outlined]="true" />
-          <p-button
-            (click)="confirm2($event)"
-            label="Delete"
-            severity="danger"
-            [outlined]="true"
-          />
           <div class="p-2" *ngFor="let colorName of paletteColorsTitle">
             <h3 class="text-zinc-400 my-1 text-start">{{ colorName }}</h3>
             <div class="flex justify-start items-center gap-2">
@@ -42,18 +34,29 @@
                   class="cursor-pointer flex flex-col justify-center items-center gap-2"
                 >
                   <div
-                    [ngClass]="[
-                      'w-12',
-                      'h-12',
-                      'rounded-md',
-                      'bg-' + colorName + '-' + pointColor
-                    ]"
+                    (click)="onChooseBgColor(colorName, pointColor)"
+                    class="w-12 h-12 rounded-md"
+                    [ngClass]="['bg-' + colorName + '-' + pointColor]"
                   ></div>
 
                   <span>{{ pointColor }}</span>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="flex gap-2 mt-5">
+            <button
+              type="submit"
+              class="transition-all text-[14px] transition-[all 0.4s ease-in-out] font-medium hover:text-white hover:bg-slate-800 text-white bg-slate-900 hover:shadow-md px-6 py-2 rounded-md shadow-sm"
+            >
+              Save
+            </button>
+            <button
+              (click)="onHideChooseBgColor()"
+              class="transition-all text-[14px] transition-[all 0.4s ease-in-out] font-medium hover:text-white hover:bg-slate-900 border-[1px] border-zinc-400 text-zinc-400 px-6 py-2 rounded-md hover:shadow-md bg-transparent"
+            >
+              Cancel
+            </button>
           </div>
         </div>
       </div>
@@ -81,7 +84,7 @@
         </label>
       </div>
       <h1 class="font-semibold text-white text-5xl mt-8 mb-3 text-center">
-        Mário Norberto
+        {{ profileData.firstname }} {{ profileData.lastname }}
       </h1>
     </div>
   </section>
@@ -90,10 +93,10 @@
   >
     <div class="flex gap-3 justify-around">
       <span class="text-zinc-700"
-        ><i class="bi bi-laptop"></i> Fullstack Developer
+        ><i class="bi bi-laptop"></i> {{ profileData.mainJob }}
       </span>
       <span class="text-zinc-700"
-        ><i class="bi bi-geo-alt"></i> Luanda, Angola
+        ><i class="bi bi-geo-alt"></i> {{ profileData.location }}
       </span>
       <span class="text-zinc-700"
         >Joined July 29 <i class="bi bi-calendar-date"></i
@@ -104,85 +107,106 @@
 <section
   class="flex flex-col justify-between items-stretch gap-2 mt-8 mx-auto w-[60%] bg-white rounded-lg p-6 shadow-sm mb-28"
 >
-  <h3 class="text-slate-800 text-xl mb-2 font-semibold">Profile information</h3>
+  <!-- <h3 class="text-slate-800 text-xl mb-2 font-semibold">Profile information</h3> -->
 
-  <h3 class="text-slate-800 text-xl font-semibold">Update your profile</h3>
+  <!-- <h3 class="text-slate-800 text-xl font-semibold">Update your profile</h3> -->
   <div class="flex gap-1 w-full">
-    <div class="w-1/2">
+    <div class="w-1/2 text-left">
+      <label for="firstname">Firstname</label>
       <input
         type="text"
         class="text-[15px] border-b-[1px] border-zinc-400 text-black w-full p-2 bg-zinc-50"
         name="firstname"
         placeholder="Firstname"
+        [value]="profileData.firstname"
       />
     </div>
-    <div class="w-1/2">
+    <div class="w-1/2 text-left">
+      <label for="lastname">Lastname</label>
       <input
         type="text"
         class="text-[15px] border-b-[1px] border-zinc-400 text-black w-full p-2 bg-zinc-50"
         name="lastname"
         placeholder="Lastname"
+        [value]="profileData.lastname"
       />
     </div>
   </div>
   <div class="flex gap-1 w-full">
-    <div class="w-1/2">
+    <div class="w-1/2 text-left">
+      <label for="phone">Phone</label>
       <input
         type="text"
         class="text-[15px] border-b-[1px] border-zinc-400 text-black w-full p-2 bg-zinc-50"
         name="phone"
         placeholder="Phone Number"
+        [value]="profileData.phone"
       />
     </div>
 
-    <div class="w-1/2">
+    <div class="w-1/2 text-left">
+      <label for="email">Email</label>
       <input
         type="text"
         class="text-[15px] border-b-[1px] border-zinc-400 text-black w-full p-2 bg-zinc-50"
         name="email"
         placeholder="Email Address"
+        [value]="profileData.email"
       />
     </div>
   </div>
   <div class="flex gap-1 w-full">
     <!--  -->
-    <div class="w-1/2">
+    <div class="w-1/2 text-left">
+      <label for="country">Country</label>
       <select
         name="country"
         id="country"
+        value="ao"
         class="bg-zinc-50 text-[15px] border-b-[1px] border-zinc-400 text-zinc-400 w-full p-2 placeholder:text-white"
       >
         <option value="">choose country</option>
-        <option value="ao">🇦🇴 Angola</option>
+        <option
+          value="ao"
+          selected="{{ profileData.country == 'angola' ? true : false }}"
+        >
+          🇦🇴 Angola
+        </option>
         <option value="pt">🇵🇹 Portugal</option>
         <option value="br">🇧🇷 Brasil</option>
         <option value="us">🇺🇸 USA</option>
       </select>
     </div>
-    <div class="w-1/2">
+    <div class="w-1/2 text-left">
+      <label for="company">Company</label>
       <input
         type="text"
         class="text-[15px] border-b-[1px] border-zinc-400 text-black w-full p-2 bg-zinc-50"
         name="company"
         placeholder="Company Name"
+        [value]="profileData.company"
       />
     </div>
   </div>
   <div class="flex gap-1 w-full">
-    <div class="w-1/2">
+    <div class="w-1/2 text-left">
+      <label for="job">Job</label>
       <input
         type="text"
         class="text-[15px] border-b-[1px] border-zinc-400 text-black w-full p-2 bg-zinc-50"
         name="job"
         placeholder="Job Title"
+        [value]="profileData.mainJob"
       />
     </div>
-    <div class="w-1/2">
+    <div class="w-1/2 text-left">
+      <label for="location">Location</label>
       <input
         type="text"
         class="text-[15px] border-b-[1px] border-zinc-400 text-black w-full p-2 bg-zinc-50"
         name="email"
         placeholder="Email Address"
+        [value]="profileData.location"
       />
     </div>
   </div>
@@ -191,40 +215,51 @@
     name="bio"
     class="border-zinc-400 border-[1px] rounded-md h-40 w-full justify-items-start p-2 text-black flex justify-start items-stretch bg-zinc-50"
     placeholder="write your bio information here!"
-  ></textarea>
+  >
+    {{ profileData.bio }}
+</textarea
+  >
   <div class="flex gap-1 w-full">
-    <div class="w-1/2">
+    <div class="w-1/2 text-left">
+      <label for="mainOcupation">Main Ocuppation</label>
       <input
         type="text"
         class="text-[15px] border-b-[1px] border-zinc-400 text-black w-full p-2 bg-zinc-50"
         name="mainJob"
         placeholder="Main job"
+        [value]="profileData.mainJob"
       />
     </div>
-    <div class="w-1/2">
+    <div class="w-1/2 text-left">
+      <label for="stack">Stack</label>
       <input
         type="text"
         class="text-[15px] border-b-[1px] border-zinc-400 text-black w-full p-2 bg-zinc-50"
-        name="firstJob"
-        placeholder="Is your Firs Job?"
+        name="stack"
+        placeholder="stack"
+        [value]="profileData.stack"
       />
     </div>
   </div>
   <div class="flex gap-1 w-full">
-    <div class="w-1/2">
+    <div class="w-1/2 text-left">
+      <label for="remoteJob">Remote Job</label>
       <input
         type="text"
         class="text-[15px] border-b-[1px] border-zinc-400 text-black w-full p-2 bg-zinc-50"
         name="remoteJob"
         placeholder="Is you work remote?"
+        value="{{ profileData.remote ? 'yes' : 'no' }}"
       />
     </div>
-    <div class="w-1/2">
+    <div class="w-1/2 text-left">
+      <label for="jobPlace">Job Place</label>
       <input
         type="text"
         class="text-[15px] border-b-[1px] border-zinc-400 text-black w-full p-2 bg-zinc-50"
         name="jobPlace"
         placeholder="Where is your job placed?"
+        [value]="profileData.jobLocation"
       />
     </div>
   </div>

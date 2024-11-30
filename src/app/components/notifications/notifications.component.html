@@ -1,6 +1,6 @@
 <app-top-navbar></app-top-navbar>
 
-<section class="p-8 pb-44">
+<section class="p-8 pb-44 ps-14">
   <div class="flex justify-between items-center">
     <div>
       <h1 class="text-slate-600 text-4xl mt-4 relative">
@@ -30,19 +30,22 @@
       </div>
       <div class="flex justify-center items-center gap-2">
         <button
-          class="hover:bg-slate-600 bg-slate-700 text-sm font-semibold text-white rounded-sm p-1 px-2"
+          (click)="onMarkAllNotificationAsRead()"
+          class="
+          {{
+            markAllAsRead
+              ? 'font-semibold text-slate-700 bg-white'
+              : 'bg-slate-600 text-white hover:bg-slate-700'
+          }}
+            text-sm font-semibold rounded-sm p-1 px-2"
         >
-          <i class="bi bi-check-all text-sm"></i> Mark all as read
+          Mark all as read <i class="bi bi-check-all text-sm"></i>
         </button>
 
         <button
-          class="flex justify-between items-center gap-1 hover:bg-slate-300 bg-zinc-100 text-sm font-semibold text-slate-700 rounded-sm p-1 px-2"
+          class="flex justify-between items-center gap-1 hover:bg-slate-700 text-sm font-semibold bg-slate-600 text-white rounded-sm p-1 px-2"
         >
-          <p-button
-            class=""
-            (onClick)="handleCardDialog(true)"
-            label="setting"
-          />
+          <p-button class="" (onClick)="onCardDialog(true)" label="setting" />
           <i class="bi bi-sliders2 text-sm"></i>
         </button>
         <app-modal-large [cardProfileData]="dataToCardProfile">
@@ -257,18 +260,16 @@
         </app-modal-large>
       </div>
     </div>
-    <div class="flex justify-between items-center mt-10 mb-4">
-      <!-- <div class="">
-        <select
-          name="emailFilter"
-          id="emailFilter"
-          class="p-3 ps-9 bg-slate-50 text-sm rounded-sm text-slate-600 border-[1px] border-slate-100"
-        >
-          <option value="">all email</option>
-          <option value="">saved</option>
-          <option value="">arquived</option>
-        </select>
-      </div> -->
+    <div
+      class="text-yellow-500 bg-yellow-100 flex justify-center items-center h-24 rounded-sm w-full my-3 font-semibold"
+      *ngIf="dataToInput.length == 0"
+    >
+      No Notification Available <i class="ms-2 bi bi-exclamation-circle"></i>
+    </div>
+    <div
+      *ngIf="dataToInput.length > 0"
+      class="flex justify-between items-center mt-10 mb-4"
+    >
       <div class="flex gap-1 relative justify-center items-center">
         <input
           (focus)="onInputSearchFocus()"
@@ -321,7 +322,7 @@
 
     <p-table
       class="mt-3"
-      [value]="customers"
+      [value]="dataToInput"
       [paginator]="true"
       [rows]="8"
       [tableStyle]="{ 'min-width': '50rem' }"
@@ -336,42 +337,25 @@
           <th style="width: 10%; background-color: white"></th>
         </tr>
       </ng-template>
-      <ng-template pTemplate="body" let-customer>
-        <tr class="border-b-[1px] border-zinc-50 hover:bg-zinc-100">
+      <ng-template pTemplate="body" let-data>
+        <tr class="border-b-[1px] border-zinc-50 hover:bg-zinc-100 w-full">
           <td class="flex justify-start items-center gap-2">
             <input type="checkbox" class="outline-zinc-100 cursor-pointer" />
-            <img
-              src="{{ customer.image }}"
-              alt=""
-              class="w-8 h-8 rounded-full"
-            />
+            <img src="{{ data.image }}" alt="" class="w-8 h-8 rounded-full" />
             <div class="flex flex-col gap-0 justify-center items-start">
-              <span class="">{{ customer.name }}</span>
-              <span class="text-[12px] text-zinc-400">{{
-                customer.email
-              }}</span>
+              <span class="">{{ data.name }}</span>
+              <span class="text-[12px] text-zinc-400">{{ data.email }}</span>
             </div>
           </td>
-          <td>{{ customer.subject }}</td>
-          <td>{{ customer.content }}</td>
-          <td>{{ customer.date }}</td>
-          <td class="pe-20" id="{{ customer.id }}">
+          <td>{{ data.subject }}</td>
+          <td>{{ data.content }}</td>
+          <td>{{ data.date }}</td>
+          <td class="pe-20">
             <div class="relative">
               <i
-                (click)="handleSingleNotificationOption()"
+                (click)="onSingleNotificationOption()"
                 class="bi bi-three-dots rounded-sm p-[11px] hover:bg-zinc-50 cursor-pointer text-slate-700"
               ></i>
-              <div
-                *ngIf="isSingleNotificationShown && customer.id"
-                class="p-4 rounded-md bg-white absolute right-4 top-2 z-10 shadow-sm"
-              >
-                <ul>
-                  <li><a href="">See</a></li>
-                  <li><a href="">As seen</a></li>
-                  <li><a href="">Arquived</a></li>
-                  <li><a href="">Delete</a></li>
-                </ul>
-              </div>
             </div>
           </td>
         </tr>

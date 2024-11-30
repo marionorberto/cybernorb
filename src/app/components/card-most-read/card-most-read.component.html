@@ -16,12 +16,20 @@
       {{ data.content }}
     </p>
 
-    <a class="font-light cursor-pointer text-slate-600 underline text-[12px]">
-      <p-button (onClick)="handleCardDialog(true)" label="continue to see" />
-      <app-modal-large [cardProfileData]="dataToCardProfile">
-        <app-single-post></app-single-post>
-      </app-modal-large>
-    </a>
+    <div
+      (onClick)="onShowCardDialog()"
+      class="flex justify-start gap-2 items-center hover:translate-x-1 transition ease-in-out"
+    >
+      <i
+        class="bi bi-chevron-right text-sm bg-slate-600 text-white font-bold rounded-md py-[1px] px-[1px]"
+      ></i
+      ><span class="text-slate-600 hover:text-slate-700 cursor-pointer text-sm"
+        >Read Post <i class="text-slate-300 bi bi-arrow-bar-right"></i
+      ></span>
+    </div>
+    <app-modal-large [cardProfileData]="dataToCardProfile">
+      <app-single-post></app-single-post>
+    </app-modal-large>
   </div>
   <img
     src="../../../assets/images/{{ data.urlImg }}"

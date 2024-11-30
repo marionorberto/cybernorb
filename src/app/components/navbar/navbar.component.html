@@ -1,5 +1,5 @@
 <nav
-  class="pt-3 relative whitespace-nowrap flex justify-center items-center bg-slate-800 text-sm text-white w-full my-10 mb-10 shadow-lg"
+  class="pt-3 relative whitespace-nowrap flex justify-center items-center bg-slate-800 text-sm text-white w-full my-10 mb-10 shadow-lg max-lg:w-full"
 >
   <p-carousel
     [value]="techs"
@@ -8,22 +8,10 @@
     [responsiveOptions]="responsiveOptions"
   >
     <ng-template let-tech pTemplate="item">
-      <!-- <ul
-        class="navbar-container flex justify-center items-center gap-6 overflow-hidden px-6"
-      ></ul> -->
-      <!-- <ul
-        class="navbar-container flex justify-center items-center gap-6 overflow-hidden px-6"
-      > -->
-      <!-- <a
-        [style.nav-active]="true"
-        class="font-semibold bg-slate-700 hover:bg-slate-700 p-1 border-t-[3px] border-zinc-400"
-        >{{ tech }}</a
-      > -->
-      <!-- </ul> -->
       <ul class="flex justify-evenly items-center gap-0 mt-[3px]">
-        <span
-          class="text-sm font-semibold bg-slate-700 border-zinc-400 p-[3px]"
-          >{{ tech }}</span
+        <a
+          class="text-sm font-semibold hover:bg-slate-600 bg-slate-700 border-zinc-400 p-[3px] cursor-pointer"
+          >{{ tech }}</a
         >
       </ul>
     </ng-template>

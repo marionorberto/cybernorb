@@ -23,11 +23,14 @@ import { SinglePostComponent } from "../single-post/single-post.component";
 export class CardMostReadComponent {
 
   @Input() mostReadData: any[] = [];
-  
-  dataToCardProfile: { visible: boolean, position: string } = { visible: false, position: ''}
+  dataToCardProfile: { 
+    visible: boolean,
+    position: string
+  } = { visible: false, position: ''}
 
-  handleCardDialog(visible: boolean) {
+  onShowCardDialog() {
     this.dataToCardProfile.visible = true;
     this.dataToCardProfile.position = 'bottom';
   }
+
 }

@@ -18,42 +18,54 @@ export class ProfileComponent  {
   isBackgroundButtonFocused: boolean = false;
   palettePoints: string[]; 
   paletteColorsTitle: string[] ;
-
-  constructor(private confirmationService: ConfirmationService, private messageService: MessageService) {
-    this.palettePoints = ['200', '300', '400', '500', '600', '700', '800', '900'];
-    this.paletteColorsTitle =  ['orange', 'yellow','slate'];
+  bgColorDefault: string = 'bg-blue-800';
+  bgColorChoosen: string = this.bgColorDefault;
+  profileData: {
+    firstname: string;
+    lastname: string;
+    email: string;
+    phone: string;
+    country: string;
+    company: string;
+    location: string;
+    bio: string;
+    mainJob: string;
+    stack: string;
+    remote: boolean;
+    jobLocation: string;
+  } = {
+    firstname: 'Mário',
+    lastname: 'Norberto',
+    email: 'marionorberto2018@gmail.com',
+    phone: '+244 935-327-990',
+    country: 'Angola',
+    company: '---',
+    location: 'Luanda, Angola',
+    bio: 'Building softwares, system inovations, implemeting system automatization.',
+    mainJob: 'Fullstack Developer',
+    stack: 'Junior',
+    remote: true,
+    jobLocation: 'Luanda, Mainga'    
   }
 
-    confirm1(event: Event) {
-        this.confirmationService.confirm({
-            target: event.target as EventTarget,
-            message: 'Are you sure you want to proceed?',
-            icon: 'pi pi-exclamation-triangle',
-            accept: () => {
-                this.messageService.add({ severity: 'info', summary: 'Confirmed', detail: 'You have accepted', life: 3000 });
-            },
-            reject: () => {
-                this.messageService.add({ severity: 'error', summary: 'Rejected', detail: 'You have rejected', life: 3000 });
-            }
-        });
-    }
+  constructor() {
+    this.palettePoints = ['200', '300', '400', '500', '600', '700', '800', '900'];
+    this.paletteColorsTitle =  ['slate'];
+  }
 
-     confirm2(event: Event) {
-        this.confirmationService.confirm({
-            target: event.target as EventTarget,
-            message: 'Do you want to delete this record?',
-            icon: 'pi pi-info-circle',
-            acceptButtonStyleClass: 'p-button-danger p-button-sm',
-            accept: () => {
-                this.messageService.add({ severity: 'info', summary: 'Confirmed', detail: 'Record deleted', life: 3000 });
-            },
-            reject: () => {
-                this.messageService.add({ severity: 'error', summary: 'Rejected', detail: 'You have rejected', life: 3000 });
-            }
-        });
-    }
-    
-  handleChangeBackgroundColorOnClick() {
+  onChangeBackgroundColorOnClick(): void {
     this.isBackgroundButtonFocused = !this.isBackgroundButtonFocused;
+  }
+
+  onChooseBgColor(colorName: string, pointColor: string): void {
+    this.bgColorChoosen = `bg-${colorName}-${pointColor}`;
+  }
+
+  onResetBgColor() {
+    this.bgColorChoosen = this.bgColorDefault;
+  }
+
+  onHideChooseBgColor() {
+    this.isBackgroundButtonFocused = false;
   }
 }

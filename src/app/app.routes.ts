@@ -22,18 +22,23 @@ import { MyPostsComponent } from './components/my-posts/my-posts.component';
 export const routes: Routes = [
   {
     path: '',
-    component: MainLayoutComponent
+    redirectTo: 'cybernorb/login',
+    pathMatch: 'full'
   },
   {
-    path: 'news',
+    path: 'cybernorb/news',
     component: NewsComponent, 
   },
   {
-    path: 'resources',
+    path: 'cybernorb',
+    component: MainLayoutComponent,
+  },
+  {
+    path: 'cybernorb/resources',
     component: ResourcesComponent, 
   },
   {
-    path: 'login',
+    path: 'cybernorb/login',
     component: LoginComponent
   },
   {
@@ -41,55 +46,55 @@ export const routes: Routes = [
     component: RegisterComponent
   },
   {
-    path: 'notifications',
+    path: 'cybernorb/notifications',
     component: NotificationsComponent
   },
   {
-    path: 'ativities',
+    path: 'cybernorb/ativities',
     component: ActivitiesComponent
   },
   {
-    path: 'about',
+    path: 'cybernorb/about',
     component: AboutComponent
   },
   {
-    path: 'regiter',
+    path: 'cybernorb/regiter',
     component: RegisterComponent
   },
   {
-    path:'my-posts',
+    path:'cybernorb/my-posts',
     component: MyPostsComponent
   },
    {
-    path: 'privacy',
+    path: 'cybernorb/privacy',
     component: PrivacyComponent
   },
   {
-    path: 'usage',
+    path: 'cybernorb/usage',
     component: AdviceUsageComponent
   },
   {
-    path: 'settings',
+    path: 'cybernorb/settings',
     component: SettingsComponent
   },
   {
-    path: 'community',
+    path: 'cybernorb/community',
     component: CommunityComponent
   },
   {
-    path: 'most-read',
+    path: 'cybernorb/most-read',
     component: MostReadComponent
   },
   {
-    path: 'events',
+    path: 'cybernorb/events',
     component: EventsComponent
   },
    {
-    path: 'single-post',
+    path: 'cybernorb/single-post',
     component: SinglePostComponent
   },
    {
-    path: 'support',
+    path: 'cybernorb/support',
     component: SupportComponent
   },
   {

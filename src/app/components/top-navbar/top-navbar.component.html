@@ -1,13 +1,13 @@
 <nav
-  class="relative p-2 py-3 flex justify-around items-center border-b-[1px] border-zinc-300"
+  class="relative p-2 py-3 flex justify-around items-center border-b-[1px] border-zinc-300 max-lg:justify-between"
 >
-  <a routerLink="/" class="font-bold">
+  <a routerLink="/cybernorb" class="font-bold">
     <img src="../../../assets/images/logo.png" alt="" srcset=""
   /></a>
-  <ul class="flex justify-center items-center gap-1 me-10">
+  <ul class="flex justify-center items-center gap-1 me-10 max-lg:hidden">
     <li>
       <a
-        routerLink="/"
+        routerLink="/cybernorb"
         routerLinkActive="nav-active"
         class="text-slate-500 hover:bg-slate-100 p-1 px-2 rounded-sm text-sm"
         >Home</a
@@ -15,7 +15,7 @@
     </li>
     <li>
       <a
-        routerLink="/news"
+        routerLink="/cybernorb/news"
         routerLinkActive="nav-active"
         class="text-slate-500 hover:bg-slate-100 p-1 px-2 rounded-sm text-sm"
         >News</a
@@ -42,7 +42,7 @@
     </li>
     <li>
       <a
-        routerLink="/about"
+        routerLink="/cybernorb/about"
         routerLinkActive="nav-active"
         class="text-slate-500 hover:bg-slate-100 p-1 px-2 rounded-sm text-sm"
         >About</a
@@ -51,8 +51,8 @@
   </ul>
   <section class="absolute right-9 flex justify-center gap-2 items-center">
     <a
-      routerLink="/notifications"
-      class="relative hover:shadow-md h-8 w-8 rounded-full cursor-pointer"
+      routerLink="/cybernorb/notifications"
+      class="relative hover:shadow-md h-8 w-8 rounded-full cursor-default max-lg:hidden"
     >
       <i
         class="bi bi-bell-fill text-slate-950 text-lg border-[1px] border-zinc-100 h-8 w-8 p-1 rounded-full flex justify-center items-center"
@@ -63,8 +63,8 @@
       >
     </a>
     <a
-      routerLink="/community"
-      class="cursor-pointer hover:shadow-md h-8 w-8 rounded-full"
+      routerLink="/cybernorb/community"
+      class="cursor-pointer hover:shadow-md h-8 w-8 rounded-full max-lg:hidden"
     >
       <i
         class="bi bi-people-fill text-slate-950 text-lg border-[1px] border-zinc-100 h-8 w-8 p-1 rounded-full flex justify-center items-center"
@@ -102,7 +102,7 @@
         class="flex w-full flex-col justify-center items-start gap-2 border-t-[1px] mt-4 border-slate-700 pt-2"
       >
         <a
-          class="font-light flex justify-center items-center gap-2 text-[14px] hover:text-zinc-400 text-zinc-300"
+          class="font-light flex justify-center items-center gap-2 text-[14px] hover:text-zinc-400 text-zinc-300 cursor-pointer"
         >
           <i class="bi bi-person-fill text-lg"></i>
           <p-button (onClick)="handleCreatePost(true)" label="Profile">
@@ -113,8 +113,8 @@
         </a>
 
         <a
-          routerLink="/settings"
-          class="flex justify-center items-center gap-2 text-[14px] text-zinc-300 hover:text-zinc-400"
+          routerLink="/cybernorb/settings"
+          class="flex justify-center items-center gap-2 text-[14px] text-zinc-300 hover:text-zinc-400 cursor-pointer"
           ><i class="bi bi-gear-fill text-lg"></i> Settings</a
         >
       </div>
@@ -122,18 +122,18 @@
         class="flex w-full flex-col justify-center items-start gap-2 border-t-[1px] mt-4 border-slate-700 pt-2"
       >
         <a
-          routerLink="/my-posts"
-          class="flex justify-center items-center gap-2 text-[14px] hover:text-zinc-400 text-zinc-300"
+          routerLink="/cybernorb/my-posts"
+          class="flex justify-center items-center gap-2 text-[14px] hover:text-zinc-400 text-zinc-300 cursor-pointer"
           ><i class="bi bi-download text-lg"></i> My Posts</a
         >
         <a
-          routerLink="/notifications"
-          class="flex justify-center items-center gap-2 text-[14px] hover:text-zinc-400 text-zinc-300"
+          routerLink="/cybernorb/notifications"
+          class="flex justify-center items-center gap-2 text-[14px] hover:text-zinc-400 text-zinc-300 cursor-pointer"
           ><i class="bi bi-bell-fill text-lg"></i> Check Notifications</a
         >
         <a
-          routerLink="/events"
-          class="flex justify-center items-center gap-2 text-[14px] hover:text-zinc-400 text-zinc-300"
+          routerLink="/cybernorb/events"
+          class="flex justify-center items-center gap-2 text-[14px] hover:text-zinc-400 text-zinc-300 cursor-pointer"
           ><i class="bi bi-calendar-event text-lg"></i>Events</a
         >
       </div>
@@ -141,10 +141,13 @@
         class="border-t-[1px] mb-8 border-slate-700 flex justify-start items-center gap-3 pt-3 w-full mt-2"
       >
         <button
-          class="relative bg-white rounded-md h-14 w-20 p-1 hover:shadow-zinc-600 hover:shadow-md"
+          (click)="onChangeLayoutModeToLight()"
+          class="relative bg-white rounded-md h-14 w-20 p-1 hover:shadow-zinc-600 hover:shadow-md cursor-pointer"
         >
           <i
-            class="absolute left-7 top-4 bi bi-check text-white bg-slate-700 text-lg h-5 w-5 rounded-full flex justify-center items-center"
+            class="absolute left-7 top-4 bi {{
+              layoutMode == 'light' ? 'bi-check bg-slate-700' : ''
+            }} text-white text-lg h-5 w-5 rounded-full flex justify-center items-center"
           ></i>
           <div class="bg-zinc-200 w-full rounded-sm h-4"></div>
           <div class="flex gap-1 justify-between items-center py-1">
@@ -157,10 +160,13 @@
           </h4>
         </button>
         <button
-          class="relative bg-black rounded-md h-14 w-20 p-1 hover:shadow-zinc-600 hover:shadow-md"
+          (click)="onChangeLayoutModeToDark()"
+          class="relative bg-black rounded-md h-14 w-20 p-1 hover:shadow-zinc-600 hover:shadow-md cursor-pointer"
         >
           <i
-            class="absolute left-7 top-4 bi bi-check text-white bg-slate-700 text-lg h-5 w-5 rounded-full flex justify-center items-center"
+            class="absolute left-7 top-4 bi {{
+              layoutMode == 'dark' ? 'bi-check bg-slate-700' : ''
+            }} text-white text-lg h-5 w-5 rounded-full flex justify-center items-center"
           ></i>
           <div class="bg-neutral-800 w-full rounded-sm h-4"></div>
           <div class="flex gap-1 justify-between items-center py-1">
@@ -174,10 +180,11 @@
         </button>
       </div>
       <a
-        routerLink="/login"
+        routerLink="/cybernorb/login"
         class="py-3 pt-5 w-full border-t-[1px] mt-4 border-slate-700 hover:text-zinc-400 text-zinc-300 font-semibold flex justify-start items-center gap-2 cursor-pointer"
       >
-        <i class="bi bi-box-arrow-left font-light text-base"></i> Logout
+        <i class="bi bi-box-arrow-left font-light text-base cursor-pointer"></i>
+        Logout
       </a>
     </div>
   </section>

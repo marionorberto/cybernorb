@@ -1,27 +1,122 @@
-# Cybernorb
+<div align="center">
+  <h1>CYBERNORB</h1>
+</div>
+<br />
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.0.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-## Code scaffolding
+cybernorb is website blog build to help tech lovers change their knowledge and ideias with comunity by publicing tech posts.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## why?
 
-## Build
+* Help tech lover share their knowledge and interact with other people within community.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+### Built With
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* Javascript;
+* Angular;
+* Css;
+* Angular Animations;
+* PrimeNg Library;
+* API REST Consuming;
 
-## Running end-to-end tests
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+<!-- GETTING STARTED -->
+## Getting Started
+
+### Prerequisites
+
+Ensure your have installed on your machine: Editor (Ex: Vscode), nodeJS, npm(or preferencial), angular-cli.
+<!-- 
+* npm
+  ```sh
+  npm install npm@latest -g
+  ``` -->
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/marionorberto/tasker.git
+   ```
+2. Install NPM packages:
+   ```sh
+   npm install
+   ```
+3. run app:
+  ```sh
+   ng s
+   ```
+4. Run the migrations
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+The main use of this web app is to create tasks and consulting them. 
+
+* main page:
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- CONTRIBUTING -->
+## Contributing
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+## License
+Distributed under the MIT License.
+
+## Contact
+
+Mário Norberto - [likedin.com/in/marionorberto](https://linkedin.com/in/marionorberto) - marionorberto2018@gmail.com
+
+Project Link: [https://github.com/marionorberto/tasker](https://github.com/marionorberto/tasker)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+

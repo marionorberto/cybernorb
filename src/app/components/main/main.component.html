@@ -1,45 +1,55 @@
-<main class="mb-40">
+<main class="mb-40 px-[65px] max-lg:px-4 max-lg:pe-10">
   <app-navbar></app-navbar>
 
   <section
-    class="relative mb-10 rounded-md shadow-sm w-96 bg-slate-50 h-12 flex justify-start items-center border-[1px] border-zinc-200"
+    class="max-lg:w-56 relative mb-10 rounded-md w-96 h-12 flex justify-start items-center"
   >
-    <i
-      class="hover:text-slate-600 cursor-pointer absolute right-[4%] top-2 text-xl text-zinc-400 bi bi-search"
-    ></i>
-    <div class="w-[100%] rounded-xl h-full bg-slate-50">
+    <div class="flex gap-1 relative justify-center items-center">
       <input
         [(ngModel)]="inputValue"
         (focus)="onInputFocus()"
         (blur)="onInputBlur()"
         type="text"
-        placeholder="Search by post here ..."
-        class="text-sm search-posts w-full bg-transparent ps-6 pe-12 text-zinc-600 h-full text-center"
+        class="p-3 ps-9 bg-slate-50 text-sm rounded-sm text-slate-600 border-[1px] border-slate-100"
+        placeholder="Search Posts..."
       />
-    </div>
-    <div
-      *ngIf="inputValue && isFocused"
-      class="absolute top-14 left-10 p-4 border-[1px] border-zinc-100 bg-white rounded-sm w-96 h-40 overflow-y-auto"
-    >
-      <div class="mb-3">
-        <h3 class="text-zinc-700 text-lg font-bold my-3">Results:</h3>
-        <div
-          class="text-zinc-400 flex flex-col justify-start items-start gap-1"
-        >
-          <a class="cursor-pointer underline text-sm hover:text-zinc-500"
-            >Installing vscode on ubuntu <i class="bi bi-arrow-right"></i>
-          </a>
-          <a class="cursor-pointer underline text-sm hover:text-zinc-500"
-            >Installing vscode on manjaro <i class="bi bi-arrow-right"></i
-          ></a>
-          <a class="cursor-pointer underline text-sm hover:text-zinc-500"
-            >Installing vscode on windows 10 <i class="bi bi-arrow-right"></i
-          ></a>
-          <a class="cursor-pointer underline text-sm hover:text-zinc-500"
-            >Installing vscode on ubuntu 18.04 <i class="bi bi-arrow-right"></i
-          ></a>
+      <div
+        *ngIf="inputValue && isFocused"
+        class="z-10 absolute top-14 right-4 p-4 border-[1px] border-zinc-100 bg-white rounded-sm w-96 h-40 overflow-y-auto shadow-md"
+      >
+        <div class="mb-3">
+          <h3 class="text-zinc-700 text-lg font-bold my-3">Results:</h3>
+          <div
+            class="text-zinc-400 flex flex-col justify-start items-start gap-1"
+          >
+            <a class="cursor-pointer underline text-sm hover:text-zinc-500"
+              >Installing vscode on ubuntu <i class="bi bi-arrow-right"></i>
+            </a>
+            <a class="cursor-pointer underline text-sm hover:text-zinc-500"
+              >Installing vscode on manjaro <i class="bi bi-arrow-right"></i
+            ></a>
+            <a class="cursor-pointer underline text-sm hover:text-zinc-500"
+              >Installing vscode on windows 10 <i class="bi bi-arrow-right"></i
+            ></a>
+            <a class="cursor-pointer underline text-sm hover:text-zinc-500"
+              >Installing vscode on ubuntu 18.04
+              <i class="bi bi-arrow-right"></i
+            ></a>
+          </div>
         </div>
       </div>
+      <select
+        name="emailFilter"
+        id="emailFilter"
+        class="p-3 bg-slate-50 text-sm rounded-sm text-zinc-500 border-[1px] border-slate-100"
+      >
+        <option value="">Filter</option>
+        <option value="">All</option>
+        <option value="">Saved</option>
+        <option value="">Read</option>
+        <option value="">Arquived</option>
+      </select>
+      <i class="absolute left-3 top-3 text-slate-400 bi bi-search"></i>
     </div>
   </section>
 

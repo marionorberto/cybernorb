@@ -1,14 +1,18 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { MenubarModule } from 'primeng/menubar';
 
+import { CommonModule } from '@angular/common';
+import { MenubarModule } from 'primeng/menubar';
 import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
+
 import { ModalLargeComponent } from "../modal-large/modal-large.component";
 import { ProfileComponent } from "../profile/profile.component";
-import { CreatePostComponent } from "../create-post/create-post.component";
 
+enum EnumLayoutMode  {
+  'DARK' = 'dark',
+  'LIGHT' = 'light',
+}
 @Component({
   selector: 'app-top-navbar',
   standalone: true,
@@ -21,17 +25,21 @@ import { CreatePostComponent } from "../create-post/create-post.component";
     DialogModule,
     ModalLargeComponent,
     ProfileComponent,
-    CreatePostComponent
 ],
   templateUrl: './top-navbar.component.html',
   styleUrl: './top-navbar.component.css'
 })
 export class TopNavbarComponent {
   showCardProfile: boolean = false;
-
-  dataToCardProfile: { visible: boolean, position: string } = { visible: false, position: ''};   
-
+  dataToCardProfile: { 
+    visible: boolean,
+    position: string
+  } = { 
+    visible: false,
+    position: ''
+  };   
   items: any[] =  [];
+  layoutMode: EnumLayoutMode = EnumLayoutMode.LIGHT;
   
   ngOnInit() {
      this.items = [
@@ -40,15 +48,15 @@ export class TopNavbarComponent {
     items: [
         {
           label: 'Events',
-          route: '/events'
+          route: '/cybernorb/events'
         },
         {
           label: 'Usage',
-          route: '/usage'
+          route: '/cybernorb/usage'
         },
         {
           label: 'Support',
-          route: '/support'
+          route: '/cybernorb/support'
         }
     ]
   }];
@@ -69,5 +77,11 @@ export class TopNavbarComponent {
     this.dataToCardProfile.visible = visible;
   }
 
+  onChangeLayoutModeToDark() {
+    this.layoutMode =  EnumLayoutMode.DARK;
+  }
 
+  onChangeLayoutModeToLight() {
+    this.layoutMode =  EnumLayoutMode.LIGHT;
+  }
 }

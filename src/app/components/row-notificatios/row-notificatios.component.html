@@ -1,0 +1,24 @@
+<tr class="border-b-[1px] border-zinc-50 hover:bg-zinc-100 w-full h-44">
+  <td class="flex justify-start items-center gap-2">
+    <input type="checkbox" class="outline-zinc-100 cursor-pointer" />
+    <img src="{{ data.image }}" alt="" class="w-8 h-8 rounded-full" />
+    <div class="flex flex-col gap-0 justify-center items-start">
+      <span class="">{{ data.name }}</span>
+      <span class="text-[12px] text-zinc-400">{{ data.email }}</span>
+    </div>
+  </td>
+  <td>{{ data.subject }}</td>
+  <td>{{ data.content }}</td>
+  <td>{{ data.date }}</td>
+  <td class="pe-20">
+    <div class="relative">
+      <i
+        (click)="handleSingleNotificationOption()"
+        class="bi bi-three-dots rounded-sm p-[11px] hover:bg-zinc-50 cursor-pointer text-slate-700"
+      ></i>
+      <app-three-dots-settings
+        *ngIf="isSingleNotificationShown"
+      ></app-three-dots-settings>
+    </div>
+  </td>
+</tr>

@@ -18,17 +18,26 @@
         class="bg-zinc-50 rounded-md p-4 flex justify-start items-center gap-10"
       >
         <button
-          class="text-sm bg-slate-200 rounded-md p-2 gap-0 text-slate-600 font-semibold hover:bg-slate-200"
+          (click)="filterEvents('upcoming')"
+          class="text-sm {{
+            eventFilterChosen == 'upcoming' ? 'bg-slate-300' : 'bg-slate-100'
+          }} rounded-md p-2 gap-0 text-slate-600 font-semibold hover:bg-slate-300"
         >
           Upcoming
         </button>
         <button
-          class="text-sm bg-slate-100 rounded-md p-2 gap-0 text-slate-600 font-semibold hover:bg-slate-200"
+          (click)="filterEvents('pending')"
+          class="text-sm {{
+            eventFilterChosen == 'pending' ? 'bg-slate-300' : 'bg-slate-100'
+          }} rounded-md p-2 gap-0 text-slate-600 font-semibold hover:bg-slate-300"
         >
           Pending
         </button>
         <button
-          class="text-sm bg-slate-100 rounded-md p-2 gap-0 text-slate-600 font-semibold hover:bg-slate-200"
+          (click)="filterEvents('past')"
+          class="text-sm {{
+            eventFilterChosen == 'past' ? 'bg-slate-300' : 'bg-slate-100'
+          }} rounded-md p-2 gap-0 text-slate-600 font-semibold hover:bg-slate-300"
         >
           Past
         </button>
@@ -36,274 +45,41 @@
       <div
         class="p-5 rounded-md border-[1px] border-zinc-100 mt-6 flex flex-col justify-center items-start w-full gap-2"
       >
+        <app-event-schedule></app-event-schedule>
+        <app-event-schedule></app-event-schedule>
+        <app-event-schedule></app-event-schedule>
+        <app-event-schedule></app-event-schedule>
+      </div>
+
+      <div
+        class="border-[1px] border-slate-50 bg-slate-50 grid grid-cols-3 grid-rows-1 mt-8 place-content-center place-items-center"
+      >
         <div
-          class="p-2 flex justify-start items-center gap-4 w-full rounded-md"
+          class="bg-slate-100 hover:bg-slate-200 w-40 h-36 flex justify-center items-center"
         >
-          <div
-            class="w-40 flex flex-col justify-center items-center border-r-[1px] p-5 ps-8"
+          <a
+            routerLink=""
+            class="font-semibold text-slate-600 cursor-pointer hover:underline"
+            >Saved Events</a
           >
-            <span class="font-bold text-4xl text-slate-600">Wed</span>
-            <span class="font-bold text-4xl text-slate-600">19</span>
-          </div>
-          <div class="flex justify-start items-center gap-20 relative">
-            <div class="text-lg flex flex-col gap-2 justify-center items-start">
-              <span class="text-zinc-500"
-                ><i class="bi bi-stopwatch"></i> 14h - 15h30
-                <i class="bi bi-exclamation-circle-fill text-red-500"></i
-              ></span>
-              <span class="text-zinc-500"
-                ><i class="bi bi-geo-alt-fill"></i> Online</span
-              >
-            </div>
-            <div class="flex flex-col justify-center items-start">
-              <h3 class="text-sm font-bold">
-                Nestjs Framework new release, whats new?
-              </h3>
-              <div>
-                <h5 class="text-zinc-400 italic text-sm">Feature Speakers</h5>
-                <div class="relative flex mt-2">
-                  <img
-                    src="../../../assets/images/me.jpg"
-                    alt=""
-                    class="w-8 h-8 rounded-full z-10 shadow-md"
-                  />
-                  <img
-                    src="../../../assets/images/me.jpg"
-                    alt=""
-                    class="w-8 h-8 rounded-full z-20 absolute left-7 shadow-md"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="absolute -right-64 top-6">
-              <div class="relative">
-                <i
-                  class="bi bi-three-dots-vertical bg-slate-50 rounded-sm p-[11px] border-[1px] border-slate-100 cursor-pointer text-slate-700 hover:bg-slate-100"
-                ></i>
-                <div
-                  class="bg-white absolute -right-36 -bottom-20 p-4 rounded-sm border-[1px] border-zinc-50 w-32 h-28 text-zinc-400"
-                >
-                  hwew
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-        <hr class="my-3 w-[90%] mx-auto" />
         <div
-          class="p-2 flex justify-start items-center gap-4 w-full rounded-md"
+          class="bg-slate-100 bg-gradient-to-tr hover:bg-slate-200 w-40 h-36 flex justify-center items-center"
         >
-          <div
-            class="w-40 flex flex-col justify-center items-center border-r-[1px] p-5 ps-8"
+          <a
+            routerLink=""
+            class="font-semibold text-slate-600 cursor-pointer hover:underline"
+            >Shared Events</a
           >
-            <span class="font-bold text-4xl text-slate-600">Wed</span>
-            <span class="font-bold text-4xl text-slate-600">19</span>
-          </div>
-          <div class="flex justify-start items-center gap-20 relative">
-            <div class="text-lg flex flex-col gap-2 justify-center items-start">
-              <span class="text-zinc-500"
-                ><i class="bi bi-stopwatch"></i> 14h - 15h30
-                <i class="bi bi-exclamation-circle-fill text-red-500"></i
-              ></span>
-              <span class="text-zinc-500"
-                ><i class="bi bi-geo-alt-fill"></i> Online</span
-              >
-            </div>
-            <div class="flex flex-col justify-center items-start">
-              <h3 class="text-sm font-bold">
-                Nestjs Framework new release, whats new?
-              </h3>
-              <div>
-                <h5 class="text-zinc-400 italic text-sm">Feature Speakers</h5>
-                <div class="relative flex mt-2">
-                  <img
-                    src="../../../assets/images/me.jpg"
-                    alt=""
-                    class="w-8 h-8 rounded-full z-10 shadow-md"
-                  />
-                  <img
-                    src="../../../assets/images/me.jpg"
-                    alt=""
-                    class="w-8 h-8 rounded-full z-20 absolute left-7 shadow-md"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="absolute -right-64 top-6">
-              <div class="relative">
-                <i
-                  class="bi bi-three-dots-vertical bg-slate-50 rounded-sm p-[11px] border-[1px] border-slate-100 cursor-pointer text-slate-700 hover:bg-slate-100"
-                ></i>
-                <div
-                  class="bg-white absolute -right-36 -bottom-20 p-4 rounded-sm border-[1px] border-zinc-50 w-32 h-28 text-zinc-400"
-                >
-                  hwew
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-        <hr class="my-3 w-[90%] mx-auto" />
         <div
-          class="p-2 flex justify-start items-center gap-4 w-full rounded-md"
+          class="bg-slate-100 hover:bg-slate-200 w-40 h-36 flex justify-center items-center"
         >
-          <div
-            class="w-40 flex flex-col justify-center items-center border-r-[1px] p-5 ps-8"
+          <a
+            routerLink=""
+            class="font-semibold text-slate-600 cursor-pointer hover:underline"
+            >Dismissed Events</a
           >
-            <span class="font-bold text-4xl text-slate-600">Wed</span>
-            <span class="font-bold text-4xl text-slate-600">19</span>
-          </div>
-          <div class="flex justify-start items-center gap-20 relative">
-            <div class="text-lg flex flex-col gap-2 justify-center items-start">
-              <span class="text-zinc-500"
-                ><i class="bi bi-stopwatch"></i> 14h - 15h30
-                <i class="bi bi-exclamation-circle-fill text-red-500"></i
-              ></span>
-              <span class="text-zinc-500"
-                ><i class="bi bi-geo-alt-fill"></i> Online</span
-              >
-            </div>
-            <div class="flex flex-col justify-center items-start">
-              <h3 class="text-sm font-bold">
-                Nestjs Framework new release, whats new?
-              </h3>
-              <div>
-                <h5 class="text-zinc-400 italic text-sm">Feature Speakers</h5>
-                <div class="relative flex mt-2">
-                  <img
-                    src="../../../assets/images/me.jpg"
-                    alt=""
-                    class="w-8 h-8 rounded-full z-10 shadow-md"
-                  />
-                  <img
-                    src="../../../assets/images/me.jpg"
-                    alt=""
-                    class="w-8 h-8 rounded-full z-20 absolute left-7 shadow-md"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="absolute -right-64 top-6">
-              <div class="relative">
-                <i
-                  class="bi bi-three-dots-vertical bg-slate-50 rounded-sm p-[11px] border-[1px] border-slate-100 cursor-pointer text-slate-700 hover:bg-slate-100"
-                ></i>
-                <div
-                  class="bg-white absolute -right-36 -bottom-20 p-4 rounded-sm border-[1px] border-zinc-50 w-32 h-28 text-zinc-400"
-                >
-                  hwew
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr class="my-3 w-[90%] mx-auto" />
-        <div
-          class="p-2 flex justify-start items-center gap-4 w-full rounded-md"
-        >
-          <div
-            class="w-40 flex flex-col justify-center items-center border-r-[1px] p-5 ps-8"
-          >
-            <span class="font-bold text-4xl text-slate-600">Wed</span>
-            <span class="font-bold text-4xl text-slate-600">19</span>
-          </div>
-          <div class="flex justify-start items-center gap-20 relative">
-            <div class="text-lg flex flex-col gap-2 justify-center items-start">
-              <span class="text-zinc-500"
-                ><i class="bi bi-stopwatch"></i> 14h - 15h30
-                <i class="bi bi-exclamation-circle-fill text-red-500"></i
-              ></span>
-              <span class="text-zinc-500"
-                ><i class="bi bi-geo-alt-fill"></i> Online</span
-              >
-            </div>
-            <div class="flex flex-col justify-center items-start">
-              <h3 class="text-sm font-bold">
-                Nestjs Framework new release, whats new?
-              </h3>
-              <div>
-                <h5 class="text-zinc-400 italic text-sm">Feature Speakers</h5>
-                <div class="relative flex mt-2">
-                  <img
-                    src="../../../assets/images/me.jpg"
-                    alt=""
-                    class="w-8 h-8 rounded-full z-10 shadow-md"
-                  />
-                  <img
-                    src="../../../assets/images/me.jpg"
-                    alt=""
-                    class="w-8 h-8 rounded-full z-20 absolute left-7 shadow-md"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="absolute -right-64 top-6">
-              <div class="relative">
-                <i
-                  class="bi bi-three-dots-vertical bg-slate-50 rounded-sm p-[11px] border-[1px] border-slate-100 cursor-pointer text-slate-700 hover:bg-slate-100"
-                ></i>
-                <div
-                  class="bg-white absolute -right-36 -bottom-20 p-4 rounded-sm border-[1px] border-zinc-50 w-32 h-28 text-zinc-400"
-                >
-                  hwew
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr class="my-3 w-[90%] mx-auto" />
-        <div
-          class="p-2 flex justify-start items-center gap-4 w-full rounded-md"
-        >
-          <div
-            class="w-40 flex flex-col justify-center items-center border-r-[1px] p-5 ps-8"
-          >
-            <span class="font-bold text-4xl text-slate-600">Wed</span>
-            <span class="font-bold text-4xl text-slate-600">19</span>
-          </div>
-          <div class="flex justify-start items-center gap-20 relative">
-            <div class="text-lg flex flex-col gap-2 justify-center items-start">
-              <span class="text-zinc-500"
-                ><i class="bi bi-stopwatch"></i> 14h - 15h30
-                <i class="bi bi-exclamation-circle-fill text-red-500"></i
-              ></span>
-              <span class="text-zinc-500"
-                ><i class="bi bi-geo-alt-fill"></i> Online</span
-              >
-            </div>
-            <div class="flex flex-col justify-center items-start">
-              <h3 class="text-sm font-bold">
-                Nestjs Framework new release, whats new?
-              </h3>
-              <div>
-                <h5 class="text-zinc-400 italic text-sm">Feature Speakers</h5>
-                <div class="relative flex mt-2">
-                  <img
-                    src="../../../assets/images/me.jpg"
-                    alt=""
-                    class="w-8 h-8 rounded-full z-10 shadow-md"
-                  />
-                  <img
-                    src="../../../assets/images/me.jpg"
-                    alt=""
-                    class="w-8 h-8 rounded-full z-20 absolute left-7 shadow-md"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="absolute -right-64 top-6">
-              <div class="relative">
-                <i
-                  class="bi bi-three-dots-vertical bg-slate-50 rounded-sm p-[11px] border-[1px] border-slate-100 cursor-pointer text-slate-700 hover:bg-slate-100"
-                ></i>
-                <div
-                  class="bg-white absolute -right-36 -bottom-20 p-4 rounded-sm border-[1px] border-zinc-50 w-32 h-28 text-zinc-400"
-                >
-                  hwew
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
