@@ -23,10 +23,16 @@
       <i
         class="bi bi-chevron-right text-sm bg-slate-600 text-white font-bold rounded-md py-[1px] px-[1px]"
       ></i
-      ><span class="text-slate-600 hover:text-slate-700 cursor-pointer text-sm"
-        >Read Post <i class="text-slate-300 bi bi-arrow-bar-right"></i
+      ><span class="text-slate-600 hover:text-slate-700 cursor-pointer text-sm">
+        <p-button
+          class="font-light"
+          (onClick)="onShowCardDialog()"
+          label="Read Post" /><i
+          class="text-slate-300 bi bi-arrow-bar-right"
+        ></i
       ></span>
     </div>
+
     <app-modal-large [cardProfileData]="dataToCardProfile">
       <app-single-post></app-single-post>
     </app-modal-large>

@@ -5,7 +5,7 @@
   <form
     action="cybernorb"
     method="post"
-    class="p-5 w-96 bg-white rounded-sm shadow-lg flex flex-col gap-5"
+    class="p-5 w-96 bg-white rounded-md shadow-lg flex flex-col gap-5"
   >
     <a routerLink="/" class="font-bold mx-auto">
       <img src="../../../assets/images/logo.png" alt="" srcset=""
@@ -14,8 +14,9 @@
       <input
         type="text"
         id="email"
+        [(ngModel)]="email"
         name="email"
-        class="border-b-[1px] border-zinc-300 p-1 text-zinc-500"
+        class="border-[1px] ps-3 border-zinc-300 p-1 py-2 text-zinc-500 rounded-md"
         placeholder="E-mail"
       />
     </div>
@@ -24,43 +25,26 @@
       <input
         type="text"
         id="password"
+        [(ngModel)]="password"
         name="password"
-        class="border-b-[1px] border-zinc-300 p-1 text-zinc-500"
+        class="border-[1px] border-zinc-300 py-2 p-1 text-zinc-500 rounded-md"
         placeholder="Password"
       />
-      <i class="absolute right-0 bi bi-eye-fill text-zinc-600"></i>
+      <i class="absolute right-2 top-2 bi bi-eye-fill text-zinc-600"></i>
     </div>
 
     <button
+      (click)="onSubmit()"
       type="submit"
-      class="w-full p-3 bg-slate-900 hover:bg-slate-800 rounded-sm text-white hover:shadow-sm"
+      class="w-full p-3 bg-slate-900 hover:bg-slate-800 rounded-md text-white hover:shadow-sm"
     >
       submit <i class="bi bi-send"></i>
     </button>
-    <div class="flex justify-end items-center gap-1 my-[-15px]">
-      <span class="text-[12px] text-zinc-400">Have no account</span>
-      <a routerLink="/register" class="underline text-[12px] text-blue-600"
+    <div class="flex justify-end items-center gap-1">
+      <span class="text-sm text-zinc-400">Have no account</span>
+      <a routerLink="/register" class="underline text-sm text-blue-600"
         >Sign Up</a
       >
-    </div>
-    <div class="flex justify-center items-center gap-2">
-      <hr class="w-full" />
-      <span class="text-zinc-300">or</span>
-      <hr class="w-full" />
-    </div>
-    <div class="w-full flex flex-col justify-center items-center gap-2">
-      <button
-        class="w-full text-black font-semibold flex justify-center items-center rounded-full border-[1px] hover:shadow-sm border-zinc-300 p-3 hover:border-zinc-400"
-      >
-        <img src="../../../assets/images/google.png" class="w-8" alt="" />
-        <span>Google</span>
-      </button>
-      <button
-        class="text-black w-full font-semibold flex gap-2 justify-center items-center rounded-full border-[1px] border-zinc-300 p-3 hover:shadow-sm hover:border-zinc-400"
-      >
-        <img src="../../../assets/images/github.png" class="w-4 h-4" alt="" />
-        <span>Github</span>
-      </button>
     </div>
   </form>
 </section>

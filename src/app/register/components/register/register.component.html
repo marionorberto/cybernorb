@@ -27,9 +27,12 @@
     </div>
   </div> -->
 
-  <!-- <app-step-1></app-step-1> -->
-  <!-- <app-step-2></app-step-2> -->
-  <!-- <app-step-3></app-step-3> -->
-  <!-- <app-step-4></app-step-4> -->
-  <app-step-5></app-step-5>
+  <app-step-1
+    *ngIf="showStep1"
+    (createAccount)="goToStep2($event)"
+  ></app-step-1>
+  <app-step-2 *ngIf="showStep2" (payload)="goToStep3($event)"></app-step-2>
+  <app-step-3 (payload)="goToStep4($event)" *ngIf="showStep3"></app-step-3>
+  <app-step-4 (payload)="goToStep5($event)" *ngIf="showStep4"></app-step-4>
+  <app-step-5 (payload)="createAccount($event)" *ngIf="showStep5"></app-step-5>
 </section>

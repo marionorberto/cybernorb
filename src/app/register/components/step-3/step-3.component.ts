@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-step-3',
@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './step-3.component.css'
 })
 export class Step3Component {
+  @Output() payload = new EventEmitter<boolean>(false);
 
+  goToStep4() {
+    this.payload.emit(true);
+  }
 }

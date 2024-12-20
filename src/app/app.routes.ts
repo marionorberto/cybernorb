@@ -18,6 +18,7 @@ import { EventsComponent } from './components/events/events.component';
 import { SinglePostComponent } from './components/single-post/single-post.component';
 import { SupportComponent } from './components/support/support.component';
 import { MyPostsComponent } from './components/my-posts/my-posts.component';
+import { authGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
   {
@@ -32,6 +33,7 @@ export const routes: Routes = [
   {
     path: 'cybernorb',
     component: MainLayoutComponent,
+    canActivate: [authGuard]
   },
   {
     path: 'cybernorb/resources',

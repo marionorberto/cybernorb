@@ -12,23 +12,24 @@
   <h5 class="font-semibold text-lg text-zinc-300">choose your sign up way</h5>
   <section class="mt-9 flex justify-center items-center gap-8">
     <div>
-      <h3 class="mb-4 text-white text-sm font-bold">
+      <h3 class="mb-4 text-white text-lg font-bold">
         Click to create your account
       </h3>
       <button
+        (click)="goToStep2()"
         class="bg-slate-900 hover:bg-slate-800 font-bold hover:shadow-md text-nowrap text-white p-4 rounded-md"
       >
         <i class="bi bi-person-fill"></i> Create New Account
       </button>
       <br />
-      <span class="text-[10px] text-zinc-400"
+      <span class="text-[14px] text-zinc-400"
         >*create a personal new account (recommended)</span
       >
     </div>
-    <div
+    <!-- <div
       class="w-full flex flex-col justify-center items-start gap-2 ps-12 ms-8 border-s-[1px] border-zinc-200"
     >
-      <h3 class="mb-4 text-white text-sm font-bold mt-9">
+      <h3 class="mb-4 text-white text-lg font-bold mt-9">
         Sign up with a provider
       </h3>
       <button
@@ -43,16 +44,16 @@
         <img src="../../../assets/images/github.png" class="w-4 h-4" alt="" />
         <span class="text-zinc-300">Github</span>
       </button>
-      <span class="text-[10px] text-zinc-400 ps-5"
+      <span class="text-lg text-zinc-400 ps-5"
         >*create a account by a chosen provider (preferencial)</span
       >
-    </div>
+    </div> -->
   </section>
-  <p class="text-white text-sm mt-16">
+  <p class="text-white mt-16 text-lg">
     I already have account
     <a
-      routerLink="/login"
-      class="text-slate-400 text-base mt-2 hover:text-slate-500 hover:underline"
+      routerLink="/cybernorb/login"
+      class="text-slate-400 text-center text-lg mt-2 hover:text-slate-500 hover:underline"
       >Sign In</a
     >
   </p>

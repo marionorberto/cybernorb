@@ -1,5 +1,5 @@
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -14,11 +14,14 @@ import { FormsModule } from '@angular/forms';
 })
 export class CardPostComponent {
 
+  @Input() data: any = {};
+
   isInputFocused: boolean = false;
   likesNumber: number = 24;
   like: boolean = false;
   saved: boolean = false;
   follow: boolean = false;
+
   
   onInputCommentFocus() {
     this.isInputFocused = true;
@@ -41,5 +44,4 @@ export class CardPostComponent {
   followPost() {
     this.follow = !this.follow;
   }
-
 }

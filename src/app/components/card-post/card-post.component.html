@@ -6,7 +6,7 @@
       class="w-6 h-6 rounded-full"
     />
     <div class="flex flex-col items-start justify-center">
-      <h3 class="text-zinc-800 text-sm font-bold">Mário Norberto</h3>
+      <h3 class="text-zinc-800 text-sm font-bold">{{ data.user?.username }}</h3>
       <div class="text-sm flex gap-1 justify-start items-center">
         <span href="" class="text-[11px] text-green-700 font-semibold"
           ><i class="bi bi-dot"></i>{{ follow ? "Follow" : "Unfollow" }}</span
@@ -16,37 +16,29 @@
     </div>
   </div>
   <h1 class="text-zinc-900 text-3xl pb-5">
-    How to install extensions on vs code?
+    {{ data.title }}
   </h1>
   <img
-    src="../../../assets/images/how-to-install-images-on-vscode.png"
+    src="{{ data.linkPosterFile }}"
     alt=""
     class="w-full h-96 rounded-sm mb-3"
   />
   <div class="flex gap-2 justify-start items-center my-2">
     <span
+      *ngFor="let value of data.tags"
       class="flex justify-center items-center text-sm h-8 bg-white border-[1px] border-zinc-200 text-black font-bold shadow-sm rounded-[3px] p-1 text-center"
-      >programming</span
-    >
-    <span
-      class="flex justify-center items-center text-sm h-8 bg-white border-[1px] border-zinc-200 text-black font-bold shadow-sm rounded-[3px] p-1 text-center"
-      >code editor</span
+      >{{ value.tag }}</span
     >
   </div>
-  <section class="mt-4 text-justify text-sm text-neutral-700">
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed excepturi
-    assumenda beatae recusandae eligendi, consectetur nisi molestiae molestias
-    perferendis ut, voluptas inventore debitis aut officiis velit, veniam illum
-    nulla dolor. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed
-    excepturi assumenda beatae recusandae eligendi, consectetur nisi molestiae
-    molestias perferendis ut, voluptas inventore debitis aut officiis velit,
-    veniam illum nulla dolor. Lorem, ipsum dolor sit amet consectetur
-    adipisicing elit. Sed excepturi assumenda beatae recusandae eligendi,
-    consectetur nisi molestiae molestias perferendis ut, voluptas inventore
-    debitis aut officiis velit, veniam illum nulla dolor. Lorem, ipsum dolor sit
-    amet consectetur adipisicing elit. Sed excepturi assumenda beatae recusandae
-    eligendi, consectetur nisi molestiae molestias perferendis ut, voluptas
-    inventore debitis aut officiis velit, veniam illum nulla dolor.
+  <section
+    class="mt-4 text-justify text-sm text-neutral-700"
+    *ngFor="let section of data.sections"
+  >
+    <h1 class="text-zinc-900 text-2xl pb-5">
+      {{ section.subtitle }}
+    </h1>
+    <img src="{{ section?.linkFileSection }}" alt="" />
+    <p *ngFor="let value of section.contents">{{ value.content }}</p>
   </section>
   <div class="flex justify-start items-center gap-3 mt-4">
     <button

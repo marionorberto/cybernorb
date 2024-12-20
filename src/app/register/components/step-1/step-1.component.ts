@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -11,5 +11,11 @@ import { RouterLink } from '@angular/router';
   styleUrl: './step-1.component.css'
 })
 export class Step1Component {
+  
+  @Output() createAccount = new EventEmitter<boolean>(false);
+
+  goToStep2() {
+    this.createAccount.emit(true);
+  }
 
 }

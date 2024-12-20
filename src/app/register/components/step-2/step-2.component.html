@@ -101,18 +101,17 @@
 
   <div class="flex gap-2">
     <button
+      routerLink="/cybernorb/login"
+      class="transition-all text-[14px] transition-[all 0.4s ease-in-out] font-medium hover:text-white hover:bg-slate-900 border-[1px] border-zinc-400 text-zinc-400 px-6 py-2 rounded-md hover:shadow-md bg-transparent"
+    >
+      back
+    </button>
+    <button
+      (click)="goToStep3()"
       type="submit"
       class="transition-all text-[14px] transition-[all 0.4s ease-in-out] font-medium hover:text-white hover:bg-slate-800 text-white bg-slate-900 hover:shadow-md px-6 py-2 rounded-md shadow-sm"
     >
       Submit
     </button>
-    <button
-      class="transition-all text-[14px] transition-[all 0.4s ease-in-out] font-medium hover:text-white hover:bg-slate-900 border-[1px] border-zinc-400 text-zinc-400 px-6 py-2 rounded-md hover:shadow-md bg-transparent"
-    >
-      Cancel
-    </button>
   </div>
-  <a href="" class="text-slate-400 text-base mt-2 hover:text-slate-500"
-    ><i class="bi bi-arrow-left"></i> Back</a
-  >
 </form>
